@@ -1,77 +1,71 @@
-# Academic & Economics Researcher Portfolio
+# MD. Ashikul Islam (Ashikul Islam Khan) - Professional Portfolio
 
-A clean, high-craft academic portfolio website designed specifically for an **Economics Undergraduate at University of Dhaka**, **Development Economics & Policy Researcher**, **Aspiring Data Analyst**, **Youth Parliamentarian at CAB**, and **Vice President at Economics Cultural Club**.
-
-Built according to strict **Quiet Chrome & High Craft (Unslop)** design standards:
-- **No Vibecoded Slop**: Zero purple/violet gradients, no blurry background blobs, no glowing shadows, and no decorative emojis.
-- **Editorial Typography**: Rich scholarly typography (`Newsreader` serif for headings, `Inter` for crisp body text, and `JetBrains Mono` for tabular metrics, JEL classification codes, and BibTeX snippets).
-- **One Bright Focus**: An interactive, publication-quality Chart.js data lab visualizing high-frequency macroeconomic & household welfare telemetry in Bangladesh.
-- **Hairline Restraint**: Subtle borders (6–8% opacity) and calm neutral surfaces for maximum reading comfort and scholarly authority.
+> **Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist**  
+> *Department of Economics, University of Dhaka*  
+> **Live Site:** [https://ashikulislamkhan.github.io/portfolio/](https://ashikulislamkhan.github.io/portfolio/)
 
 ---
 
-## 📁 Project Structure
+## 🌟 Highlights & Design System
+
+- **iOS Liquid Glass Physics**: Translucent frosted surfaces (`backdrop-filter: blur(28px)`), specular hairline boundaries, floating iOS-style bottom dock with active scroll-tracking, springy segmented tabs, and floating liquid snackbars.
+- **100% Dynamic & Editable**: The whole site is powered by `portfolio-data.js`. Every segment—from work experience, research papers, apps built, education, to certifications—can be added, modified, or removed in seconds.
+- **Live Customizer Drawer**: Click "Edit Data" on the top bar or dock to open the live JSON editor, tweak content right in your browser, and instantly preview changes or export the updated file.
+- **Accurate CV Integration**: Pre-populated with your verified 3-page CV, research manuscripts on inflation targeting and the Cuban development puzzle, energy justice publication at CAB, and student leadership across DU clubs.
+
+---
+
+## 📂 Architecture
 
 ```
 academic-portfolio/
-├── index.html        # Main semantic markup, sections, modals, and CV view
-├── styles.css        # Academic design tokens, quiet chrome styling, responsive layout, print styles
-├── app.js            # Chart.js telemetry engine, paper filters, search, BibTeX copy & toast notifications
-└── README.md         # Instructions for customization and deployment
+├── portfolio-data.js   # 💡 CENTRAL DATA STORE - Edit all content here!
+├── index.html          # Semantic markup, sections, and Liquid Glass layout
+├── styles.css          # iOS Liquid Glass design system, dock, tabs, snackbar
+├── app.js              # Reactive renderer, live search, filters, modals
+├── standalone.html     # Single-file portable bundle (everything inlined)
+└── README.md           # Documentation & customization guide
 ```
 
 ---
 
-## ⚡ Quick Start & Local Preview
+## 🛠️ How to Customize & Add/Modify Content
 
-### Option 1: Open Directly
-Double-click `index.html` in your file explorer to open it in any web browser. Everything is self-contained with CDN assets.
+### Method 1: Edit `portfolio-data.js` Directly (Recommended)
+Open [`portfolio-data.js`](portfolio-data.js) in your editor. You will see clear sections:
 
-### Option 2: Run a Local Dev Server
-If you prefer running a local server:
-
-Using Node / npx:
-```bash
-npx serve C:\Users\Admin\.gemini\antigravity\scratch\academic-portfolio
-```
-
-Or using Python:
-```bash
-cd C:\Users\Admin\.gemini\antigravity\scratch\academic-portfolio
-python -m http.server 8000
-```
-Then visit `http://localhost:8000`.
-
----
-
-## 🛠️ Personalization & Customization Guide
-
-1. **Your Name & Bio**:
-   - Open `index.html` and edit lines in `<h1 class="hero-title">` to display your personal name (e.g. `Ahnaf Sadman | Economics Researcher & Data Analyst`).
-   - Update the contact email in `copyEmailAddress()` inside `app.js` and in the contact section of `index.html`.
-
-2. **Publications & Working Papers**:
-   - Open `app.js` and modify `papersData` to include your own research papers, conference presentations, term papers, or policy monographs with your preferred JEL codes and methodology tags.
-
-3. **Data Lab & Visualizations**:
-   - Update `chartDatasets` in `app.js` with your own empirical datasets, macro indicators, or survey findings.
-
-4. **Curriculum Vitae (CV)**:
-   - The site includes an integrated interactive CV modal with a built-in "Print / Save PDF" feature. You can customize the coursework, awards, and credentials directly in `index.html`.
-
----
-
-## 🚀 Free Hosting & Deployment
-
-### Deploy to GitHub Pages (Recommended)
-1. Initialize a git repository in this folder:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio release"
+1. **Profile & Contact Info**: Change title, email, phone, bio, or links.
+2. **Work Experience (`workExperience`)**: Add a new job or internship:
+   ```javascript
+   {
+     id: "new-role",
+     role: "Research Associate",
+     organization: "New Think Tank",
+     location: "Dhaka, Bangladesh",
+     period: "2026 – Present",
+     type: "Research & Policy",
+     achievements: ["Key outcome 1", "Key outcome 2"],
+     responsibilities: ["Task 1", "Task 2"]
+   }
    ```
-2. Create a new repository on GitHub (e.g., `username.github.io` or `portfolio`).
-3. Push your code and enable **GitHub Pages** under `Settings > Pages > Branch: main`.
+3. **Research Manuscripts (`researchWorks`)**: Add working papers with JEL codes, BibTeX, and ResearchGate links.
+4. **Software & Apps (`projects`)**: Add new apps, web tools, or repositories.
+5. **Certifications, Volunteering & Creative Campaigns**: Add or remove entries from their respective arrays.
 
-### Deploy to Netlify or Vercel
-- Simply drag and drop the `academic-portfolio` folder into the [Netlify Drop](https://app.netlify.com/drop) dashboard for an instant live URL with free SSL.
+### Method 2: Use the In-Browser Live Customizer
+1. Click the **"Edit Data"** button on the top-right header or the pen icon on the bottom dock.
+2. An iOS Liquid Glass drawer will slide open showing your current data configuration.
+3. Edit any text or add items, then click **"Apply Changes"** to see your site update in real-time.
+4. Click **"Export File"** to download the new `portfolio-data.js`.
+
+---
+
+## 🚀 Live Deployment to GitHub Pages
+
+To sync changes to your live GitHub Pages site:
+```bash
+git add .
+git commit -m "Update portfolio content"
+git push origin main
+```
+GitHub Pages will automatically build and publish the changes to `https://ashikulislamkhan.github.io/portfolio/`.

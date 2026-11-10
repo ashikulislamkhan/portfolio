@@ -3,78 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Portfolio | Economics & Policy Researcher</title>
-  <meta name="description" content="Academic portfolio of an Economics Undergraduate at University of Dhaka, Development Economics & Policy Researcher, and Aspiring Data Analyst.">
+  <title>Ashikul Islam Khan | Economics & Policy Researcher Â· Data Analyst</title>
+  <meta name="description" content="Professional portfolio of MD. Ashikul Islam (Ashikul Islam Khan) - Economics Undergraduate at University of Dhaka, Development Economics & Policy Researcher, and Aspiring Data Analyst.">
+  
+  <!-- Typography Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  
   <style>
+/* ==========================================================================
+   ASHIKUL ISLAM KHAN - LIQUID GLASS PORTFOLIO DESIGN SYSTEM (iOS GLASSPHYSICS)
+   ========================================================================== */
+
 :root {
-  /* Design Tokens - Light Mode (Editorial Academic / Quiet Chrome) */
-  --bg-primary: #fbfbfa;
-  --bg-secondary: #f4f4f2;
+  /* Core Surface Tokens - Daylight Mode */
+  --bg-canvas: #f8fafc;
+  --bg-canvas-gradient: radial-gradient(100% 60% at 50% 0%, rgba(224, 238, 255, 0.5) 0%, #f8fafc 100%);
   --bg-surface: #ffffff;
-  --bg-surface-elevated: #ffffff;
-  --bg-subtle: #eeeee9;
+  --bg-surface-elevated: rgba(255, 255, 255, 0.85);
   
-  --border-hairline: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.16);
+  /* iOS Liquid Glass Tokens (Light) */
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-bg-hover: rgba(255, 255, 255, 0.82);
+  --glass-bg-active: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-border-subtle: rgba(15, 23, 42, 0.08);
+  --glass-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+  --glass-blur: blur(24px) saturate(190%);
   
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #6b7280;
+  /* Text & Ink */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
   --text-inverse: #ffffff;
   
-  --accent-primary: #1e3a8a; /* Academic Oxford Navy */
-  --accent-primary-hover: #172554;
-  --accent-subtle: #eff4fe;
+  /* Editorial & Accent Blue */
+  --accent-primary: #1d4ed8;
+  --accent-primary-hover: #1e40af;
+  --accent-subtle: rgba(37, 99, 235, 0.08);
   --accent-text: #1d4ed8;
   
-  --accent-tag-bg: #f1f5f9;
-  --accent-tag-text: #334155;
-  
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
-  
-  --font-serif: "Newsreader", "Times New Roman", Times, serif;
+  /* Typography */
+  --font-serif: "Newsreader", "Times New Roman", serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-mono: "JetBrains Mono", monospace;
   
-  --container-max: 1120px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  /* Layout & Radii */
+  --container-max: 1140px;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  --dock-height: 4rem;
 }
 
 [data-theme="dark"] {
-  /* Dark Mode (Quiet Slate Dusk) */
-  --bg-primary: #0b0f17;
-  --bg-secondary: #111722;
-  --bg-surface: #151d2a;
-  --bg-surface-elevated: #1a2332;
-  --bg-subtle: #1f2a3c;
+  /* Core Surface Tokens - Dusk Mode */
+  --bg-canvas: #090d16;
+  --bg-canvas-gradient: radial-gradient(100% 60% at 50% 0%, rgba(30, 58, 138, 0.22) 0%, #090d16 100%);
+  --bg-surface: #111827;
+  --bg-surface-elevated: rgba(17, 24, 39, 0.85);
   
-  --border-hairline: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  /* iOS Liquid Glass Tokens (Dark) */
+  --glass-bg: rgba(18, 24, 38, 0.72);
+  --glass-bg-hover: rgba(28, 38, 58, 0.85);
+  --glass-bg-active: rgba(37, 50, 75, 0.95);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.55), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  --glass-blur: blur(28px) saturate(200%);
   
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
-  --text-inverse: #0b0f17;
+  /* Text & Ink */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #090d16;
   
+  /* Accent */
   --accent-primary: #3b82f6;
   --accent-primary-hover: #60a5fa;
-  --accent-subtle: #172554;
+  --accent-subtle: rgba(59, 130, 246, 0.16);
   --accent-text: #93c5fd;
-  
-  --accent-tag-bg: #1e293b;
-  --accent-tag-text: #cbd5e1;
-  
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* CSS Reset & Base */
+/* ==========================================================================
+   Base & Resets
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -90,14 +107,16 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-primary);
+  background-color: var(--bg-canvas);
+  background-image: var(--bg-canvas-gradient);
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding-bottom: calc(var(--dock-height) + 3rem);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Typography Standards */
 h1, h2, h3, h4, .serif-heading {
   font-family: var(--font-serif);
   font-weight: 500;
@@ -108,14 +127,14 @@ h1, h2, h3, h4, .serif-heading {
 
 p {
   color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 0.975rem;
+  line-height: 1.65;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .tabular-nums {
@@ -123,7 +142,6 @@ a {
   font-feature-settings: "tnum";
 }
 
-/* Layout Containers */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -132,318 +150,395 @@ a {
 }
 
 .section {
-  padding: 5rem 0;
-  border-top: 1px solid var(--border-hairline);
-}
-
-.section:first-of-type {
-  border-top: none;
-}
-
-/* Header & Navigation */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: rgba(251, 251, 250, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-hairline);
-  transition: background-color 0.2s ease;
-}
-
-[data-theme="dark"] .site-header {
-  background-color: rgba(11, 15, 23, 0.88);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4rem;
-}
-
-.brand-link {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-}
-
-.brand-sub {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.75rem;
-  list-style: none;
-}
-
-.nav-item a {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  font-weight: 450;
-  padding: 0.25rem 0;
+  padding: 4.5rem 0;
   position: relative;
 }
 
-.nav-item a:hover {
-  color: var(--text-primary);
+/* ==========================================================================
+   iOS Liquid Glass Components
+   ========================================================================== */
+
+/* The Master Liquid Glass Class */
+.liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-md);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-item a.active {
-  color: var(--accent-text);
-  font-weight: 500;
+.liquid-glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-actions {
+.liquid-glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .liquid-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+   Top Header Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 80;
+  margin: 0 auto;
+  max-width: var(--container-max);
+  padding: 0 1.5rem;
+}
+
+.header-glass-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.75rem;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-full);
+}
+
+.brand-wrapper {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-/* Button & Pill Utilities */
-.btn {
+.brand-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  background: var(--accent-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--accent-text);
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.brand-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
+   iOS Segmented Liquid Tabs
+   ========================================================================== */
+.tabs-outer-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.liquid-segmented-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.liquid-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.liquid-tab-btn.active {
+  background: var(--glass-bg-active);
+  color: var(--accent-text);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .liquid-tab-btn.active {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   Buttons & Tags
+   ========================================================================== */
+.btn-glass {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.15s ease;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
-.btn-primary {
-  background-color: var(--accent-primary);
+.btn-glass:hover {
+  background: var(--glass-bg-hover);
+  transform: translateY(-1px);
+}
+
+.btn-glass-primary {
+  background: var(--accent-primary);
+  border-color: rgba(255, 255, 255, 0.3);
   color: var(--text-inverse);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
 }
 
-.btn-primary:hover {
-  background-color: var(--accent-primary-hover);
+.btn-glass-primary:hover {
+  background: var(--accent-primary-hover);
+  color: var(--text-inverse);
+  transform: translateY(-1px);
 }
 
-.btn-outline {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
-  border-color: var(--border-hairline);
-}
-
-.btn-outline:hover {
-  background-color: var(--bg-secondary);
-  border-color: var(--border-strong);
-}
-
-.btn-sm {
-  padding: 0.35rem 0.75rem;
-  font-size: 0.8125rem;
-}
-
-.btn-icon {
-  width: 2.25rem;
-  height: 2.25rem;
+.btn-icon-glass {
+  width: 2.35rem;
+  height: 2.35rem;
   padding: 0;
-  border-radius: var(--radius-md);
-  background-color: transparent;
-  color: var(--text-secondary);
-  border: 1px solid var(--border-hairline);
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-.btn-icon:hover {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   color: var(--text-primary);
-  background-color: var(--bg-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-/* Mobile Nav Toggle */
-.mobile-toggle {
-  display: none;
+.btn-icon-glass:hover {
+  background: var(--glass-bg-hover);
+  transform: scale(1.05);
 }
 
-/* Hero Section */
-.hero-section {
-  padding: 4.5rem 0 3.5rem;
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--accent-subtle);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--accent-text);
 }
 
-.hero-grid {
+.pill-tag-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+/* ==========================================================================
+   Hero Section & Profile Card
+   ========================================================================== */
+.hero-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 3.5rem;
-  align-items: start;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding-top: 2rem;
 }
 
-.affiliation-pill {
+.hero-status-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
   font-size: 0.8125rem;
   color: var(--text-secondary);
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   margin-bottom: 1.25rem;
 }
 
-.affiliation-pill .dot {
-  width: 6px;
-  height: 6px;
-  background-color: #10b981;
+.pulse-dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
-.hero-title {
-  font-size: 2.75rem;
-  line-height: 1.15;
-  margin-bottom: 1rem;
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-.hero-subtitle {
+.hero-name {
+  font-size: 2.85rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
   font-family: var(--font-serif);
   font-size: 1.35rem;
   font-style: italic;
   color: var(--text-secondary);
   margin-bottom: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .hero-bio {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.75rem;
-  max-width: 640px;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-size: 1.025rem;
   margin-bottom: 2rem;
+  color: var(--text-secondary);
 }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  background-color: var(--accent-tag-bg);
-  color: var(--accent-tag-text);
-  font-weight: 500;
-  border: 1px solid var(--border-hairline);
-}
-
-.tag-mono {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-}
-
-.hero-cta {
+.hero-cta-group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Hero Aside / Profile Dossier Card */
-.dossier-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
+/* Hero Right Profile Card */
+.hero-glass-dossier {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.dossier-header {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-hairline);
-  margin-bottom: 1rem;
-}
-
-.dossier-header h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-
-.dossier-header span {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.dossier-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-  margin-bottom: 1.25rem;
-}
-
-.dossier-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.dossier-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.dossier-value {
-  font-size: 0.875rem;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.dossier-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-hairline);
-}
-
-.dossier-link-item {
+.dossier-headline {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--glass-border-subtle);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dossier-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.dossier-stat-box {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-subtle);
+  padding: 0.85rem 1rem;
   border-radius: var(--radius-sm);
-  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
 }
 
-.dossier-link-item:hover {
+.dossier-stat-num {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--text-primary);
-  background-color: var(--bg-subtle);
 }
 
-/* Section Headers */
-.section-header {
-  margin-bottom: 2.5rem;
-  max-width: 720px;
+.dossier-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
 }
 
-.section-label {
+.dossier-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.dossier-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--text-secondary);
+}
+
+.dossier-contact-item:hover {
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+}
+
+/* ==========================================================================
+   Section Headers & Controls
+   ========================================================================== */
+.section-headline-group {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-eyebrow {
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -452,1101 +547,745 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.section-title {
-  font-size: 2.1rem;
+.section-heading {
+  font-size: 2.25rem;
   margin-bottom: 0.75rem;
 }
 
-.section-desc {
+.section-subtext {
   font-size: 1rem;
   color: var(--text-secondary);
 }
 
-/* Filter Controls */
-.filter-bar {
+/* Live Search Liquid Bar */
+.search-liquid-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  margin: 0 auto 2.5rem;
+  max-width: 480px;
 }
 
-.filter-pills {
+.search-liquid-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.search-liquid-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Competencies & Skills Grid
+   ========================================================================== */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.competency-card {
+  padding: 1.5rem;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.competency-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
+}
+
+.skill-chips {
+  display: flex;
   flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
-.filter-btn {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-secondary);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.8125rem;
-  cursor: pointer;
-  transition: all 0.15s ease;
+/* ==========================================================================
+   Experience Timeline Cards
+   ========================================================================== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
-.filter-btn:hover {
-  border-color: var(--border-strong);
+.exp-card {
+  padding: 1.75rem;
+  position: relative;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.exp-role-title {
+  font-size: 1.3rem;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
-.filter-btn.active {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
-  color: var(--text-inverse);
+.exp-org-badge {
+  font-size: 0.95rem;
+  color: var(--accent-text);
   font-weight: 500;
 }
 
-.search-input-wrap {
-  position: relative;
-  min-width: 240px;
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.45rem 0.75rem 0.45rem 2.25rem;
-  font-size: 0.8125rem;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  outline: none;
-}
-
-.search-input:focus {
-  border-color: var(--accent-primary);
-}
-
-.search-icon {
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
-  color: var(--text-muted);
-  pointer-events: none;
-}
-
-/* Research & Working Papers Grid */
-.paper-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
-  margin-bottom: 1.5rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.paper-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-sm);
-}
-
-.paper-meta-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.paper-status-badge {
-  font-size: 0.7rem;
+.exp-meta-tag {
   font-family: var(--font-mono);
-  padding: 0.15rem 0.5rem;
-  border-radius: 999px;
-  background-color: var(--accent-subtle);
-  color: var(--accent-text);
-  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.exp-achievements-title {
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.paper-date {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.paper-title {
-  font-size: 1.35rem;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  color: var(--text-primary);
-}
-
-.paper-authors {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: 0.875rem;
-}
-
-.paper-authors strong {
-  color: var(--text-primary);
-}
-
-.paper-abstract {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
-}
-
-.paper-tags-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.25rem;
-}
-
-.paper-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-hairline);
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.paper-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--accent-text);
-  padding: 0.3rem 0.6rem;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-secondary);
-}
-
-.link-btn:hover {
-  background-color: var(--bg-subtle);
-}
-
-/* Data Analytics & Interactive Visualization Section */
-.data-feature-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.chart-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.chart-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
-}
-
-.chart-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.chart-subtitle {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.chart-controls {
-  display: flex;
-  gap: 0.35rem;
-  background-color: var(--bg-secondary);
-  padding: 0.25rem;
-  border-radius: var(--radius-sm);
-}
-
-.chart-control-btn {
-  background: transparent;
-  border: none;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.chart-control-btn.active {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
-  box-shadow: var(--shadow-sm);
-}
-
-.chart-wrapper {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  margin-bottom: 1rem;
-}
-
-.chart-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 0.75rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-/* Data Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.15s ease, border-color 0.15s ease;
-}
-
-.project-card:hover {
-  border-color: var(--border-strong);
-  transform: translateY(-2px);
-}
-
-.project-top {
-  margin-bottom: 1.25rem;
-}
-
-.project-title {
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-desc {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 1rem;
-}
-
-.project-stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  background-color: var(--bg-secondary);
-  padding: 0.75rem;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-num {
-  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text-primary);
-  font-family: var(--font-mono);
-}
-
-.stat-label {
-  font-size: 0.7rem;
   color: var(--text-muted);
-  text-transform: uppercase;
+  margin: 0.85rem 0 0.35rem;
 }
 
-/* Policy & Parliamentary Leadership Section */
-.leadership-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: relative;
-  padding-left: 2rem;
-}
-
-.leadership-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  left: 7px;
-  width: 2px;
-  background-color: var(--border-hairline);
-}
-
-.timeline-item {
-  position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-}
-
-.timeline-bullet {
-  position: absolute;
-  left: -2.35rem;
-  top: 1.5rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: var(--bg-primary);
-  border: 3px solid var(--accent-primary);
-}
-
-.timeline-role {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.timeline-org {
-  font-size: 0.9375rem;
-  color: var(--accent-text);
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
-.timeline-period {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-}
-
-.timeline-points {
+.exp-bullet-list {
   list-style: disc;
   padding-left: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  font-size: 0.875rem;
+  gap: 0.35rem;
+  font-size: 0.925rem;
   color: var(--text-secondary);
 }
 
-/* Academic Dossier / Education Grid */
-.education-grid {
+/* ==========================================================================
+   Research Works Grid & BibTeX
+   ========================================================================== */
+.research-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
 }
 
-.edu-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
+.research-card {
+  padding: 1.85rem;
 }
 
-.edu-degree {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
+.research-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-.edu-inst {
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-bottom: 0.25rem;
-}
-
-.edu-timeline {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.coursework-title {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
+.research-title {
+  font-size: 1.45rem;
+  line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 
-/* Contact & CV Section */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-.contact-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-}
-
-.form-group {
+.research-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
   margin-bottom: 1.25rem;
 }
 
-.form-label {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  margin-bottom: 0.35rem;
-  color: var(--text-primary);
-}
-
-.form-control {
-  width: 100%;
-  padding: 0.6rem 0.85rem;
-  font-size: 0.875rem;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-hairline);
-  color: var(--text-primary);
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.15s ease;
-}
-
-.form-control:focus {
-  border-color: var(--accent-primary);
-  background-color: var(--bg-surface);
-}
-
-textarea.form-control {
-  resize: vertical;
-  min-height: 110px;
-}
-
-.channels-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.channel-box {
+.research-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
-  border-radius: var(--radius-md);
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
-  transition: all 0.15s ease;
+  border-top: 1px solid var(--glass-border-subtle);
+  padding-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.channel-box:hover {
-  border-color: var(--border-strong);
-  background-color: var(--bg-secondary);
+/* ==========================================================================
+   Software & Apps Built Grid
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
 }
 
-.channel-meta {
+.project-card {
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.channel-title {
+.project-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+}
+
+.project-tagline {
+  font-size: 0.85rem;
+  color: var(--accent-text);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   iOS Liquid Glass Floating Bottom Dock
+   ========================================================================== */
+.ios-glass-dock {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] .ios-glass-dock {
+  box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.7), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease;
+}
+
+.dock-item:hover {
+  transform: scale(1.15) translateY(-4px);
+  color: var(--accent-text);
+  background: var(--glass-bg-hover);
+}
+
+.dock-item.active {
+  background: var(--glass-bg-active);
+  color: var(--accent-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dock-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--glass-bg-active);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+  box-shadow: var(--glass-shadow);
+}
+
+.dock-item:hover .dock-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dock-divider {
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--glass-border-subtle);
+  margin: 0 0.15rem;
+}
+
+/* ==========================================================================
+   iOS Liquid Glass Snackbar (Toast Notification)
+   ========================================================================== */
+.liquid-snackbar {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-primary);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
-.channel-desc {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+.liquid-snackbar.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Modals (BibTeX & CV Preview) */
-.modal-overlay {
+/* ==========================================================================
+   Interactive Modals & Customizer Drawer
+   ========================================================================== */
+.glass-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 100;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 120;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition: all 0.25s ease;
 }
 
-.modal-overlay.active {
+.glass-modal-backdrop.active {
   opacity: 1;
   visibility: visible;
 }
 
-.modal-dialog {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-hairline);
+.glass-modal-window {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   border-radius: var(--radius-lg);
-  max-width: 680px;
+  max-width: 720px;
   width: 100%;
   max-height: 85vh;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-md);
   overflow: hidden;
+  transform: scale(0.96);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.modal-header {
+.glass-modal-backdrop.active .glass-modal-window {
+  transform: scale(1);
+}
+
+.modal-header-glass {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--glass-border-subtle);
 }
 
-.modal-title {
-  font-size: 1.15rem;
-}
-
-.modal-body {
+.modal-body-scroll {
   padding: 1.5rem;
   overflow-y: auto;
 }
 
-.code-block {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-hairline);
+.code-snippet-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border-subtle);
   border-radius: var(--radius-sm);
   padding: 1rem;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--text-primary);
+  font-size: 0.825rem;
   white-space: pre-wrap;
   word-break: break-all;
-}
-
-.modal-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.75rem;
-  padding: 1rem 1.5rem;
-  border-top: 1px solid var(--border-hairline);
-  background-color: var(--bg-secondary);
-}
-
-/* Toast Notification */
-.toast-notice {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--text-primary);
-  color: var(--text-inverse);
-  padding: 0.65rem 1.25rem;
-  border-radius: var(--radius-md);
-  font-size: 0.875rem;
-  font-weight: 500;
-  box-shadow: var(--shadow-md);
-  z-index: 120;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
-  pointer-events: none;
-}
-
-.toast-notice.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 1px solid var(--border-hairline);
-  padding: 3rem 0;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.footer-links a:hover {
   color: var(--text-primary);
 }
 
-/* Print Styles for CV */
-@media print {
-  .site-header, .site-footer, .filter-bar, .paper-footer, .hero-cta, .btn, .chart-controls, .mobile-toggle {
-    display: none !important;
-  }
-  body {
-    background-color: #fff !important;
-    color: #000 !important;
-  }
-  .section {
-    padding: 1.5rem 0 !important;
-    page-break-inside: avoid;
-  }
+/* Customizer Drawer */
+.customizer-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  max-width: 90vw;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-left: 1px solid var(--glass-border);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  z-index: 140;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 900px) {
-  .hero-grid {
+.customizer-drawer.open {
+  transform: translateX(0);
+}
+
+/* Form Elements */
+.input-glass {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-subtle);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input-glass:focus {
+  border-color: var(--accent-primary);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 860px) {
+  .hero-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .hero-name {
+    font-size: 2.25rem;
   }
-  .education-grid {
-    grid-template-columns: 1fr;
+  .ios-glass-dock {
+    bottom: 1rem;
+    gap: 0.25rem;
+    padding: 0.35rem 0.5rem;
+  }
+  .dock-item {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
-@media (max-width: 768px) {
-  .mobile-toggle {
-    display: inline-flex;
+@media print {
+  .site-header, .ios-glass-dock, .liquid-snackbar, .tabs-outer-wrap, .search-liquid-bar, .customizer-drawer, .btn-glass {
+    display: none !important;
   }
-  .nav-links {
-    position: fixed;
-    top: 4rem;
-    left: 0;
-    right: 0;
-    background-color: var(--bg-surface);
-    border-bottom: 1px solid var(--border-hairline);
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
-    display: none;
-    box-shadow: var(--shadow-md);
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0 !important;
   }
-  .nav-links.open {
-    display: flex;
-  }
-  .hero-title {
-    font-size: 2.15rem;
-  }
-  .hero-subtitle {
-    font-size: 1.15rem;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .liquid-glass-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    background: transparent !important;
   }
 }
 
 </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- Site Header -->
+  <!-- iOS Liquid Glass Top Bar -->
   <header class="site-header">
-    <div class="container nav-container">
-      <a href="#home" class="brand-link">
-        <span class="brand-name">Ashikul Islam Khan</span>
-        <span class="brand-sub">University of Dhaka Â· Department of Economics</span>
-      </a>
+    <div class="header-glass-bar liquid-glass">
+      <div class="brand-wrapper">
+        <div class="brand-avatar">AK</div>
+        <div class="brand-text-block">
+          <span class="brand-title" id="brandNameText">Ashikul Islam Khan</span>
+          <span class="brand-badge">University of Dhaka Â· Economics</span>
+        </div>
+      </div>
 
-      <ul class="nav-links" id="navLinks">
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#research">Research</a></li>
-        <li class="nav-item"><a href="#data-lab">Data Lab</a></li>
-        <li class="nav-item"><a href="#policy">Policy & Leadership</a></li>
-        <li class="nav-item"><a href="#education">Education</a></li>
-        <li class="nav-item"><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <button class="btn btn-sm btn-outline" onclick="openCvModal()">
+      <div class="header-actions">
+        <button class="btn-glass" onclick="openCvModal()">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          Curriculum Vitae
+          <span>Curriculum Vitae</span>
         </button>
-        <button class="btn-icon" id="themeToggle" title="Toggle color mode" aria-label="Toggle theme">
+        <button class="btn-glass" onclick="toggleCustomizerDrawer()" title="Live Content Editor & Data Configuration">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <span style="font-size: 0.8rem;">Edit Data</span>
+        </button>
+        <button class="btn-icon-glass" onclick="toggleThemeMode()" title="Toggle Light / Dark mode" aria-label="Toggle theme">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-        <button class="btn-icon mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main id="home">
-    <section class="section hero-section" id="about">
-      <div class="container hero-grid">
+  <!-- Main Hero View -->
+  <main>
+    <section class="section" id="hero">
+      <div class="container hero-layout">
         <div>
-          <div class="affiliation-pill">
-            <span class="dot"></span>
-            <span>Department of Economics, University of Dhaka</span>
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span id="heroStatusText">Final Year Undergraduate Â· Available for Research & Analytics Roles</span>
           </div>
 
-          <h1 class="hero-title">Ashikul Islam Khan | Applied Economics & Policy Researcher</h1>
-          
-          <p class="hero-subtitle">
-            Investigating development microeconomics, food price dynamics, consumer protection regulation, and household resilience.
+          <h1 class="hero-name" id="heroFullName">MD. ASHIKUL ISLAM</h1>
+          <p class="hero-tagline" id="heroTagline">
+            Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist
           </p>
 
-          <p class="hero-bio">
-            Undergraduate researcher at the University of Dhaka with a focus on empirical econometrics and public policy. Combining rigorous statistical modeling (Stata, R, Python) with institutional field insights to evaluate how market failures, price volatility, and regulatory gaps affect household welfare across Bangladesh.
+          <p class="hero-bio" id="heroBio">
+            Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers.
           </p>
 
-          <div class="hero-tags">
-            <span class="tag">Development Microeconomics</span>
-            <span class="tag">Applied Econometrics</span>
-            <span class="tag">Consumer Welfare & Market Regulation</span>
-            <span class="tag">Causal Inference</span>
-            <span class="tag">Survey Methodology</span>
-          </div>
-
-          <div class="hero-cta">
-            <a href="#research" class="btn btn-primary">
+          <div class="hero-cta-group">
+            <a href="#research" class="btn-glass btn-glass-primary">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              View Research Papers
+              View Research Works
             </a>
-            <a href="#data-lab" class="btn btn-outline">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-              Interactive Data Lab
+            <a href="http://cal.com/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Book a Meeting
             </a>
-            <button onclick="copyEmailAddress()" class="btn btn-outline">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <button onclick="copyDirectEmail()" class="btn-glass">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               Copy Email
             </button>
           </div>
         </div>
 
-        <!-- Aside Dossier Card -->
-        <aside class="dossier-card">
-          <div class="dossier-header">
-            <h3>Academic Dossier</h3>
-            <span>Research Profile & Standing</span>
+        <!-- Right Side Liquid Glass Dossier -->
+        <aside class="liquid-glass-card hero-glass-dossier">
+          <div class="dossier-headline">
+            <h3 style="font-size: 1.15rem;">Academic Dossier</h3>
+            <span class="pill-tag pill-tag-mono">Verified Profile</span>
           </div>
 
-          <ul class="dossier-list">
-            <li class="dossier-item">
-              <span class="dossier-label">Institution</span>
-              <span class="dossier-value">University of Dhaka</span>
-            </li>
-            <li class="dossier-item">
-              <span class="dossier-label">Program</span>
-              <span class="dossier-value">B.S.S. (Hons) in Economics</span>
-            </li>
-            <li class="dossier-item">
-              <span class="dossier-label">Policy Roles</span>
-              <span class="dossier-value">Youth Parliamentarian, CAB</span>
-            </li>
-            <li class="dossier-item">
-              <span class="dossier-label">Student Leadership</span>
-              <span class="dossier-value">Vice President, Economics Cultural Club</span>
-            </li>
-            <li class="dossier-item">
-              <span class="dossier-label">Quantitative Tools</span>
-              <span class="dossier-value">Stata Â· R Â· Python Â· QGIS</span>
-            </li>
+          <div class="dossier-stats-grid" id="dossierStatsGrid">
+            <!-- Populated via app.js -->
+          </div>
+
+          <ul class="dossier-contact-list" id="dossierContactList">
+            <!-- Populated via app.js -->
           </ul>
 
-          <div class="dossier-links">
-            <a href="https://scholar.google.com" target="_blank" rel="noopener" class="dossier-link-item">
-              <span>Google Scholar Profile</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--glass-border-subtle); flex-wrap: wrap;">
+            <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+              LinkedIn
             </a>
-            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="dossier-link-item">
-              <span>GitHub Replication Repos</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+              ResearchGate
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="dossier-link-item">
-              <span>LinkedIn Network</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+              GitHub
             </a>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- Research & Publications Section -->
+    <!-- Core Competencies -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Skills & Methodology</span>
+          <h2 class="section-heading">Core Competencies</h2>
+          <p class="section-subtext">Econometric modeling, quantitative programming, and visual policy communication.</p>
+        </div>
+
+        <div class="competencies-grid" id="competenciesContainer">
+          <!-- Populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified Search & Segmented Experience Controls -->
+    <section class="section" id="experience" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Career Trajectory</span>
+          <h2 class="section-heading">Professional & Leadership Experience</h2>
+          <p class="section-subtext">Research internships, parliamentary youth advocacy, and student executive governance.</p>
+        </div>
+
+        <!-- iOS Liquid Glass Segmented Tabs -->
+        <div class="tabs-outer-wrap">
+          <div class="liquid-segmented-tabs">
+            <button class="liquid-tab-btn active" data-category="all">All Experiences</button>
+            <button class="liquid-tab-btn" data-category="work">Research & Policy Roles</button>
+            <button class="liquid-tab-btn" data-category="leadership">Executive & Campus Leadership</button>
+          </div>
+        </div>
+
+        <!-- Liquid Search Bar -->
+        <div class="search-liquid-bar liquid-glass">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="globalSearchInput" class="search-liquid-input" placeholder="Live search across roles, research, or tools...">
+        </div>
+
+        <div class="experience-list" id="experienceContainer">
+          <!-- Populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Works Section -->
     <section class="section" id="research">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Scholarly Output</span>
-          <h2 class="section-title">Research Papers & Working Drafts</h2>
-          <p class="section-desc">
-            Empirical investigations focused on price dynamics, vulnerability, agricultural risk insurance, and consumer protection frameworks in developing economies.
-          </p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Scholarly Manuscripts</span>
+          <h2 class="section-heading">Research Works & Publications</h2>
+          <p class="section-subtext">Empirical macroeconomic evaluations, development puzzles, and energy justice frameworks.</p>
         </div>
 
-        <!-- Filter & Search Controls -->
-        <div class="filter-bar">
-          <div class="filter-pills">
-            <button class="filter-btn active" data-filter="all">All Manuscripts</button>
-            <button class="filter-btn" data-filter="development">Development Economics</button>
-            <button class="filter-btn" data-filter="econometrics">Applied Econometrics</button>
-            <button class="filter-btn" data-filter="policy">Policy & Regulation</button>
-          </div>
-
-          <div class="search-input-wrap">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="paperSearchInput" class="search-input" placeholder="Search by topic, JEL or method...">
-          </div>
-        </div>
-
-        <!-- Papers List Container -->
-        <div id="papersList">
-          <!-- Dynamically populated via app.js -->
+        <div class="research-grid" id="researchContainer">
+          <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Interactive Data Lab & Projects -->
-    <section class="section" id="data-lab">
+    <!-- Applications & Software Built -->
+    <section class="section" id="projects">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Empirical Analytics</span>
-          <h2 class="section-title">Interactive Data Lab & Econometrics</h2>
-          <p class="section-desc">
-            Interactive macro-level data telemetry and reproducible computational workflows applied to Bangladesh's economic indicators.
-          </p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Software & Digital Utilities</span>
+          <h2 class="section-heading">Applications Built</h2>
+          <p class="section-subtext">Offline-first web tools, secure file distribution, and messaging utilities.</p>
         </div>
 
-        <!-- Interactive Chart Card (One Bright Element) -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <div>
-              <h3 class="chart-title" id="chartHeading">Consumer Price Index (CPI): Headline vs. Food Inflation (2024â€“2026)</h3>
-              <p class="chart-subtitle" id="chartSubheading">Source: Bangladesh Bureau of Statistics (BBS) & Field Telemetry Analysis</p>
-            </div>
-            <div class="chart-controls">
-              <button class="chart-control-btn active" data-metric="inflation">CPI Inflation</button>
-              <button class="chart-control-btn" data-metric="welfare">Wage vs. Food Basket</button>
-              <button class="chart-control-btn" data-metric="resilience">Household Coping</button>
-            </div>
-          </div>
-
-          <div class="chart-wrapper">
-            <canvas id="macroChartCanvas"></canvas>
-          </div>
-
-          <div class="chart-footer">
-            <span>Chart engine: Chart.js Â· Clean tabular time-series telemetry</span>
-            <span>Tabular frequency: Monthly series Â· Base year 2023</span>
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <h3 style="font-size: 1.35rem; margin: 3rem 0 1.25rem;">Reproducible Analytics Projects</h3>
-        <div class="projects-grid" id="projectsList">
-          <!-- Dynamically populated via app.js -->
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Policy Advocacy & Campus Leadership -->
-    <section class="section" id="policy">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Public Policy & Institutional Impact</span>
-          <h2 class="section-title">Parliamentary Advocacy & Leadership</h2>
-          <p class="section-desc">
-            Translating empirical economic findings into institutional policy recommendations and fostering student scholarly discourse.
-          </p>
-        </div>
-
-        <div class="leadership-timeline">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-bullet"></div>
-            <h3 class="timeline-role">Youth Parliamentarian</h3>
-            <div class="timeline-org">Consumers Association of Bangladesh (CAB)</div>
-            <div class="timeline-period">2024 â€“ Present Â· Dhaka, Bangladesh</div>
-            <ul class="timeline-points">
-              <li>Represented youth perspectives on essential commodity inflation, syndicate monitoring, and consumer redress mechanisms before national policy forums.</li>
-              <li>Drafted comprehensive policy recommendations submitted to the Directorate of National Consumer Rights Protection (DNCRP) on algorithmic pricing and deceptive practices in quick-commerce apps.</li>
-              <li>Spearheaded grassroots consumer rights awareness workshops engaging over 1,200 university students and civic leaders.</li>
-              <li>Collaborated on white papers scrutinizing tariff adjustments on bulk food imports and domestic wholesale supply-chain bottlenecks.</li>
-            </ul>
-          </div>
-
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-bullet"></div>
-            <h3 class="timeline-role">Vice President</h3>
-            <div class="timeline-org">Economics Cultural Club (ECC), University of Dhaka</div>
-            <div class="timeline-period">2024 â€“ Present Â· Department of Economics</div>
-            <ul class="timeline-points">
-              <li>Direct executive operations, academic symposia, and budget allocations for the premier departmental organization at University of Dhaka.</li>
-              <li>Organized the Annual Economics Policy Hackathon & Symposium, convening leading researchers from BIDS, CPD, and faculty to mentor undergraduate policy proposals.</li>
-              <li>Founded the "Econ Literacy & Research Circle", conducting peer-led workshops on Stata replication, causal inference, and academic paper writing.</li>
-              <li>Curated cross-disciplinary debates on structural reforms in Bangladesh's banking sector, foreign exchange reserves management, and LDC graduation trajectories.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education & Academic Training -->
+    <!-- Education & Training Qualifications -->
     <section class="section" id="education">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Academic Foundations</span>
-          <h2 class="section-title">Education & Technical Competencies</h2>
-          <p class="section-desc">
-            Formal rigorous coursework in theoretical economics, mathematical modeling, and empirical causal inference.
-          </p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Academic Background</span>
+          <h2 class="section-heading">Educational Qualifications</h2>
+          <p class="section-subtext">Rigorous foundational coursework and academic achievements.</p>
         </div>
 
-        <div class="education-grid">
-          <!-- Card 1 -->
-          <div class="edu-card">
-            <h3 class="edu-degree">Bachelor of Social Sciences (B.S.S. Hons) in Economics</h3>
-            <div class="edu-inst">Department of Economics, University of Dhaka</div>
-            <div class="edu-timeline">Expected Graduation: 2026/2027 Â· CGPA: High Standing</div>
-            
-            <div class="coursework-title">Key Coursework</div>
-            <div class="hero-tags">
-              <span class="tag">Intermediate Microeconomics</span>
-              <span class="tag">Macroeconomic Theory</span>
-              <span class="tag">Econometrics I & II</span>
-              <span class="tag">Development Economics</span>
-              <span class="tag">Mathematical Economics</span>
-              <span class="tag">Public Finance & Taxation</span>
-              <span class="tag">International Trade</span>
-              <span class="tag">Time-Series & Forecasting</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;" id="educationContainer">
+          <!-- Populated via app.js -->
+        </div>
+
+        <!-- Certifications & Volunteering Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Training & Certifications</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;" id="certificationsContainer">
+              <!-- Populated via app.js -->
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="edu-card">
-            <h3 class="edu-degree">Technical & Analytical Stack</h3>
-            <div class="edu-inst">Econometric Software, Programming & Survey Instruments</div>
-            <div class="edu-timeline">Demonstrated proficiency across research projects</div>
-            
-            <div class="coursework-title">Statistical & Computational Tools</div>
-            <div class="hero-tags" style="margin-bottom: 1rem;">
-              <span class="tag tag-mono">Stata (Panel, DiD, IV)</span>
-              <span class="tag tag-mono">R (tidyverse, fixest, ggplot2)</span>
-              <span class="tag tag-mono">Python (pandas, statsmodels, bs4)</span>
-              <span class="tag tag-mono">QGIS (Spatial Mapping)</span>
-              <span class="tag tag-mono">LaTeX / Overleaf</span>
-              <span class="tag tag-mono">Excel (Advanced Modeling)</span>
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Volunteering Works</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;" id="volunteeringContainer">
+              <!-- Populated via app.js -->
             </div>
+          </div>
+        </div>
 
-            <div class="coursework-title">Methodological Proficiencies</div>
-            <div class="hero-tags">
-              <span class="tag">Household Survey Design (HIES/KoboToolbox)</span>
-              <span class="tag">Causal Inference</span>
-              <span class="tag">Policy Evaluation</span>
-              <span class="tag">Data Scraping & Cleaning</span>
-            </div>
+        <!-- Creative Works & Campaigns -->
+        <div style="margin-top: 3.5rem;">
+          <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Creative Video Campaigns & Direction (ECC & Summits)</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;" id="creativeWorksContainer">
+            <!-- Populated via app.js -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Inquiries Section -->
+    <!-- Contact & Collaboration Section -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Inquiries & Correspondence</span>
-          <h2 class="section-title">Connect & Collaborate</h2>
-          <p class="section-desc">
-            Open to research assistantships, pre-doctoral fellowships, collaborative empirical studies, and policy advisory engagements.
-          </p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-heading">Connect & Collaborate</h2>
+          <p class="section-subtext">Open to research assistantships, policy evaluation projects, and analytical roles.</p>
         </div>
 
-        <div class="contact-grid">
-          <!-- Form -->
-          <div class="contact-card">
-            <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Send a Message</h3>
-            <form id="academicContactForm">
-              <div class="form-group">
-                <label class="form-label" for="contactName">Full Name</label>
-                <input type="text" id="contactName" class="form-control" placeholder="e.g. Dr. Jane Doe" required>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;">
+          <!-- Inquiry Form -->
+          <div class="liquid-glass-card">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Transmit Inquiry</h3>
+            <form id="directInquiryForm">
+              <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Full Name</label>
+                <input type="text" class="input-glass" placeholder="Dr. / Prof. / Full Name" required>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="contactEmail">Affiliation / Institutional Email</label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="s-2022112154@econ.du.ac.bd" required>
+              <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Email Address</label>
+                <input type="email" class="input-glass" placeholder="name@organization.com" required>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="contactSubject">Inquiry Topic</label>
-                <select id="contactSubject" class="form-control" required>
-                  <option value="" disabled selected>Select an inquiry area...</option>
-                  <option value="research-collab">Research Collaboration</option>
-                  <option value="ra-position">Research Assistantship / Fellowship</option>
-                  <option value="policy-dialogue">Policy Brief / Parliamentary Discussion</option>
-                  <option value="data-inquiry">Replication Code / Dataset Query</option>
-                  <option value="other">General Academic Inquiries</option>
-                </select>
+              <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Message</label>
+                <textarea class="input-glass" style="min-height: 100px; resize: vertical;" placeholder="Outline collaboration, research scope, or inquiry..." required></textarea>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="contactMessage">Message</label>
-                <textarea id="contactMessage" class="form-control" placeholder="Please outline the scope of collaboration or inquiry..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                Send Academic Inquiry
+              <button type="submit" class="btn-glass btn-glass-primary" style="width: 100%;">
+                Send Message
               </button>
             </form>
           </div>
 
-          <!-- Channels -->
-          <div class="channels-list">
-            <div class="channel-box" onclick="copyEmailAddress()" style="cursor: pointer;">
-              <div class="channel-meta">
-                <span class="channel-title">Direct Academic Email</span>
-                <span class="channel-desc">Click to copy email address directly</span>
+          <!-- Direct Channels -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="liquid-glass-card" onclick="copyDirectEmail()" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 600;">Direct Email</h4>
+                <span style="font-size: 0.825rem; color: var(--accent-text);">inboxashikulislam@gmail.com</span>
               </div>
-              <button class="btn btn-sm btn-outline">Copy</button>
+              <button class="btn-glass" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Copy</button>
             </div>
 
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel-box">
-              <div class="channel-meta">
-                <span class="channel-title">LinkedIn Profile</span>
-                <span class="channel-desc">Professional updates and academic network</span>
+            <a href="http://cal.com/ashikul-islam-khan" target="_blank" rel="noopener" class="liquid-glass-card" style="display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 600;">Schedule Virtual Discussion</h4>
+                <span style="font-size: 0.825rem; color: var(--text-muted);">cal.com/ashikul-islam-khan</span>
               </div>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
 
-            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="channel-box">
-              <div class="channel-meta">
-                <span class="channel-title">GitHub Code Repository</span>
-                <span class="channel-desc">Replication packages for Stata, R, and Python</span>
-              </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-
-            <div class="channel-box">
-              <div class="channel-meta">
-                <span class="channel-title">Department Physical Address</span>
-                <span class="channel-desc">Department of Economics, Arts Building, University of Dhaka, Dhaka-1000, Bangladesh</span>
-              </div>
+            <div class="liquid-glass-card">
+              <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem;">Department Location</h4>
+              <p style="font-size: 0.825rem; color: var(--text-muted);">
+                Department of Economics, Arts Building, University of Dhaka, Dhaka-1000, Bangladesh.
+              </p>
             </div>
           </div>
         </div>
@@ -1554,610 +1293,1139 @@ textarea.form-control {
     </section>
   </main>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div>
-        <p style="font-size: 0.8125rem; color: var(--text-muted);">
-          &copy; 2026 Economics & Policy Research Dossier. All rights reserved.
-        </p>
-        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">
-          Designed with high academic craft, quiet chrome typography, and reproducible econometrics.
-        </p>
-      </div>
+  <!-- iOS Liquid Glass Floating Bottom Dock -->
+  <nav class="ios-glass-dock" aria-label="Floating Navigation Dock">
+    <button class="dock-item active" data-target="hero" onclick="scrollToSection('hero')" aria-label="Overview">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span class="dock-tooltip">Overview</span>
+    </button>
+    <button class="dock-item" data-target="skills" onclick="scrollToSection('skills')" aria-label="Skills">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <span class="dock-tooltip">Competencies</span>
+    </button>
+    <button class="dock-item" data-target="experience" onclick="scrollToSection('experience')" aria-label="Experience">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      <span class="dock-tooltip">Experience</span>
+    </button>
+    <button class="dock-item" data-target="research" onclick="scrollToSection('research')" aria-label="Research">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      <span class="dock-tooltip">Research</span>
+    </button>
+    <button class="dock-item" data-target="projects" onclick="scrollToSection('projects')" aria-label="Projects">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      <span class="dock-tooltip">Apps</span>
+    </button>
 
-      <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#data-lab">Data Lab</a></li>
-        <li><a href="#policy">Policy</a></li>
-        <li><a href="#" onclick="openCvModal(); return false;">Curriculum Vitae</a></li>
-      </ul>
-    </div>
-  </footer>
+    <div class="dock-divider"></div>
 
-  <!-- BibTeX Modal -->
-  <div class="modal-overlay" id="bibtexModal">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3 class="modal-title" id="bibtexModalTitle">BibTeX Citation</h3>
-        <button class="btn-icon" onclick="closeBibtexModal()" aria-label="Close modal">
+    <button class="dock-item" onclick="openCvModal()" aria-label="Curriculum Vitae">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+      <span class="dock-tooltip">Curriculum Vitae</span>
+    </button>
+    <button class="dock-item" onclick="toggleCustomizerDrawer()" aria-label="Edit Data">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+      <span class="dock-tooltip">Customizer</span>
+    </button>
+    <button class="dock-item" onclick="toggleThemeMode()" aria-label="Toggle Theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+      <span class="dock-tooltip">Theme</span>
+    </button>
+  </nav>
+
+  <!-- iOS Liquid Glass Snackbar (Toast) -->
+  <div class="liquid-snackbar" id="liquidSnackbar" role="status">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="snackbarText">Action completed successfully</span>
+  </div>
+
+  <!-- BibTeX Citation Modal -->
+  <div class="glass-modal-backdrop" id="bibtexModalBackdrop">
+    <div class="glass-modal-window">
+      <div class="modal-header-glass">
+        <div>
+          <h3 style="font-size: 1.15rem;" id="bibtexPaperTitle">BibTeX Citation</h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Standard academic citation format</span>
+        </div>
+        <button class="btn-icon-glass" onclick="closeBibtexModal()">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-      <div class="modal-body">
-        <pre class="code-block" id="bibtexCode"></pre>
+      <div class="modal-body-scroll">
+        <pre class="code-snippet-box" id="bibtexCodeSnippet"></pre>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline" onclick="closeBibtexModal()">Close</button>
-        <button class="btn btn-primary" onclick="copyBibtexCode()">Copy Citation</button>
+      <div style="padding: 1rem 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle);">
+        <button class="btn-glass" onclick="closeBibtexModal()">Close</button>
+        <button class="btn-glass btn-glass-primary" onclick="copyBibtexSnippet()">Copy Citation</button>
       </div>
     </div>
   </div>
 
-  <!-- Curriculum Vitae Modal -->
-  <div class="modal-overlay" id="cvModal">
-    <div class="modal-dialog" style="max-width: 820px;">
-      <div class="modal-header">
-        <h3 class="modal-title">Curriculum Vitae Summary</h3>
+  <!-- Curriculum Vitae Viewer Modal -->
+  <div class="glass-modal-backdrop" id="cvModalBackdrop">
+    <div class="glass-modal-window" style="max-width: 860px;">
+      <div class="modal-header-glass">
+        <div>
+          <h3 style="font-size: 1.25rem;">Curriculum Vitae Document</h3>
+          <span style="font-size: 0.78rem; color: var(--text-muted);">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</span>
+        </div>
         <div style="display: flex; gap: 0.5rem;">
-          <button class="btn btn-sm btn-outline" onclick="printCv()">
+          <button class="btn-glass" onclick="printCvDocument()">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            Print / PDF
+            Print / Save PDF
           </button>
-          <button class="btn-icon" onclick="closeCvModal()" aria-label="Close modal">
+          <button class="btn-icon-glass" onclick="closeCvModal()">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
         </div>
       </div>
-      <div class="modal-body" style="font-size: 0.875rem; line-height: 1.65;">
-        <div style="border-bottom: 1px solid var(--border-hairline); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-          <h2 style="font-size: 1.6rem; margin-bottom: 0.25rem;">Researcher & Economics Undergraduate</h2>
-          <p style="color: var(--text-muted); font-size: 0.8125rem;">
-            Department of Economics Â· University of Dhaka Â· Dhaka-1000, Bangladesh<br>
-            Specialization: Development Microeconomics, Applied Econometrics, Consumer Protection Policy
-          </p>
+      <div class="modal-body-scroll" style="font-size: 0.875rem; line-height: 1.65;">
+        <div style="border-bottom: 1px solid var(--glass-border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.6rem; margin-bottom: 0.25rem;">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</h2>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">
+            Shahbag, Dhaka, Bangladesh Â· +880 1753-932582 Â· inboxashikulislam@gmail.com Â· ashikulislamkhan.github.io
+          </div>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1rem; color: var(--accent-text); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Education</h4>
-          <div style="display: flex; justify-content: space-between; font-weight: 500;">
-            <span>Bachelor of Social Sciences (B.S.S. Hons) in Economics</span>
-            <span class="tabular-nums">Expected 2026/2027</span>
-          </div>
-          <div style="color: var(--text-muted); font-size: 0.8125rem;">University of Dhaka, Bangladesh</div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Professional Summary</h4>
+          <p style="font-size: 0.85rem;">Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI.</p>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1rem; color: var(--accent-text); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Leadership & Civic Engagements</h4>
-          <div style="margin-bottom: 0.75rem;">
-            <div style="display: flex; justify-content: space-between; font-weight: 500;">
-              <span>Youth Parliamentarian</span>
-              <span class="tabular-nums">2024 â€“ Present</span>
-            </div>
-            <div style="color: var(--text-muted); font-size: 0.8125rem;">Consumers Association of Bangladesh (CAB)</div>
-            <p style="font-size: 0.8125rem; margin-top: 0.25rem;">Advocating market transparency, food price monitoring, and consumer redress regulation.</p>
-          </div>
-          <div>
-            <div style="display: flex; justify-content: space-between; font-weight: 500;">
-              <span>Vice President</span>
-              <span class="tabular-nums">2024 â€“ Present</span>
-            </div>
-            <div style="color: var(--text-muted); font-size: 0.8125rem;">Economics Cultural Club (ECC), University of Dhaka</div>
-            <p style="font-size: 0.8125rem; margin-top: 0.25rem;">Organizing policy hackathons, academic seminars, and econometric workshops.</p>
-          </div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Work & Leadership Experience</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Research Intern</strong> â€” International Institute of SDGs & Public Policy Research (IISPPR) (Sep 2026 â€“ Present)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Youth Parliamentarian</strong> â€” Consumers Association of Bangladesh (CAB) (Sep 2025 â€“ Present)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Graphic Designer</strong> â€” Political and Policy Science Research Foundation (PPSRF) (May 2025 â€“ Present)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Vice President (Administration)</strong> â€” Economics Cultural Club, University of Dhaka (Sep 2024 â€“ Present)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Associate Member</strong> â€” Economics Study Center, University of Dhaka (May 2024 â€“ Oct 2026)</p>
         </div>
 
-        <div style="margin-bottom: 1rem;">
-          <h4 style="font-size: 1rem; color: var(--accent-text); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Analytical Toolset</h4>
-          <p style="font-size: 0.8125rem;">
-            <strong>Econometric & Data Languages:</strong> Stata (Microeconometrics, Panel, DiD, IV), R (fixest, tidyverse, ggplot2), Python (pandas, statsmodels, web scraping), QGIS.<br>
-            <strong>Survey & Methodological Skills:</strong> Household Survey Sampling, HIES analysis, Causal Inference, Policy Evaluation.
-          </p>
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Research Manuscripts</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Should Bangladesh Bank's Policy Move Towards Inflation Targeting?</strong> (Jan 2026)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform</strong> (Dec 2025)</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Energy Justice in Protecting Energy Rights</strong> (CAB Youth Parliament 2025 Handbook, Nov 2025)</p>
         </div>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline" onclick="closeCvModal()">Close</button>
-        <button class="btn btn-primary" onclick="printCv()">Print / Save PDF</button>
+      <div style="padding: 1rem 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle);">
+        <button class="btn-glass" onclick="closeCvModal()">Close</button>
+        <button class="btn-glass btn-glass-primary" onclick="printCvDocument()">Print / Save PDF</button>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-notice" id="toastNotice">Notification</div>
+  <!-- Live Content Customizer Drawer -->
+  <aside class="customizer-drawer" id="customizerDrawer">
+    <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--glass-border-subtle); display: flex; align-items: center; justify-content: space-between;">
+      <div>
+        <h3 style="font-size: 1.1rem;">Portfolio Customizer</h3>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">Edit live JSON data configuration</span>
+      </div>
+      <button class="btn-icon-glass" onclick="toggleCustomizerDrawer()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div style="flex: 1; padding: 1rem 1.5rem; overflow-y: auto;">
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+        Modify your profile, add new research papers, or update work experience here. Click <strong>Apply Changes</strong> to re-render in real time or <strong>Export File</strong> to save your new <code>portfolio-data.js</code>.
+      </p>
+      <textarea id="customizerJsonArea" style="width: 100%; height: calc(100% - 100px); font-family: var(--font-mono); font-size: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--glass-border-subtle); background: var(--bg-surface); color: var(--text-primary); padding: 0.75rem; outline: none;"></textarea>
+    </div>
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--glass-border-subtle); display: flex; gap: 0.5rem;">
+      <button class="btn-glass" onclick="downloadConfigJs()" style="flex: 1; font-size: 0.775rem;">Export File</button>
+      <button class="btn-glass btn-glass-primary" onclick="applyLiveCustomization()" style="flex: 1; font-size: 0.775rem;">Apply Changes</button>
+    </div>
+  </aside>
 
+  <!-- Data Store & Controller Scripts -->
   <script>
-// Academic & Development Economics Portfolio Engine
+/**
+ * =========================================================================
+ * ASHIKUL ISLAM KHAN - PORTFOLIO CONFIGURATION DATA STORE
+ * =========================================================================
+ * 
+ * ðŸ’¡ EDITING GUIDE:
+ * Every segment of this website is dynamically driven by this file.
+ * To add, remove, or modify any section:
+ * 1. Simply edit the objects or arrays below.
+ * 2. Save the file. The website updates automatically!
+ * =========================================================================
+ */
 
-// Research Papers Data
-const papersData = [
-  {
-    id: "food-price-volatility-2026",
-    title: "Food Price Volatility, Inflationary Pressures, and Household Welfare: Evidence from High-Frequency Market Surveys in Urban Dhaka",
-    authors: "Ashikul Islam Khan*, Dr. Fahmida Khatun (Advisory Supervisor)",
-    venue: "Working Paper Series, Department of Economics, University of Dhaka",
-    year: "2026",
-    status: "Working Paper",
-    category: "development",
-    jel: ["D12", "E31", "I31", "O12"],
-    methodology: ["Difference-in-Differences", "High-Frequency Panel", "Stata"],
-    abstract: "This paper investigates the transmission mechanism of commodity price spikes into urban household consumption baskets following supply disruptions in wholesale trading hubs of Dhaka. Utilizing a balanced 14-month panel of 1,240 urban low-and-middle income households alongside daily wholesale-retail commodity price telemetry, we estimate short-run compensatory price elasticities and calorie substitution rates. Findings demonstrate an asymmetric pass-through where retail food margins expand by 18.4% during wholesale surges but contract by only 5.2% during gluts, exacerbating real income erosion among the bottom two quintiles.",
-    bibtex: `@techreport{khan2026food,
-  title={Food Price Volatility, Inflationary Pressures, and Household Welfare: Evidence from High-Frequency Market Surveys in Urban Dhaka},
-  author={Sadman, Ahnaf and Khatun, Fahmida},
-  institution={Department of Economics, University of Dhaka},
-  type={Working Paper},
+const PORTFOLIO_DATA = {
+  // -----------------------------------------------------------------------
+  // 1. PRIMARY PERSONAL PROFILE
+  // -----------------------------------------------------------------------
+  profile: {
+    fullName: "MD. ASHIKUL ISLAM",
+    preferredName: "Ashikul Islam Khan",
+    headline: "Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist",
+    location: "Shahbag, Dhaka, Bangladesh",
+    email: "inboxashikulislam@gmail.com",
+    academicEmail: "s-2022112154@econ.du.ac.bd",
+    phone: "+880 1753-932582",
+    institution: "Department of Economics, University of Dhaka",
+    statusBadge: "Final Year Undergraduate Â· Available for Research & Analytics Roles",
+    
+    bio: "Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI, supported by strong organizational and leadership skills. Seeking to apply analytical and research expertise to advance evidence-based policymaking, climate resilience, and sustainable socio-economic development in the international development sector.",
+    
+    socials: {
+      linkedin: "https://linkedin.com/in/ashikul-islam-khan",
+      github: "https://github.com/ashikulislamkhan",
+      researchgate: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
+      googlescholar: "https://scholar.google.com/citations?hl=en&authuser=3&user=39HR9nwAAAAJ",
+      orcid: "https://orcid.org/0009-0001-2470-6484",
+      calendly: "http://cal.com/ashikul-islam-khan",
+      resumePdf: "https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=sharing",
+      instagram: "https://instagram.com/ashikplays19",
+      xTwitter: "https://x.com/AshikulIslamK"
+    },
+
+    quickStats: [
+      { label: "University", val: "Univ of Dhaka" },
+      { label: "Program", val: "BSS Economics" },
+      { label: "Research Papers", val: "3 Manuscripts" },
+      { label: "English Score", val: "Duolingo 129" }
+    ]
+  },
+
+  // -----------------------------------------------------------------------
+  // 2. CORE COMPETENCIES & TOOLKIT
+  // -----------------------------------------------------------------------
+  competencies: [
+    {
+      category: "Economics & Research",
+      icon: "trending-up",
+      skills: ["Econometrics", "Policy Research", "Data Analysis", "Academic Writing", "Policy Advocacy", "Development Economics", "Environmental Economics", "Exchange Rate Pass-Through"]
+    },
+    {
+      category: "Technical & Data Science",
+      icon: "cpu",
+      skills: ["Python", "SQL", "Power BI", "Advanced Excel", "Data Visualization", "Microsoft Office Applications", "Stata (Basic)", "QGIS (Spatial Analysis)"]
+    },
+    {
+      category: "Creative & Media Production",
+      icon: "film",
+      skills: ["Graphic Designing", "Cinematography", "Video Editing", "Visual Storytelling", "Brand Identity", "Social Media Design", "Promotional Campaigns"]
+    },
+    {
+      category: "Leadership & Civic Action",
+      icon: "award",
+      skills: ["Leadership", "Communication", "Project Management", "Public Speaking & Presentation", "Climate Activism", "Cross-team Collaboration", "Event Logistics"]
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 3. WORK & PROFESSIONAL EXPERIENCE
+  // -----------------------------------------------------------------------
+  workExperience: [
+    {
+      id: "iisppr-intern",
+      role: "Research Intern",
+      organization: "International Institute of SDGs & Public Policy Research (IISPPR)",
+      location: "Aligarh, India (Remote)",
+      period: "Joined Sep 2026",
+      type: "Research & Policy",
+      achievements: [
+        "Selected as a Research Intern at the International Institute of SDGs & Public Policy Research.",
+        "Engaged in research on sustainable development and public policy.",
+        "Committed to strengthening research, analytical, and policy evaluation skills through practical experience."
+      ],
+      responsibilities: [
+        "Support research activities related to the Sustainable Development Goals and public policy.",
+        "Assist with literature reviews, data analysis, and research documentation.",
+        "Collaborate with the research team on ongoing projects and policy initiatives."
+      ]
+    },
+    {
+      id: "cab-parliamentarian",
+      role: "Youth Parliamentarian",
+      organization: "Consumers Association of Bangladesh (CAB)",
+      location: "Dhaka, Bangladesh",
+      period: "Sep 2025 â€“ Present",
+      type: "Policy & Governance",
+      achievements: [
+        "Authored and published a policy paper on Energy Justice and Consumer Rights in the CAB Youth Parliament 2025 Handbook.",
+        "Presented research findings before national leaders, policymakers, and stakeholders.",
+        "Contributed to evidence-based policy discussions on CAB's 13-point Energy Justice agenda."
+      ],
+      responsibilities: [
+        "Conducted policy research on energy justice, consumer rights, and sustainable energy governance.",
+        "Participated in parliamentary sessions, seminars, press briefings, and stakeholder engagements.",
+        "Collaborated with Youth Parliament members to develop and communicate policy recommendations."
+      ]
+    },
+    {
+      id: "ppsrf-designer",
+      role: "Graphic Designer",
+      organization: "Political and Policy Science Research Foundation (PPSRF)",
+      location: "Dhaka, Bangladesh",
+      period: "May 2025 â€“ Present",
+      type: "Design & Communications",
+      achievements: [
+        "Designed official visual materials for the 1st Political Science Conference.",
+        "Selected as Graphic Designer for the World Democracy Congress.",
+        "Contributed to the visual identity of PPSRF's flagship academic and policy events."
+      ],
+      responsibilities: [
+        "Designed branding, promotional, and event materials for conferences and institutional activities.",
+        "Collaborated with organizing committees to produce high-quality visual communications.",
+        "Maintained design consistency across digital and print media."
+      ]
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 4. LEADERSHIP EXPERIENCE
+  // -----------------------------------------------------------------------
+  leadershipExperience: [
+    {
+      id: "ecc-vp",
+      role: "Vice President (Administration)",
+      organization: "Economics Cultural Club, University of Dhaka",
+      location: "Dhaka, Bangladesh",
+      period: "Sep 2024 â€“ Present",
+      achievements: [
+        "Promoted from Secretary (Talent Acquisition) to Vice President (Administration).",
+        "Led talent selection for ECC Talent Hunt 2025 and 2026.",
+        "Organized flagship events including ECC Freshers' Breeze and ECC Nobohorshe Noboborshe."
+      ],
+      responsibilities: [
+        "Co-direct club administration, executive strategy, and daily operations with the President.",
+        "Resolve internal administrative bottlenecks to maintain smooth organizational workflow.",
+        "Direct organizing committees, volunteers, and stakeholders for seamless event execution."
+      ]
+    },
+    {
+      id: "esc-member",
+      role: "Associate Member",
+      organization: "Economics Study Center, University of Dhaka",
+      location: "Dhaka, Bangladesh",
+      period: "May 2024 â€“ Oct 2026",
+      achievements: [
+        "Contributed to the successful organization of the 6th Bangladesh Economics Summit (2025) and 7th Bangladesh Economics Summit (2026).",
+        "Supported the planning and execution of major academic programs and events at the Economics Study Center.",
+        "Strengthened organizational effectiveness through logistics coordination and cross-team collaboration."
+      ],
+      responsibilities: [
+        "Coordinated logistics and event operations for seminars, study circles, workshops, and flagship programs.",
+        "Collaborated with internal teams and external stakeholders using leadership, communication, coordination, and public relations skills.",
+        "Assisted in planning, organizing, and managing academic and policy-related events."
+      ]
+    },
+    {
+      id: "eca-associate",
+      role: "Associate (Organizing)",
+      organization: "Economics Career Alliance, University of Dhaka",
+      location: "Dhaka, Bangladesh",
+      period: "Oct 2023 â€“ Oct 2026",
+      achievements: [
+        "Contributed to organizing ECA Quizverse, ECA Career Expo, and The Colosseum II.",
+        "Supported the successful execution of career development and student engagement initiatives.",
+        "Strengthened event operations through effective logistics and team coordination."
+      ],
+      responsibilities: [
+        "Coordinated logistics and event management for career-focused programs.",
+        "Collaborated with organizing teams to plan and execute departmental events.",
+        "Communicated with participants, volunteers, and stakeholders to ensure smooth event operations."
+      ]
+    },
+    {
+      id: "aranyak-coordinator",
+      role: "Joint Coordinator of E3F",
+      organization: "ARANYAK",
+      location: "Barishal, Bangladesh",
+      period: "2021 â€“ 2023",
+      achievements: [
+        "Led environmental awareness and conservation initiatives promoting climate action and sustainability.",
+        "Organized tree plantation campaigns and environmental education programs for students and local communities.",
+        "Designed and implemented conservation activities that strengthened youth engagement in environmental stewardship."
+      ],
+      responsibilities: [
+        "Planned and coordinated environmental campaigns, seminars, and community outreach programs.",
+        "Led tree plantation initiatives and promoted climate and environmental awareness among students and the public.",
+        "Collaborated with volunteers and local stakeholders to implement conservation and sustainability initiatives."
+      ]
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 5. RESEARCH PAPERS & PUBLICATIONS
+  // -----------------------------------------------------------------------
+  researchWorks: [
+    {
+      id: "inflation-targeting-2026",
+      title: "Should Bangladesh Bank's Policy Move Towards Inflation Targeting?",
+      genre: "Monetary Economics Paper",
+      institution: "Department of Economics, University of Dhaka",
+      date: "Jan 2026",
+      location: "Dhaka, Bangladesh",
+      status: "Unpublished Research Manuscript",
+      description: "Analyzed 27 years of Bangladesh Bank data to evaluate the feasibility of inflation targeting using exchange rate pass-through (ERPT) econometric analysis.",
+      methodology: ["Exchange Rate Pass-Through", "Time Series Econometrics", "27-Year Macro Dataset"],
+      link: "https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds",
+      bibtex: `@article{khan2026inflation,
+  title={Should Bangladesh Bank's Policy Move Towards Inflation Targeting?},
+  author={Khan, Ashikul Islam},
+  journal={Department of Economics, University of Dhaka Working Papers},
   year={2026},
-  number={DU-ECON-WP-26-04}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
-  },
-  {
-    id: "micro-insurance-coastal-2025",
-    title: "Evaluating Index-Based Weather Micro-Insurance Uptake and Consumption Smoothing Among Agrarian Households in Coastal Bangladesh",
-    authors: "Ashikul Islam Khan*, Rafiqul Islam, Samira Chowdhury",
-    venue: "Preprint presented at Bangladesh Economic Association (BEA) Biennial Conference",
-    year: "2025",
-    status: "Conference Paper",
-    category: "econometrics",
-    jel: ["G22", "O13", "Q12", "Q54"],
-    methodology: ["Instrumental Variables (IV)", "Household Surveys", "R (fixest)"],
-    abstract: "Coastal agrarian communities in southwestern Bangladesh face accelerating cyclone severity and saline intrusion. We evaluate the pilot uptake of satellite-indexed rainfall and cyclone parametric micro-insurance among 850 smallholders in Satkhira and Khulna districts. Utilizing distance-to-weather-station and localized literacy peer effects as instrumental variables, we find insured households maintain 23% higher caloric stability during post-cyclone recovery periods and rely significantly less on distress livestock liquidation.",
-    bibtex: `@article{khan2025microinsurance,
-  title={Evaluating Index-Based Weather Micro-Insurance Uptake and Consumption Smoothing Among Agrarian Households in Coastal Bangladesh},
-  author={Sadman, Ahnaf and Islam, Rafiqul and Chowdhury, Samira},
-  journal={Working Papers in Environmental & Development Economics},
+  month={January},
+  address={Dhaka, Bangladesh}
+}`
+    },
+    {
+      id: "cuban-development-puzzle-2025",
+      title: "The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform",
+      genre: "Development Economics Paper",
+      institution: "Department of Economics, University of Dhaka",
+      date: "Dec 2025",
+      location: "Dhaka, Bangladesh",
+      status: "Unpublished Research Manuscript",
+      description: "Examined Cuba's development model by analyzing the relationship between human development, economic performance, institutional reforms, and sustainable development, with a focus on resilience, human capital, and policy challenges.",
+      methodology: ["Comparative Development", "Human Capital Index", "Institutional Policy Analysis"],
+      link: "https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle",
+      bibtex: `@article{khan2025cuba,
+  title={The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform},
+  author={Khan, Ashikul Islam},
+  journal={Department of Economics, University of Dhaka Working Papers},
   year={2025},
-  url={https://doi.org/10.xxxx/du-econ.2025.012}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
-  },
-  {
-    id: "digital-finance-consumer-protection-2025",
-    title: "Regulatory Arbitrage and Consumer Vulnerability in Digital Financial Services (DFS): An Empirical Audit of Redress Mechanisms",
-    authors: "Ashikul Islam Khan (Lead Investigator, CAB Youth Parliamentary Desk)",
-    venue: "Policy Monograph, Consumers Association of Bangladesh (CAB)",
-    year: "2025",
-    status: "Policy Paper",
-    category: "policy",
-    jel: ["D18", "K23", "O33", "G28"],
-    methodology: ["Mixed Methods", "Regulatory Audit", "Python NLP"],
-    abstract: "Digital micro-credit and mobile wallet applications have rapidly expanded across semi-urban Bangladesh, yet consumer dispute resolution remains fragmented. Analyzing 3,400 formal consumer grievances filed with regulatory ombudsman platforms and utilizing natural language parsing of grievance outcomes, this study highlights an average resolution latency exceeding 46 days for unauthorized deductions. We formulate a policy architecture for automated transaction dispute adjudication and real-time merchant disclosure.",
-    bibtex: `@report{khan2025dfs,
-  title={Regulatory Arbitrage and Consumer Vulnerability in Digital Financial Services: An Empirical Audit of Redress Mechanisms},
-  author={Sadman, Ahnaf},
-  institution={Consumers Association of Bangladesh (CAB)},
+  month={December},
+  address={Dhaka, Bangladesh}
+}`
+    },
+    {
+      id: "energy-justice-2025",
+      title: "Energy Justice in Protecting Energy Rights",
+      genre: "Conference Paper",
+      institution: "CAB Youth Parliament 2025",
+      date: "Nov 2025",
+      location: "Dhaka, Bangladesh",
+      status: "Published in Handbook",
+      description: "Published in the CAB Youth Parliament 2025 Handbook. Examined energy justice, consumer rights, renewable energy governance, and climate justice in Bangladesh.",
+      methodology: ["Policy Evaluation", "Consumer Equity Framework", "Renewable Energy Transition"],
+      link: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
+      bibtex: `@inproceedings{khan2025energyjustice,
+  title={Energy Justice in Protecting Energy Rights},
+  author={Khan, Ashikul Islam},
+  booktitle={Consumers Association of Bangladesh (CAB) Youth Parliament 2025 Handbook},
   year={2025},
-  type={Special Policy Brief}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
-  }
-];
+  month={November},
+  address={Dhaka, Bangladesh}
+}`
+    }
+  ],
 
-// Data Analytics & Computational Projects
-const projectsData = [
-  {
-    id: "hies-welfare-pipeline",
-    title: "National Household Welfare & Poverty Transition Pipeline",
-    desc: "End-to-end econometric pipeline analyzing multiple rounds of Bangladesh Household Income and Expenditure Survey (HIES). Automates consumption aggregate adjustments, Foster-Greer-Thorbecke (FGT) poverty indices, and multivariable probit regressions for vulnerability profiling.",
-    stack: ["Stata", "R (tidyverse)", "HIES Microdata"],
-    stats: [
-      { label: "Sample Size", val: "46,080 HH" },
-      { label: "Poverty Indicators", val: "12 Metrics" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
-  },
-  {
-    id: "market-syndicate-telemetry",
-    title: "Dhaka Retail Food Price Spatial Tracking & Arbitrage Scanner",
-    desc: "A spatial analytics tool web-scraping daily essential commodity wholesale rates (Karwan Bazar, Badamtoli) and retail prices across 18 municipal markets to detect geographic price disparities and synthetic markup divergence during festival cycles.",
-    stack: ["Python", "Pandas", "QGIS", "Plotly"],
-    stats: [
-      { label: "Daily Data Points", val: "1,850+" },
-      { label: "Markets Tracked", val: "18 Hubs" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
-  },
-  {
-    id: "macro-dashboard",
-    title: "Macroeconomic Dashboard: Inflation, Reserves & Remittance Tracker",
-    desc: "Interactive statistical dashboard aggregating Bangladesh Bank balance of payments, monthly wage rate index, and BBS consumer price indices to forecast real income degradation and foreign exchange reserve runway.",
-    stack: ["R Shiny", "timeDate", "ggplot2"],
-    stats: [
-      { label: "Series Frequency", val: "Monthly" },
-      { label: "Time Span", val: "2018â€“2026" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
-  }
-];
+  // -----------------------------------------------------------------------
+  // 6. APPS & SOFTWARE PROJECTS
+  // -----------------------------------------------------------------------
+  projects: [
+    {
+      id: "airshare",
+      name: "AirShare",
+      tagline: "Free Cloud File Sharing Platform",
+      description: "A lightweight, secure, and completely free web-based file-sharing cloud platform engineered for frictionless peer-to-peer file exchanges with automatic link expiration.",
+      stack: ["Web Technologies", "Cloud Storage API", "JavaScript", "Responsive UI"],
+      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      githubUrl: "https://github.com/ashikulislamkhan"
+    },
+    {
+      id: "konvert",
+      name: "KonVert",
+      tagline: "100% Client-Side Offline File Converter",
+      description: "A privacy-centric file conversion web application that processes files fully offline within the user's browser, eliminating data upload overhead and bandwidth usage.",
+      stack: ["WebAssembly", "JavaScript (ES6)", "HTML5 File API", "Tailwind CSS"],
+      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      githubUrl: "https://github.com/ashikulislamkhan"
+    },
+    {
+      id: "framefuse",
+      name: "FrameFuse",
+      tagline: "Offline Social Media Frame Applicator",
+      description: "A fast, offline-first canvas manipulation tool allowing organizations and conference attendees to seamlessly overlay campaign badges and event frames onto profile photos.",
+      stack: ["HTML5 Canvas", "JavaScript", "Image Processing", "Offline-first"],
+      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      githubUrl: "https://github.com/ashikulislamkhan"
+    },
+    {
+      id: "a2y",
+      name: "A2Y",
+      tagline: "Anonymous Web-Based Texting Utility",
+      description: "A minimalist anonymous communication web application prioritizing zero-log confidentiality and instantaneous ephemeral text transmissions.",
+      stack: ["WebSockets / Serverless", "JavaScript", "Security Architecture"],
+      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      githubUrl: "https://github.com/ashikulislamkhan"
+    }
+  ],
 
-// Chart Datasets
-const chartDatasets = {
-  inflation: {
-    title: "Consumer Price Index (CPI): Headline vs. Food Inflation (2024â€“2026)",
-    subtitle: "Source: Bangladesh Bureau of Statistics (BBS) & Field Telemetry Analysis",
-    labels: ["Jan 24", "Apr 24", "Jul 24", "Oct 24", "Jan 25", "Apr 25", "Jul 25", "Oct 25", "Jan 26", "Apr 26", "Jul 26", "Oct 26"],
-    datasets: [
-      {
-        label: "Food Inflation (%)",
-        data: [10.2, 10.8, 12.5, 12.8, 11.4, 10.9, 11.6, 12.2, 10.8, 9.9, 9.4, 8.8],
-        borderColor: "#1e3a8a",
-        backgroundColor: "rgba(30, 58, 138, 0.08)",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: true,
-        pointRadius: 3
-      },
-      {
-        label: "Headline CPI (%)",
-        data: [9.8, 9.7, 10.9, 10.6, 9.9, 9.6, 9.8, 10.1, 9.5, 8.9, 8.6, 8.2],
-        borderColor: "#64748b",
-        borderDash: [5, 5],
-        borderWidth: 2,
-        tension: 0.25,
-        fill: false,
-        pointRadius: 2
-      }
-    ]
-  },
-  welfare: {
-    title: "Nominal Wage Rate Index (WRI) vs. Cost of Food Basket (Base 2023 = 100)",
-    subtitle: "Simulating urban low-income purchasing power erosion over time",
-    labels: ["Jan 24", "Apr 24", "Jul 24", "Oct 24", "Jan 25", "Apr 25", "Jul 25", "Oct 25", "Jan 26", "Apr 26", "Jul 26", "Oct 26"],
-    datasets: [
-      {
-        label: "Food Basket Cost Index",
-        data: [108, 112, 124, 128, 131, 134, 142, 147, 150, 153, 156, 158],
-        borderColor: "#991b1b",
-        backgroundColor: "rgba(153, 27, 27, 0.06)",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: true,
-        pointRadius: 3
-      },
-      {
-        label: "Nominal Wage Rate Index",
-        data: [105, 107, 111, 114, 118, 121, 125, 128, 132, 135, 138, 142],
-        borderColor: "#0f766e",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: false,
-        pointRadius: 3
-      }
-    ]
-  },
-  resilience: {
-    title: "Estimated Coping Mechanisms during Price Shocks by Income Quintile",
-    subtitle: "Share of households reporting non-sustainable coping strategies (Debt vs. Asset Sale)",
-    labels: ["Q1 (Poorest 20%)", "Q2 (Lower Middle)", "Q3 (Middle)", "Q4 (Upper Middle)", "Q5 (Richest 20%)"],
-    datasets: [
-      {
-        label: "Consumption Curtailment / Calorie Reduction (%)",
-        data: [58.4, 42.1, 23.5, 11.2, 3.4],
-        backgroundColor: "#1e3a8a",
-        borderRadius: 4
-      },
-      {
-        label: "High-Interest Informal Borrowing (%)",
-        data: [46.2, 31.8, 16.4, 6.1, 1.2],
-        backgroundColor: "#64748b",
-        borderRadius: 4
-      }
-    ]
-  }
+  // -----------------------------------------------------------------------
+  // 7. EDUCATIONAL QUALIFICATIONS
+  // -----------------------------------------------------------------------
+  education: [
+    {
+      degree: "Bachelor of Social Science (BSS) in Economics",
+      institution: "University of Dhaka",
+      timeline: "Final Year Undergraduate",
+      location: "Dhaka, Bangladesh",
+      detail: "Specializing in Development Economics, Econometrics, and Public Policy Analysis."
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC) in Humanities",
+      institution: "Amrita Lal Dey College, Barishal",
+      timeline: "Graduated",
+      location: "Barishal, Bangladesh",
+      detail: "Result: GPA 5.00 / 5.00"
+    },
+    {
+      degree: "Secondary School Certificate (SSC) in Humanities",
+      institution: "Kaunia Govt. Secondary School, Barishal",
+      timeline: "Graduated",
+      location: "Barishal, Bangladesh",
+      detail: "Result: GPA 5.00 / 5.00"
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 8. TRAINING & CERTIFICATIONS
+  // -----------------------------------------------------------------------
+  certifications: [
+    {
+      title: "Students in Energy Security and Just Energy Transition Workshop",
+      issuer: "Consumers Association of Bangladesh (CAB)",
+      year: "2026",
+      location: "Dhaka, Bangladesh"
+    },
+    {
+      title: "Climate and Environmental Policy 101",
+      issuer: "AYO Academy | ASEAN Youth Organization",
+      year: "2026",
+      location: "International"
+    },
+    {
+      title: "Air Diary Challenge",
+      issuer: "Youth4Nature Fellowship Program",
+      year: "2026",
+      location: "Global"
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 9. VOLUNTEERING WORKS
+  // -----------------------------------------------------------------------
+  volunteering: [
+    {
+      role: "Volunteer (Public Relations)",
+      organization: "South Asian Network on Economic Modeling (SANEM)",
+      date: "Feb 2025",
+      location: "Dhaka, Bangladesh",
+      achievements: [
+        "Supported public relations and participant engagement for the 8th SANEM Annual Economists' Conference (SAEC) 2025.",
+        "Assisted in communication and coordination to ensure smooth event operations."
+      ]
+    },
+    {
+      role: "Volunteer (Logistics)",
+      organization: "Economics Study Center, University of Dhaka",
+      date: "Feb 2025, Apr 2026",
+      location: "Dhaka, Bangladesh",
+      achievements: [
+        "Provided logistics support for the 6th and 7th Bangladesh Economics Summit (BES) 2025 & 2026.",
+        "Assisted in coordinating event operations and participant management."
+      ]
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 10. CREATIVE & MEDIA WORKS (SUMMITS & ECC)
+  // -----------------------------------------------------------------------
+  creativeWorks: [
+    { title: "6th Bangladesh Economics Summit (BES 2025) Promo Campaign", role: "Cinematography & Editing" },
+    { title: "BES 2025 EconQuest Economics Olympiad Promo Video", role: "Visual Direction & Editing" },
+    { title: "ECC Freshers' Breeze 2025 Official Promo", role: "Direction & Video Production" },
+    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing" },
+    { title: "ECC Nobohorshe Noboborshe 1432 Cultural Promo", role: "Motion Design & Video Editing" }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 11. LANGUAGES & PERSONAL
+  // -----------------------------------------------------------------------
+  languages: [
+    { name: "Bangla", proficiency: "Native" },
+    { name: "English", proficiency: "Fluent (Duolingo English Test Score: 129)" }
+  ],
+
+  personalInterests: ["Football", "Astrophotography", "Tree Plantation & Conservation", "Distance Running", "Music"]
 };
 
-let macroChart = null;
-
-// Initialize Chart
-function renderMacroChart(metricKey = "inflation") {
-  const ctx = document.getElementById("macroChartCanvas");
-  if (!ctx) return;
-  
-  const chartData = chartDatasets[metricKey];
-  if (!chartData) return;
-  
-  document.getElementById("chartHeading").textContent = chartData.title;
-  document.getElementById("chartSubheading").textContent = chartData.subtitle;
-  
-  if (macroChart) {
-    macroChart.destroy();
-  }
-  
-  const isResilience = metricKey === "resilience";
-  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  const gridColor = isDark ? "rgba(255, 255, 255, 0.06)" : "rgba(15, 23, 42, 0.06)";
-  const textColor = isDark ? "#94a3b8" : "#64748b";
-  
-  macroChart = new Chart(ctx, {
-    type: isResilience ? "bar" : "line",
-    data: {
-      labels: chartData.labels,
-      datasets: chartData.datasets
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: "top",
-          align: "end",
-          labels: {
-            boxWidth: 12,
-            boxHeight: 12,
-            color: textColor,
-            font: {
-              family: "Inter",
-              size: 11
-            }
-          }
-        },
-        tooltip: {
-          backgroundColor: isDark ? "#1e293b" : "#0f172a",
-          titleFont: { family: "Inter", size: 12, weight: "600" },
-          bodyFont: { family: "JetBrains Mono", size: 11 },
-          padding: 10,
-          cornerRadius: 6
-        }
-      },
-      scales: {
-        x: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, font: { family: "Inter", size: 11 } }
-        },
-        y: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, font: { family: "JetBrains Mono", size: 11 } }
-        }
-      }
-    }
-  });
+// Export for browser global context
+if (typeof window !== "undefined") {
+  window.PORTFOLIO_DATA = PORTFOLIO_DATA;
 }
 
-// Render Research Papers
-function renderPapers(filter = "all", searchQuery = "") {
-  const container = document.getElementById("papersList");
+</script>
+  <script>
+/**
+ * =========================================================================
+ * ASHIKUL ISLAM KHAN - LIQUID GLASS PORTFOLIO CONTROLLER & RENDER ENGINE
+ * =========================================================================
+ */
+
+// Global active tab & state
+let activeCategory = "all";
+let activeSearchQuery = "";
+let snackbarTimer = null;
+
+// Initialize on DOM load
+document.addEventListener("DOMContentLoaded", () => {
+  // Check theme preference
+  const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  // Initial UI Render from PORTFOLIO_DATA
+  renderHeroAndProfile();
+  renderCompetencies();
+  renderExperience(activeCategory, activeSearchQuery);
+  renderResearch(activeSearchQuery);
+  renderProjects(activeSearchQuery);
+  renderEducation();
+  renderCertificationsAndVolunteering();
+  renderCreativeWorks();
+
+  // Setup Event Listeners
+  setupNavigationEvents();
+  setupSegmentedTabs();
+  setupSearchInput();
+  setupDockObserver();
+});
+
+// -------------------------------------------------------------------------
+// 1. Render Hero & Profile Summary
+// -------------------------------------------------------------------------
+function renderHeroAndProfile() {
+  const data = window.PORTFOLIO_DATA.profile;
+  if (!data) return;
+
+  // Name & Headings
+  const heroName = document.getElementById("heroFullName");
+  const heroTagline = document.getElementById("heroTagline");
+  const heroBio = document.getElementById("heroBio");
+  const heroStatus = document.getElementById("heroStatusText");
+  const brandName = document.getElementById("brandNameText");
+
+  if (heroName) heroName.textContent = data.fullName;
+  if (heroTagline) heroTagline.textContent = data.headline;
+  if (heroBio) heroBio.textContent = data.bio;
+  if (heroStatus) heroStatus.textContent = data.statusBadge;
+  if (brandName) brandName.textContent = data.preferredName;
+
+  // Quick Stats
+  const statsContainer = document.getElementById("dossierStatsGrid");
+  if (statsContainer && data.quickStats) {
+    statsContainer.innerHTML = data.quickStats.map(stat => `
+      <div class="dossier-stat-box">
+        <span class="dossier-stat-num">${stat.val}</span>
+        <span class="dossier-stat-label">${stat.label}</span>
+      </div>
+    `).join("");
+  }
+
+  // Contact list
+  const contactContainer = document.getElementById("dossierContactList");
+  if (contactContainer) {
+    contactContainer.innerHTML = `
+      <li class="dossier-contact-item">
+        <span>Location</span>
+        <span class="tabular-nums" style="font-weight: 500;">${data.location}</span>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Email</span>
+        <a href="mailto:${data.email}" style="color: var(--accent-text); font-weight: 500;">${data.email}</a>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Phone</span>
+        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="color: var(--text-primary);">${data.phone}</a>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Institution</span>
+        <span style="font-weight: 500;">Univ of Dhaka</span>
+      </li>
+    `;
+  }
+}
+
+// -------------------------------------------------------------------------
+// 2. Render Core Competencies
+// -------------------------------------------------------------------------
+function renderCompetencies() {
+  const container = document.getElementById("competenciesContainer");
+  const list = window.PORTFOLIO_DATA.competencies;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card competency-card">
+      <div>
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-text);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          ${item.category}
+        </h3>
+        <div class="skill-chips">
+          ${item.skills.map(s => `<span class="pill-tag">${s}</span>`).join("")}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 3. Render Work & Leadership Experience
+// -------------------------------------------------------------------------
+function renderExperience(category = "all", query = "") {
+  const container = document.getElementById("experienceContainer");
   if (!container) return;
-  
-  const filtered = papersData.filter(paper => {
-    const matchesFilter = filter === "all" || paper.category === filter;
-    const query = searchQuery.toLowerCase().trim();
-    const matchesSearch = query === "" || 
-      paper.title.toLowerCase().includes(query) ||
-      paper.abstract.toLowerCase().includes(query) ||
-      paper.methodology.some(m => m.toLowerCase().includes(query)) ||
-      paper.jel.some(j => j.toLowerCase().includes(query));
-    return matchesFilter && matchesSearch;
+
+  const work = window.PORTFOLIO_DATA.workExperience || [];
+  const leadership = window.PORTFOLIO_DATA.leadershipExperience || [];
+  const combined = [...work, ...leadership];
+
+  const q = query.toLowerCase().trim();
+  const filtered = combined.filter(item => {
+    const isLeadership = leadership.some(l => l.id === item.id);
+    const matchesCategory = 
+      category === "all" ||
+      (category === "work" && !isLeadership) ||
+      (category === "leadership" && isLeadership);
+
+    const matchesSearch = !q || 
+      item.role.toLowerCase().includes(q) ||
+      item.organization.toLowerCase().includes(q) ||
+      (item.achievements && item.achievements.some(a => a.toLowerCase().includes(q))) ||
+      (item.responsibilities && item.responsibilities.some(r => r.toLowerCase().includes(q)));
+
+    return matchesCategory && matchesSearch;
   });
-  
+
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="padding: 3rem; text-align: center; background: var(--bg-surface); border: 1px dashed var(--border-hairline); border-radius: var(--radius-md);">
-        <p style="color: var(--text-muted); font-size: 0.95rem;">No publications or working papers found matching your criteria.</p>
+      <div class="liquid-glass-card" style="text-align: center; padding: 2.5rem;">
+        <p style="color: var(--text-muted);">No experience entries match your query.</p>
       </div>
     `;
     return;
   }
-  
-  container.innerHTML = filtered.map(paper => `
-    <article class="paper-card" id="${paper.id}">
-      <div class="paper-meta-top">
-        <span class="paper-status-badge">${paper.status} (${paper.year})</span>
-        <span class="paper-date">${paper.venue}</span>
-      </div>
-      <h3 class="paper-title">${paper.title}</h3>
-      <div class="paper-authors">${paper.authors}</div>
-      <p class="paper-abstract">${paper.abstract}</p>
-      
-      <div class="paper-tags-row">
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-right: 0.25rem;">JEL:</span>
-        ${paper.jel.map(code => `<span class="tag tag-mono">${code}</span>`).join(" ")}
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; margin-right: 0.25rem;">Methods:</span>
-        ${paper.methodology.map(m => `<span class="tag">${m}</span>`).join(" ")}
+
+  container.innerHTML = filtered.map(item => `
+    <article class="liquid-glass-card exp-card">
+      <div class="exp-header">
+        <div>
+          <h3 class="exp-role-title">${item.role}</h3>
+          <span class="exp-org-badge">${item.organization}</span>
+        </div>
+        <div style="text-align: right;">
+          <span class="exp-meta-tag tabular-nums">${item.period}</span>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${item.location}</div>
+        </div>
       </div>
 
-      <div class="paper-footer">
-        <div class="paper-actions">
-          <button class="btn btn-sm btn-outline" onclick="openBibtexModal('${paper.id}')">
+      ${item.achievements && item.achievements.length > 0 ? `
+        <div class="exp-achievements-title">Key Accomplishments</div>
+        <ul class="exp-bullet-list">
+          ${item.achievements.map(ach => `<li>${ach}</li>`).join("")}
+        </ul>
+      ` : ""}
+
+      ${item.responsibilities && item.responsibilities.length > 0 ? `
+        <div class="exp-achievements-title" style="margin-top: 0.85rem;">Core Responsibilities</div>
+        <ul class="exp-bullet-list">
+          ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
+        </ul>
+      ` : ""}
+    </article>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 4. Render Research Papers & Publications
+// -------------------------------------------------------------------------
+function renderResearch(query = "") {
+  const container = document.getElementById("researchContainer");
+  const list = window.PORTFOLIO_DATA.researchWorks;
+  if (!container || !list) return;
+
+  const q = query.toLowerCase().trim();
+  const filtered = list.filter(item => {
+    return !q ||
+      item.title.toLowerCase().includes(q) ||
+      item.description.toLowerCase().includes(q) ||
+      item.genre.toLowerCase().includes(q) ||
+      (item.methodology && item.methodology.some(m => m.toLowerCase().includes(q)));
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="liquid-glass-card" style="text-align: center; padding: 2.5rem;">
+        <p style="color: var(--text-muted);">No research papers found matching your criteria.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => `
+    <article class="liquid-glass-card research-card">
+      <div class="research-card-top">
+        <span class="pill-tag pill-tag-mono">${item.genre} (${item.date})</span>
+        <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted);">${item.status}</span>
+      </div>
+
+      <h3 class="research-title">${item.title}</h3>
+      <div style="font-size: 0.85rem; color: var(--accent-text); font-weight: 500; margin-bottom: 0.75rem;">
+        ${item.institution} Â· ${item.location}
+      </div>
+
+      <p class="research-desc">${item.description}</p>
+
+      <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+        ${item.methodology.map(m => `<span class="pill-tag">${m}</span>`).join("")}
+      </div>
+
+      <div class="research-actions">
+        <div style="display: flex; gap: 0.65rem;">
+          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            ResearchGate
+          </a>
+          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
             BibTeX
           </button>
-          <button class="btn btn-sm btn-outline" onclick="showToast('Working paper PDF manuscript link requested')">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Draft PDF
-          </button>
         </div>
-        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);">Peer review in progress</span>
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Evidence-based empirical study</span>
       </div>
     </article>
   `).join("");
 }
 
-// Render Data Projects
-function renderProjects() {
-  const container = document.getElementById("projectsList");
-  if (!container) return;
-  
-  container.innerHTML = projectsData.map(proj => `
-    <div class="project-card">
-      <div class="project-top">
-        <h3 class="project-title">${proj.title}</h3>
-        <p class="project-desc">${proj.desc}</p>
-        <div class="project-stats-grid">
-          ${proj.stats.map(s => `
-            <div class="stat-item">
-              <span class="stat-num">${s.val}</span>
-              <span class="stat-label">${s.label}</span>
-            </div>
-          `).join("")}
+// -------------------------------------------------------------------------
+// 5. Render Software & Applications Built
+// -------------------------------------------------------------------------
+function renderProjects(query = "") {
+  const container = document.getElementById("projectsContainer");
+  const list = window.PORTFOLIO_DATA.projects;
+  if (!container || !list) return;
+
+  const q = query.toLowerCase().trim();
+  const filtered = list.filter(item => {
+    return !q ||
+      item.name.toLowerCase().includes(q) ||
+      item.tagline.toLowerCase().includes(q) ||
+      item.description.toLowerCase().includes(q) ||
+      (item.stack && item.stack.some(s => s.toLowerCase().includes(q)));
+  });
+
+  container.innerHTML = filtered.map(item => `
+    <div class="liquid-glass-card project-card">
+      <div>
+        <div class="project-header-row">
+          <h3 class="project-title">${item.name}</h3>
+          <span class="pill-tag pill-tag-mono">App</span>
         </div>
-        <div class="hero-tags" style="margin-bottom: 0;">
-          ${proj.stack.map(tech => `<span class="tag tag-mono">${tech}</span>`).join("")}
+        <div class="project-tagline">${item.tagline}</div>
+        <p style="font-size: 0.875rem; margin-bottom: 1rem;">${item.description}</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+          ${item.stack.map(st => `<span class="pill-tag pill-tag-mono" style="font-size: 0.7rem;">${st}</span>`).join("")}
         </div>
       </div>
-      <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--border-hairline); padding-top: 1rem;">
-        <a href="${proj.codeUrl}" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="flex: 1;">
+      <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle); padding-top: 1rem;">
+        <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.4rem 0.6rem; font-size: 0.8rem;">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          Replication Code
+          Repository
         </a>
       </div>
     </div>
   `).join("");
 }
 
-// BibTeX Modal Functions
+// -------------------------------------------------------------------------
+// 6. Render Education
+// -------------------------------------------------------------------------
+function renderEducation() {
+  const container = document.getElementById("educationContainer");
+  const list = window.PORTFOLIO_DATA.education;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="font-size: 1.15rem;">${item.degree}</h3>
+        <span class="pill-tag pill-tag-mono">${item.timeline}</span>
+      </div>
+      <div style="font-size: 0.9rem; color: var(--accent-text); font-weight: 500; margin-bottom: 0.35rem;">
+        ${item.institution} Â· ${item.location}
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">${item.detail}</p>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 7. Render Certifications & Volunteering
+// -------------------------------------------------------------------------
+function renderCertificationsAndVolunteering() {
+  const certContainer = document.getElementById("certificationsContainer");
+  const certs = window.PORTFOLIO_DATA.certifications;
+  if (certContainer && certs) {
+    certContainer.innerHTML = certs.map(c => `
+      <div class="liquid-glass-card" style="padding: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 600;">${c.title}</h4>
+          <span class="tabular-nums" style="font-size: 0.75rem; color: var(--text-muted);">${c.year}</span>
+        </div>
+        <div style="font-size: 0.825rem; color: var(--accent-text);">${c.issuer}</div>
+      </div>
+    `).join("");
+  }
+
+  const volContainer = document.getElementById("volunteeringContainer");
+  const vols = window.PORTFOLIO_DATA.volunteering;
+  if (volContainer && vols) {
+    volContainer.innerHTML = vols.map(v => `
+      <div class="liquid-glass-card" style="padding: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 600;">${v.role}</h4>
+          <span class="tabular-nums" style="font-size: 0.75rem; color: var(--text-muted);">${v.date}</span>
+        </div>
+        <div style="font-size: 0.825rem; color: var(--accent-text); margin-bottom: 0.5rem;">${v.organization}</div>
+        <ul class="exp-bullet-list" style="font-size: 0.825rem;">
+          ${v.achievements.map(a => `<li>${a}</li>`).join("")}
+        </ul>
+      </div>
+    `).join("");
+  }
+}
+
+// -------------------------------------------------------------------------
+// 8. Render Creative & Media Works
+// -------------------------------------------------------------------------
+function renderCreativeWorks() {
+  const container = document.getElementById("creativeWorksContainer");
+  const list = window.PORTFOLIO_DATA.creativeWorks;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.15rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+      <div>
+        <h4 style="font-size: 0.925rem; font-weight: 500;">${item.title}</h4>
+        <span style="font-size: 0.775rem; color: var(--accent-text);">${item.role}</span>
+      </div>
+      <span class="pill-tag pill-tag-mono">Media</span>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 9. Segmented Tabs & Search Controls
+// -------------------------------------------------------------------------
+function setupSegmentedTabs() {
+  const tabs = document.querySelectorAll(".liquid-tab-btn");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      activeCategory = tab.getAttribute("data-category");
+      renderExperience(activeCategory, activeSearchQuery);
+      showSnackbar(`Filtered: ${tab.textContent.trim()}`);
+    });
+  });
+}
+
+function setupSearchInput() {
+  const input = document.getElementById("globalSearchInput");
+  if (!input) return;
+
+  input.addEventListener("input", (e) => {
+    activeSearchQuery = e.target.value;
+    renderExperience(activeCategory, activeSearchQuery);
+    renderResearch(activeSearchQuery);
+    renderProjects(activeSearchQuery);
+  });
+}
+
+// -------------------------------------------------------------------------
+// 10. iOS Liquid Glass Dock & ScrollSpy
+// -------------------------------------------------------------------------
+function setupDockObserver() {
+  const sections = document.querySelectorAll("section[id]");
+  const dockItems = document.querySelectorAll(".dock-item[data-target]");
+
+  window.addEventListener("scroll", () => {
+    let currentId = "";
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 200;
+      if (window.scrollY >= top) {
+        currentId = sec.getAttribute("id");
+      }
+    });
+
+    dockItems.forEach(item => {
+      item.classList.remove("active");
+      if (item.getAttribute("data-target") === currentId) {
+        item.classList.add("active");
+      }
+    });
+  }, { passive: true });
+}
+
+function scrollToSection(sectionId) {
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// -------------------------------------------------------------------------
+// 11. iOS Liquid Glass Snackbar Utility
+// -------------------------------------------------------------------------
+function showSnackbar(message) {
+  const bar = document.getElementById("liquidSnackbar");
+  const text = document.getElementById("snackbarText");
+  if (!bar || !text) return;
+
+  text.textContent = message;
+  bar.classList.add("show");
+
+  if (snackbarTimer) clearTimeout(snackbarTimer);
+  snackbarTimer = setTimeout(() => {
+    bar.classList.remove("show");
+  }, 2600);
+}
+
+// -------------------------------------------------------------------------
+// 12. BibTeX & CV Modals
+// -------------------------------------------------------------------------
 function openBibtexModal(paperId) {
-  const paper = papersData.find(p => p.id === paperId);
+  const papers = window.PORTFOLIO_DATA.researchWorks || [];
+  const paper = papers.find(p => p.id === paperId);
   if (!paper) return;
-  
-  const modal = document.getElementById("bibtexModal");
-  const codeElem = document.getElementById("bibtexCode");
-  const titleElem = document.getElementById("bibtexModalTitle");
-  
-  titleElem.textContent = "BibTeX Citation";
-  codeElem.textContent = paper.bibtex;
-  modal.classList.add("active");
+
+  const modal = document.getElementById("bibtexModalBackdrop");
+  const codeBox = document.getElementById("bibtexCodeSnippet");
+  const title = document.getElementById("bibtexPaperTitle");
+
+  if (title) title.textContent = paper.title;
+  if (codeBox) codeBox.textContent = paper.bibtex;
+  if (modal) modal.classList.add("active");
 }
 
 function closeBibtexModal() {
-  document.getElementById("bibtexModal").classList.remove("active");
+  const modal = document.getElementById("bibtexModalBackdrop");
+  if (modal) modal.classList.remove("active");
 }
 
-function copyBibtexCode() {
-  const code = document.getElementById("bibtexCode").textContent;
-  navigator.clipboard.writeText(code).then(() => {
-    showToast("BibTeX citation copied to clipboard");
+function copyBibtexSnippet() {
+  const codeBox = document.getElementById("bibtexCodeSnippet");
+  if (!codeBox) return;
+
+  navigator.clipboard.writeText(codeBox.textContent).then(() => {
+    showSnackbar("BibTeX citation copied to clipboard!");
   }).catch(() => {
-    showToast("Selected and ready to copy");
+    showSnackbar("Ready to copy");
   });
 }
 
-// CV Modal Functions
 function openCvModal() {
-  document.getElementById("cvModal").classList.add("active");
+  const modal = document.getElementById("cvModalBackdrop");
+  if (modal) modal.classList.add("active");
 }
 
 function closeCvModal() {
-  document.getElementById("cvModal").classList.remove("active");
+  const modal = document.getElementById("cvModalBackdrop");
+  if (modal) modal.classList.remove("active");
 }
 
-function printCv() {
+function printCvDocument() {
   window.print();
 }
 
-// Toast Function
-let toastTimer = null;
-function showToast(message) {
-  const toast = document.getElementById("toastNotice");
-  if (!toast) return;
-  
-  toast.textContent = message;
-  toast.classList.add("show");
-  
-  if (toastTimer) clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2800);
+// -------------------------------------------------------------------------
+// 13. Theme Switcher & Clipboard
+// -------------------------------------------------------------------------
+function toggleThemeMode() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("portfolio-theme", next);
+  showSnackbar(`Switched to ${next === "dark" ? "Dusk" : "Daylight"} mode`);
 }
 
-// Copy Email Utility
-function copyEmailAddress(email = "s-2022112154@econ.du.ac.bd") {
+function copyDirectEmail() {
+  const email = window.PORTFOLIO_DATA.profile.email;
   navigator.clipboard.writeText(email).then(() => {
-    showToast(`Copied ${email} to clipboard`);
+    showSnackbar(`Copied ${email} to clipboard!`);
   }).catch(() => {
-    showToast(`Email: ${email}`);
+    showSnackbar(`Email: ${email}`);
   });
 }
 
-// Theme Toggle
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const targetTheme = currentTheme === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", targetTheme);
-  localStorage.setItem("user-theme", targetTheme);
+// -------------------------------------------------------------------------
+// 14. Live Content Customizer Drawer
+// -------------------------------------------------------------------------
+function toggleCustomizerDrawer() {
+  const drawer = document.getElementById("customizerDrawer");
+  if (!drawer) return;
+  drawer.classList.toggle("open");
   
-  // Re-render chart to adapt colors
-  const activeBtn = document.querySelector(".chart-control-btn.active");
-  const metric = activeBtn ? activeBtn.getAttribute("data-metric") : "inflation";
-  renderMacroChart(metric);
+  if (drawer.classList.contains("open")) {
+    const jsonArea = document.getElementById("customizerJsonArea");
+    if (jsonArea) {
+      jsonArea.value = JSON.stringify(window.PORTFOLIO_DATA, null, 2);
+    }
+  }
 }
 
-// Initialization on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-  // Theme check
-  const savedTheme = localStorage.getItem("user-theme") || "light";
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  
-  // Render initial components
-  renderPapers("all", "");
-  renderProjects();
-  renderMacroChart("inflation");
-  
-  // Theme button
-  const themeToggle = document.getElementById("themeToggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", toggleTheme);
-  }
-  
-  // Mobile menu toggle
-  const mobileToggle = document.getElementById("mobileToggle");
-  const navLinks = document.getElementById("navLinks");
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
+function applyLiveCustomization() {
+  try {
+    const jsonArea = document.getElementById("customizerJsonArea");
+    if (!jsonArea) return;
+    const updated = JSON.parse(jsonArea.value);
+    window.PORTFOLIO_DATA = updated;
     
-    // Close on link click
-    navLinks.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => navLinks.classList.remove("open"));
-    });
+    // Re-render whole page
+    renderHeroAndProfile();
+    renderCompetencies();
+    renderExperience(activeCategory, activeSearchQuery);
+    renderResearch(activeSearchQuery);
+    renderProjects(activeSearchQuery);
+    renderEducation();
+    renderCertificationsAndVolunteering();
+    renderCreativeWorks();
+
+    showSnackbar("Website refreshed with updated data!");
+    toggleCustomizerDrawer();
+  } catch (err) {
+    alert("JSON Parsing error: " + err.message);
   }
-  
-  // Filter tabs for papers
-  document.querySelectorAll(".filter-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const filter = btn.getAttribute("data-filter");
-      const searchVal = document.getElementById("paperSearchInput")?.value || "";
-      renderPapers(filter, searchVal);
-    });
-  });
-  
-  // Search input for papers
-  const searchInput = document.getElementById("paperSearchInput");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const activeFilter = document.querySelector(".filter-btn.active")?.getAttribute("data-filter") || "all";
-      renderPapers(activeFilter, e.target.value);
-    });
-  }
-  
-  // Chart control tabs
-  document.querySelectorAll(".chart-control-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".chart-control-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderMacroChart(btn.getAttribute("data-metric"));
-    });
-  });
-  
-  // Contact form submission handle
-  const contactForm = document.getElementById("academicContactForm");
+}
+
+function downloadConfigJs() {
+  const jsonArea = document.getElementById("customizerJsonArea");
+  const content = "const PORTFOLIO_DATA = " + jsonArea.value + ";\nif (typeof window !== 'undefined') { window.PORTFOLIO_DATA = PORTFOLIO_DATA; }";
+  const blob = new Blob([content], { type: "application/javascript" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "portfolio-data.js";
+  a.click();
+  showSnackbar("Downloaded updated portfolio-data.js!");
+}
+
+function setupNavigationEvents() {
+  // Contact form submission
+  const contactForm = document.getElementById("directInquiryForm");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      showToast("Thank you. Your message has been received.");
+      showSnackbar("Inquiry transmitted. Thank you, Ashikul will reply shortly.");
       contactForm.reset();
     });
   }
-});
+}
 
 </script>
 </body>

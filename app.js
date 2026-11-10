@@ -1,491 +1,563 @@
-﻿// Academic & Development Economics Portfolio Engine
+/**
+ * =========================================================================
+ * ASHIKUL ISLAM KHAN - LIQUID GLASS PORTFOLIO CONTROLLER & RENDER ENGINE
+ * =========================================================================
+ */
 
-// Research Papers Data
-const papersData = [
-  {
-    id: "food-price-volatility-2026",
-    title: "Food Price Volatility, Inflationary Pressures, and Household Welfare: Evidence from High-Frequency Market Surveys in Urban Dhaka",
-    authors: "Ashikul Islam Khan*, Dr. Fahmida Khatun (Advisory Supervisor)",
-    venue: "Working Paper Series, Department of Economics, University of Dhaka",
-    year: "2026",
-    status: "Working Paper",
-    category: "development",
-    jel: ["D12", "E31", "I31", "O12"],
-    methodology: ["Difference-in-Differences", "High-Frequency Panel", "Stata"],
-    abstract: "This paper investigates the transmission mechanism of commodity price spikes into urban household consumption baskets following supply disruptions in wholesale trading hubs of Dhaka. Utilizing a balanced 14-month panel of 1,240 urban low-and-middle income households alongside daily wholesale-retail commodity price telemetry, we estimate short-run compensatory price elasticities and calorie substitution rates. Findings demonstrate an asymmetric pass-through where retail food margins expand by 18.4% during wholesale surges but contract by only 5.2% during gluts, exacerbating real income erosion among the bottom two quintiles.",
-    bibtex: `@techreport{khan2026food,
-  title={Food Price Volatility, Inflationary Pressures, and Household Welfare: Evidence from High-Frequency Market Surveys in Urban Dhaka},
-  author={Sadman, Ahnaf and Khatun, Fahmida},
-  institution={Department of Economics, University of Dhaka},
-  type={Working Paper},
-  year={2026},
-  number={DU-ECON-WP-26-04}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
-  },
-  {
-    id: "micro-insurance-coastal-2025",
-    title: "Evaluating Index-Based Weather Micro-Insurance Uptake and Consumption Smoothing Among Agrarian Households in Coastal Bangladesh",
-    authors: "Ashikul Islam Khan*, Rafiqul Islam, Samira Chowdhury",
-    venue: "Preprint presented at Bangladesh Economic Association (BEA) Biennial Conference",
-    year: "2025",
-    status: "Conference Paper",
-    category: "econometrics",
-    jel: ["G22", "O13", "Q12", "Q54"],
-    methodology: ["Instrumental Variables (IV)", "Household Surveys", "R (fixest)"],
-    abstract: "Coastal agrarian communities in southwestern Bangladesh face accelerating cyclone severity and saline intrusion. We evaluate the pilot uptake of satellite-indexed rainfall and cyclone parametric micro-insurance among 850 smallholders in Satkhira and Khulna districts. Utilizing distance-to-weather-station and localized literacy peer effects as instrumental variables, we find insured households maintain 23% higher caloric stability during post-cyclone recovery periods and rely significantly less on distress livestock liquidation.",
-    bibtex: `@article{khan2025microinsurance,
-  title={Evaluating Index-Based Weather Micro-Insurance Uptake and Consumption Smoothing Among Agrarian Households in Coastal Bangladesh},
-  author={Sadman, Ahnaf and Islam, Rafiqul and Chowdhury, Samira},
-  journal={Working Papers in Environmental & Development Economics},
-  year={2025},
-  url={https://doi.org/10.xxxx/du-econ.2025.012}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
-  },
-  {
-    id: "digital-finance-consumer-protection-2025",
-    title: "Regulatory Arbitrage and Consumer Vulnerability in Digital Financial Services (DFS): An Empirical Audit of Redress Mechanisms",
-    authors: "Ashikul Islam Khan (Lead Investigator, CAB Youth Parliamentary Desk)",
-    venue: "Policy Monograph, Consumers Association of Bangladesh (CAB)",
-    year: "2025",
-    status: "Policy Paper",
-    category: "policy",
-    jel: ["D18", "K23", "O33", "G28"],
-    methodology: ["Mixed Methods", "Regulatory Audit", "Python NLP"],
-    abstract: "Digital micro-credit and mobile wallet applications have rapidly expanded across semi-urban Bangladesh, yet consumer dispute resolution remains fragmented. Analyzing 3,400 formal consumer grievances filed with regulatory ombudsman platforms and utilizing natural language parsing of grievance outcomes, this study highlights an average resolution latency exceeding 46 days for unauthorized deductions. We formulate a policy architecture for automated transaction dispute adjudication and real-time merchant disclosure.",
-    bibtex: `@report{khan2025dfs,
-  title={Regulatory Arbitrage and Consumer Vulnerability in Digital Financial Services: An Empirical Audit of Redress Mechanisms},
-  author={Sadman, Ahnaf},
-  institution={Consumers Association of Bangladesh (CAB)},
-  year={2025},
-  type={Special Policy Brief}
-}`,
-    pdfUrl: "#",
-    codeUrl: "#"
+// Global active tab & state
+let activeCategory = "all";
+let activeSearchQuery = "";
+let snackbarTimer = null;
+
+// Initialize on DOM load
+document.addEventListener("DOMContentLoaded", () => {
+  // Check theme preference
+  const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  // Initial UI Render from PORTFOLIO_DATA
+  renderHeroAndProfile();
+  renderCompetencies();
+  renderExperience(activeCategory, activeSearchQuery);
+  renderResearch(activeSearchQuery);
+  renderProjects(activeSearchQuery);
+  renderEducation();
+  renderCertificationsAndVolunteering();
+  renderCreativeWorks();
+
+  // Setup Event Listeners
+  setupNavigationEvents();
+  setupSegmentedTabs();
+  setupSearchInput();
+  setupDockObserver();
+});
+
+// -------------------------------------------------------------------------
+// 1. Render Hero & Profile Summary
+// -------------------------------------------------------------------------
+function renderHeroAndProfile() {
+  const data = window.PORTFOLIO_DATA.profile;
+  if (!data) return;
+
+  // Name & Headings
+  const heroName = document.getElementById("heroFullName");
+  const heroTagline = document.getElementById("heroTagline");
+  const heroBio = document.getElementById("heroBio");
+  const heroStatus = document.getElementById("heroStatusText");
+  const brandName = document.getElementById("brandNameText");
+
+  if (heroName) heroName.textContent = data.fullName;
+  if (heroTagline) heroTagline.textContent = data.headline;
+  if (heroBio) heroBio.textContent = data.bio;
+  if (heroStatus) heroStatus.textContent = data.statusBadge;
+  if (brandName) brandName.textContent = data.preferredName;
+
+  // Quick Stats
+  const statsContainer = document.getElementById("dossierStatsGrid");
+  if (statsContainer && data.quickStats) {
+    statsContainer.innerHTML = data.quickStats.map(stat => `
+      <div class="dossier-stat-box">
+        <span class="dossier-stat-num">${stat.val}</span>
+        <span class="dossier-stat-label">${stat.label}</span>
+      </div>
+    `).join("");
   }
-];
 
-// Data Analytics & Computational Projects
-const projectsData = [
-  {
-    id: "hies-welfare-pipeline",
-    title: "National Household Welfare & Poverty Transition Pipeline",
-    desc: "End-to-end econometric pipeline analyzing multiple rounds of Bangladesh Household Income and Expenditure Survey (HIES). Automates consumption aggregate adjustments, Foster-Greer-Thorbecke (FGT) poverty indices, and multivariable probit regressions for vulnerability profiling.",
-    stack: ["Stata", "R (tidyverse)", "HIES Microdata"],
-    stats: [
-      { label: "Sample Size", val: "46,080 HH" },
-      { label: "Poverty Indicators", val: "12 Metrics" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
-  },
-  {
-    id: "market-syndicate-telemetry",
-    title: "Dhaka Retail Food Price Spatial Tracking & Arbitrage Scanner",
-    desc: "A spatial analytics tool web-scraping daily essential commodity wholesale rates (Karwan Bazar, Badamtoli) and retail prices across 18 municipal markets to detect geographic price disparities and synthetic markup divergence during festival cycles.",
-    stack: ["Python", "Pandas", "QGIS", "Plotly"],
-    stats: [
-      { label: "Daily Data Points", val: "1,850+" },
-      { label: "Markets Tracked", val: "18 Hubs" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
-  },
-  {
-    id: "macro-dashboard",
-    title: "Macroeconomic Dashboard: Inflation, Reserves & Remittance Tracker",
-    desc: "Interactive statistical dashboard aggregating Bangladesh Bank balance of payments, monthly wage rate index, and BBS consumer price indices to forecast real income degradation and foreign exchange reserve runway.",
-    stack: ["R Shiny", "timeDate", "ggplot2"],
-    stats: [
-      { label: "Series Frequency", val: "Monthly" },
-      { label: "Time Span", val: "2018â€“2026" }
-    ],
-    codeUrl: "https://github.com/ashikulislamkhan/portfolio",
-    demoUrl: "#"
+  // Contact list
+  const contactContainer = document.getElementById("dossierContactList");
+  if (contactContainer) {
+    contactContainer.innerHTML = `
+      <li class="dossier-contact-item">
+        <span>Location</span>
+        <span class="tabular-nums" style="font-weight: 500;">${data.location}</span>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Email</span>
+        <a href="mailto:${data.email}" style="color: var(--accent-text); font-weight: 500;">${data.email}</a>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Phone</span>
+        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="color: var(--text-primary);">${data.phone}</a>
+      </li>
+      <li class="dossier-contact-item">
+        <span>Institution</span>
+        <span style="font-weight: 500;">Univ of Dhaka</span>
+      </li>
+    `;
   }
-];
-
-// Chart Datasets
-const chartDatasets = {
-  inflation: {
-    title: "Consumer Price Index (CPI): Headline vs. Food Inflation (2024â€“2026)",
-    subtitle: "Source: Bangladesh Bureau of Statistics (BBS) & Field Telemetry Analysis",
-    labels: ["Jan 24", "Apr 24", "Jul 24", "Oct 24", "Jan 25", "Apr 25", "Jul 25", "Oct 25", "Jan 26", "Apr 26", "Jul 26", "Oct 26"],
-    datasets: [
-      {
-        label: "Food Inflation (%)",
-        data: [10.2, 10.8, 12.5, 12.8, 11.4, 10.9, 11.6, 12.2, 10.8, 9.9, 9.4, 8.8],
-        borderColor: "#1e3a8a",
-        backgroundColor: "rgba(30, 58, 138, 0.08)",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: true,
-        pointRadius: 3
-      },
-      {
-        label: "Headline CPI (%)",
-        data: [9.8, 9.7, 10.9, 10.6, 9.9, 9.6, 9.8, 10.1, 9.5, 8.9, 8.6, 8.2],
-        borderColor: "#64748b",
-        borderDash: [5, 5],
-        borderWidth: 2,
-        tension: 0.25,
-        fill: false,
-        pointRadius: 2
-      }
-    ]
-  },
-  welfare: {
-    title: "Nominal Wage Rate Index (WRI) vs. Cost of Food Basket (Base 2023 = 100)",
-    subtitle: "Simulating urban low-income purchasing power erosion over time",
-    labels: ["Jan 24", "Apr 24", "Jul 24", "Oct 24", "Jan 25", "Apr 25", "Jul 25", "Oct 25", "Jan 26", "Apr 26", "Jul 26", "Oct 26"],
-    datasets: [
-      {
-        label: "Food Basket Cost Index",
-        data: [108, 112, 124, 128, 131, 134, 142, 147, 150, 153, 156, 158],
-        borderColor: "#991b1b",
-        backgroundColor: "rgba(153, 27, 27, 0.06)",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: true,
-        pointRadius: 3
-      },
-      {
-        label: "Nominal Wage Rate Index",
-        data: [105, 107, 111, 114, 118, 121, 125, 128, 132, 135, 138, 142],
-        borderColor: "#0f766e",
-        borderWidth: 2,
-        tension: 0.25,
-        fill: false,
-        pointRadius: 3
-      }
-    ]
-  },
-  resilience: {
-    title: "Estimated Coping Mechanisms during Price Shocks by Income Quintile",
-    subtitle: "Share of households reporting non-sustainable coping strategies (Debt vs. Asset Sale)",
-    labels: ["Q1 (Poorest 20%)", "Q2 (Lower Middle)", "Q3 (Middle)", "Q4 (Upper Middle)", "Q5 (Richest 20%)"],
-    datasets: [
-      {
-        label: "Consumption Curtailment / Calorie Reduction (%)",
-        data: [58.4, 42.1, 23.5, 11.2, 3.4],
-        backgroundColor: "#1e3a8a",
-        borderRadius: 4
-      },
-      {
-        label: "High-Interest Informal Borrowing (%)",
-        data: [46.2, 31.8, 16.4, 6.1, 1.2],
-        backgroundColor: "#64748b",
-        borderRadius: 4
-      }
-    ]
-  }
-};
-
-let macroChart = null;
-
-// Initialize Chart
-function renderMacroChart(metricKey = "inflation") {
-  const ctx = document.getElementById("macroChartCanvas");
-  if (!ctx) return;
-  
-  const chartData = chartDatasets[metricKey];
-  if (!chartData) return;
-  
-  document.getElementById("chartHeading").textContent = chartData.title;
-  document.getElementById("chartSubheading").textContent = chartData.subtitle;
-  
-  if (macroChart) {
-    macroChart.destroy();
-  }
-  
-  const isResilience = metricKey === "resilience";
-  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  const gridColor = isDark ? "rgba(255, 255, 255, 0.06)" : "rgba(15, 23, 42, 0.06)";
-  const textColor = isDark ? "#94a3b8" : "#64748b";
-  
-  macroChart = new Chart(ctx, {
-    type: isResilience ? "bar" : "line",
-    data: {
-      labels: chartData.labels,
-      datasets: chartData.datasets
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: "top",
-          align: "end",
-          labels: {
-            boxWidth: 12,
-            boxHeight: 12,
-            color: textColor,
-            font: {
-              family: "Inter",
-              size: 11
-            }
-          }
-        },
-        tooltip: {
-          backgroundColor: isDark ? "#1e293b" : "#0f172a",
-          titleFont: { family: "Inter", size: 12, weight: "600" },
-          bodyFont: { family: "JetBrains Mono", size: 11 },
-          padding: 10,
-          cornerRadius: 6
-        }
-      },
-      scales: {
-        x: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, font: { family: "Inter", size: 11 } }
-        },
-        y: {
-          grid: { color: gridColor },
-          ticks: { color: textColor, font: { family: "JetBrains Mono", size: 11 } }
-        }
-      }
-    }
-  });
 }
 
-// Render Research Papers
-function renderPapers(filter = "all", searchQuery = "") {
-  const container = document.getElementById("papersList");
+// -------------------------------------------------------------------------
+// 2. Render Core Competencies
+// -------------------------------------------------------------------------
+function renderCompetencies() {
+  const container = document.getElementById("competenciesContainer");
+  const list = window.PORTFOLIO_DATA.competencies;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card competency-card">
+      <div>
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-text);"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          ${item.category}
+        </h3>
+        <div class="skill-chips">
+          ${item.skills.map(s => `<span class="pill-tag">${s}</span>`).join("")}
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 3. Render Work & Leadership Experience
+// -------------------------------------------------------------------------
+function renderExperience(category = "all", query = "") {
+  const container = document.getElementById("experienceContainer");
   if (!container) return;
-  
-  const filtered = papersData.filter(paper => {
-    const matchesFilter = filter === "all" || paper.category === filter;
-    const query = searchQuery.toLowerCase().trim();
-    const matchesSearch = query === "" || 
-      paper.title.toLowerCase().includes(query) ||
-      paper.abstract.toLowerCase().includes(query) ||
-      paper.methodology.some(m => m.toLowerCase().includes(query)) ||
-      paper.jel.some(j => j.toLowerCase().includes(query));
-    return matchesFilter && matchesSearch;
+
+  const work = window.PORTFOLIO_DATA.workExperience || [];
+  const leadership = window.PORTFOLIO_DATA.leadershipExperience || [];
+  const combined = [...work, ...leadership];
+
+  const q = query.toLowerCase().trim();
+  const filtered = combined.filter(item => {
+    const isLeadership = leadership.some(l => l.id === item.id);
+    const matchesCategory = 
+      category === "all" ||
+      (category === "work" && !isLeadership) ||
+      (category === "leadership" && isLeadership);
+
+    const matchesSearch = !q || 
+      item.role.toLowerCase().includes(q) ||
+      item.organization.toLowerCase().includes(q) ||
+      (item.achievements && item.achievements.some(a => a.toLowerCase().includes(q))) ||
+      (item.responsibilities && item.responsibilities.some(r => r.toLowerCase().includes(q)));
+
+    return matchesCategory && matchesSearch;
   });
-  
+
   if (filtered.length === 0) {
     container.innerHTML = `
-      <div style="padding: 3rem; text-align: center; background: var(--bg-surface); border: 1px dashed var(--border-hairline); border-radius: var(--radius-md);">
-        <p style="color: var(--text-muted); font-size: 0.95rem;">No publications or working papers found matching your criteria.</p>
+      <div class="liquid-glass-card" style="text-align: center; padding: 2.5rem;">
+        <p style="color: var(--text-muted);">No experience entries match your query.</p>
       </div>
     `;
     return;
   }
-  
-  container.innerHTML = filtered.map(paper => `
-    <article class="paper-card" id="${paper.id}">
-      <div class="paper-meta-top">
-        <span class="paper-status-badge">${paper.status} (${paper.year})</span>
-        <span class="paper-date">${paper.venue}</span>
-      </div>
-      <h3 class="paper-title">${paper.title}</h3>
-      <div class="paper-authors">${paper.authors}</div>
-      <p class="paper-abstract">${paper.abstract}</p>
-      
-      <div class="paper-tags-row">
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-right: 0.25rem;">JEL:</span>
-        ${paper.jel.map(code => `<span class="tag tag-mono">${code}</span>`).join(" ")}
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem; margin-right: 0.25rem;">Methods:</span>
-        ${paper.methodology.map(m => `<span class="tag">${m}</span>`).join(" ")}
+
+  container.innerHTML = filtered.map(item => `
+    <article class="liquid-glass-card exp-card">
+      <div class="exp-header">
+        <div>
+          <h3 class="exp-role-title">${item.role}</h3>
+          <span class="exp-org-badge">${item.organization}</span>
+        </div>
+        <div style="text-align: right;">
+          <span class="exp-meta-tag tabular-nums">${item.period}</span>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">${item.location}</div>
+        </div>
       </div>
 
-      <div class="paper-footer">
-        <div class="paper-actions">
-          <button class="btn btn-sm btn-outline" onclick="openBibtexModal('${paper.id}')">
+      ${item.achievements && item.achievements.length > 0 ? `
+        <div class="exp-achievements-title">Key Accomplishments</div>
+        <ul class="exp-bullet-list">
+          ${item.achievements.map(ach => `<li>${ach}</li>`).join("")}
+        </ul>
+      ` : ""}
+
+      ${item.responsibilities && item.responsibilities.length > 0 ? `
+        <div class="exp-achievements-title" style="margin-top: 0.85rem;">Core Responsibilities</div>
+        <ul class="exp-bullet-list">
+          ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
+        </ul>
+      ` : ""}
+    </article>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 4. Render Research Papers & Publications
+// -------------------------------------------------------------------------
+function renderResearch(query = "") {
+  const container = document.getElementById("researchContainer");
+  const list = window.PORTFOLIO_DATA.researchWorks;
+  if (!container || !list) return;
+
+  const q = query.toLowerCase().trim();
+  const filtered = list.filter(item => {
+    return !q ||
+      item.title.toLowerCase().includes(q) ||
+      item.description.toLowerCase().includes(q) ||
+      item.genre.toLowerCase().includes(q) ||
+      (item.methodology && item.methodology.some(m => m.toLowerCase().includes(q)));
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="liquid-glass-card" style="text-align: center; padding: 2.5rem;">
+        <p style="color: var(--text-muted);">No research papers found matching your criteria.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => `
+    <article class="liquid-glass-card research-card">
+      <div class="research-card-top">
+        <span class="pill-tag pill-tag-mono">${item.genre} (${item.date})</span>
+        <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted);">${item.status}</span>
+      </div>
+
+      <h3 class="research-title">${item.title}</h3>
+      <div style="font-size: 0.85rem; color: var(--accent-text); font-weight: 500; margin-bottom: 0.75rem;">
+        ${item.institution} · ${item.location}
+      </div>
+
+      <p class="research-desc">${item.description}</p>
+
+      <div style="display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+        ${item.methodology.map(m => `<span class="pill-tag">${m}</span>`).join("")}
+      </div>
+
+      <div class="research-actions">
+        <div style="display: flex; gap: 0.65rem;">
+          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            ResearchGate
+          </a>
+          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
             BibTeX
           </button>
-          <button class="btn btn-sm btn-outline" onclick="showToast('Working paper PDF manuscript link requested')">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            Draft PDF
-          </button>
         </div>
-        <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted);">Peer review in progress</span>
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Evidence-based empirical study</span>
       </div>
     </article>
   `).join("");
 }
 
-// Render Data Projects
-function renderProjects() {
-  const container = document.getElementById("projectsList");
-  if (!container) return;
-  
-  container.innerHTML = projectsData.map(proj => `
-    <div class="project-card">
-      <div class="project-top">
-        <h3 class="project-title">${proj.title}</h3>
-        <p class="project-desc">${proj.desc}</p>
-        <div class="project-stats-grid">
-          ${proj.stats.map(s => `
-            <div class="stat-item">
-              <span class="stat-num">${s.val}</span>
-              <span class="stat-label">${s.label}</span>
-            </div>
-          `).join("")}
+// -------------------------------------------------------------------------
+// 5. Render Software & Applications Built
+// -------------------------------------------------------------------------
+function renderProjects(query = "") {
+  const container = document.getElementById("projectsContainer");
+  const list = window.PORTFOLIO_DATA.projects;
+  if (!container || !list) return;
+
+  const q = query.toLowerCase().trim();
+  const filtered = list.filter(item => {
+    return !q ||
+      item.name.toLowerCase().includes(q) ||
+      item.tagline.toLowerCase().includes(q) ||
+      item.description.toLowerCase().includes(q) ||
+      (item.stack && item.stack.some(s => s.toLowerCase().includes(q)));
+  });
+
+  container.innerHTML = filtered.map(item => `
+    <div class="liquid-glass-card project-card">
+      <div>
+        <div class="project-header-row">
+          <h3 class="project-title">${item.name}</h3>
+          <span class="pill-tag pill-tag-mono">App</span>
         </div>
-        <div class="hero-tags" style="margin-bottom: 0;">
-          ${proj.stack.map(tech => `<span class="tag tag-mono">${tech}</span>`).join("")}
+        <div class="project-tagline">${item.tagline}</div>
+        <p style="font-size: 0.875rem; margin-bottom: 1rem;">${item.description}</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+          ${item.stack.map(st => `<span class="pill-tag pill-tag-mono" style="font-size: 0.7rem;">${st}</span>`).join("")}
         </div>
       </div>
-      <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--border-hairline); padding-top: 1rem;">
-        <a href="${proj.codeUrl}" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="flex: 1;">
+      <div style="display: flex; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle); padding-top: 1rem;">
+        <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.4rem 0.6rem; font-size: 0.8rem;">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          Replication Code
+          Repository
         </a>
       </div>
     </div>
   `).join("");
 }
 
-// BibTeX Modal Functions
+// -------------------------------------------------------------------------
+// 6. Render Education
+// -------------------------------------------------------------------------
+function renderEducation() {
+  const container = document.getElementById("educationContainer");
+  const list = window.PORTFOLIO_DATA.education;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="font-size: 1.15rem;">${item.degree}</h3>
+        <span class="pill-tag pill-tag-mono">${item.timeline}</span>
+      </div>
+      <div style="font-size: 0.9rem; color: var(--accent-text); font-weight: 500; margin-bottom: 0.35rem;">
+        ${item.institution} · ${item.location}
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">${item.detail}</p>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 7. Render Certifications & Volunteering
+// -------------------------------------------------------------------------
+function renderCertificationsAndVolunteering() {
+  const certContainer = document.getElementById("certificationsContainer");
+  const certs = window.PORTFOLIO_DATA.certifications;
+  if (certContainer && certs) {
+    certContainer.innerHTML = certs.map(c => `
+      <div class="liquid-glass-card" style="padding: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 600;">${c.title}</h4>
+          <span class="tabular-nums" style="font-size: 0.75rem; color: var(--text-muted);">${c.year}</span>
+        </div>
+        <div style="font-size: 0.825rem; color: var(--accent-text);">${c.issuer}</div>
+      </div>
+    `).join("");
+  }
+
+  const volContainer = document.getElementById("volunteeringContainer");
+  const vols = window.PORTFOLIO_DATA.volunteering;
+  if (volContainer && vols) {
+    volContainer.innerHTML = vols.map(v => `
+      <div class="liquid-glass-card" style="padding: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 600;">${v.role}</h4>
+          <span class="tabular-nums" style="font-size: 0.75rem; color: var(--text-muted);">${v.date}</span>
+        </div>
+        <div style="font-size: 0.825rem; color: var(--accent-text); margin-bottom: 0.5rem;">${v.organization}</div>
+        <ul class="exp-bullet-list" style="font-size: 0.825rem;">
+          ${v.achievements.map(a => `<li>${a}</li>`).join("")}
+        </ul>
+      </div>
+    `).join("");
+  }
+}
+
+// -------------------------------------------------------------------------
+// 8. Render Creative & Media Works
+// -------------------------------------------------------------------------
+function renderCreativeWorks() {
+  const container = document.getElementById("creativeWorksContainer");
+  const list = window.PORTFOLIO_DATA.creativeWorks;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.15rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+      <div>
+        <h4 style="font-size: 0.925rem; font-weight: 500;">${item.title}</h4>
+        <span style="font-size: 0.775rem; color: var(--accent-text);">${item.role}</span>
+      </div>
+      <span class="pill-tag pill-tag-mono">Media</span>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 9. Segmented Tabs & Search Controls
+// -------------------------------------------------------------------------
+function setupSegmentedTabs() {
+  const tabs = document.querySelectorAll(".liquid-tab-btn");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      activeCategory = tab.getAttribute("data-category");
+      renderExperience(activeCategory, activeSearchQuery);
+      showSnackbar(`Filtered: ${tab.textContent.trim()}`);
+    });
+  });
+}
+
+function setupSearchInput() {
+  const input = document.getElementById("globalSearchInput");
+  if (!input) return;
+
+  input.addEventListener("input", (e) => {
+    activeSearchQuery = e.target.value;
+    renderExperience(activeCategory, activeSearchQuery);
+    renderResearch(activeSearchQuery);
+    renderProjects(activeSearchQuery);
+  });
+}
+
+// -------------------------------------------------------------------------
+// 10. iOS Liquid Glass Dock & ScrollSpy
+// -------------------------------------------------------------------------
+function setupDockObserver() {
+  const sections = document.querySelectorAll("section[id]");
+  const dockItems = document.querySelectorAll(".dock-item[data-target]");
+
+  window.addEventListener("scroll", () => {
+    let currentId = "";
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 200;
+      if (window.scrollY >= top) {
+        currentId = sec.getAttribute("id");
+      }
+    });
+
+    dockItems.forEach(item => {
+      item.classList.remove("active");
+      if (item.getAttribute("data-target") === currentId) {
+        item.classList.add("active");
+      }
+    });
+  }, { passive: true });
+}
+
+function scrollToSection(sectionId) {
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// -------------------------------------------------------------------------
+// 11. iOS Liquid Glass Snackbar Utility
+// -------------------------------------------------------------------------
+function showSnackbar(message) {
+  const bar = document.getElementById("liquidSnackbar");
+  const text = document.getElementById("snackbarText");
+  if (!bar || !text) return;
+
+  text.textContent = message;
+  bar.classList.add("show");
+
+  if (snackbarTimer) clearTimeout(snackbarTimer);
+  snackbarTimer = setTimeout(() => {
+    bar.classList.remove("show");
+  }, 2600);
+}
+
+// -------------------------------------------------------------------------
+// 12. BibTeX & CV Modals
+// -------------------------------------------------------------------------
 function openBibtexModal(paperId) {
-  const paper = papersData.find(p => p.id === paperId);
+  const papers = window.PORTFOLIO_DATA.researchWorks || [];
+  const paper = papers.find(p => p.id === paperId);
   if (!paper) return;
-  
-  const modal = document.getElementById("bibtexModal");
-  const codeElem = document.getElementById("bibtexCode");
-  const titleElem = document.getElementById("bibtexModalTitle");
-  
-  titleElem.textContent = "BibTeX Citation";
-  codeElem.textContent = paper.bibtex;
-  modal.classList.add("active");
+
+  const modal = document.getElementById("bibtexModalBackdrop");
+  const codeBox = document.getElementById("bibtexCodeSnippet");
+  const title = document.getElementById("bibtexPaperTitle");
+
+  if (title) title.textContent = paper.title;
+  if (codeBox) codeBox.textContent = paper.bibtex;
+  if (modal) modal.classList.add("active");
 }
 
 function closeBibtexModal() {
-  document.getElementById("bibtexModal").classList.remove("active");
+  const modal = document.getElementById("bibtexModalBackdrop");
+  if (modal) modal.classList.remove("active");
 }
 
-function copyBibtexCode() {
-  const code = document.getElementById("bibtexCode").textContent;
-  navigator.clipboard.writeText(code).then(() => {
-    showToast("BibTeX citation copied to clipboard");
+function copyBibtexSnippet() {
+  const codeBox = document.getElementById("bibtexCodeSnippet");
+  if (!codeBox) return;
+
+  navigator.clipboard.writeText(codeBox.textContent).then(() => {
+    showSnackbar("BibTeX citation copied to clipboard!");
   }).catch(() => {
-    showToast("Selected and ready to copy");
+    showSnackbar("Ready to copy");
   });
 }
 
-// CV Modal Functions
 function openCvModal() {
-  document.getElementById("cvModal").classList.add("active");
+  const modal = document.getElementById("cvModalBackdrop");
+  if (modal) modal.classList.add("active");
 }
 
 function closeCvModal() {
-  document.getElementById("cvModal").classList.remove("active");
+  const modal = document.getElementById("cvModalBackdrop");
+  if (modal) modal.classList.remove("active");
 }
 
-function printCv() {
+function printCvDocument() {
   window.print();
 }
 
-// Toast Function
-let toastTimer = null;
-function showToast(message) {
-  const toast = document.getElementById("toastNotice");
-  if (!toast) return;
-  
-  toast.textContent = message;
-  toast.classList.add("show");
-  
-  if (toastTimer) clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2800);
+// -------------------------------------------------------------------------
+// 13. Theme Switcher & Clipboard
+// -------------------------------------------------------------------------
+function toggleThemeMode() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("portfolio-theme", next);
+  showSnackbar(`Switched to ${next === "dark" ? "Dusk" : "Daylight"} mode`);
 }
 
-// Copy Email Utility
-function copyEmailAddress(email = "s-2022112154@econ.du.ac.bd") {
+function copyDirectEmail() {
+  const email = window.PORTFOLIO_DATA.profile.email;
   navigator.clipboard.writeText(email).then(() => {
-    showToast(`Copied ${email} to clipboard`);
+    showSnackbar(`Copied ${email} to clipboard!`);
   }).catch(() => {
-    showToast(`Email: ${email}`);
+    showSnackbar(`Email: ${email}`);
   });
 }
 
-// Theme Toggle
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const targetTheme = currentTheme === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", targetTheme);
-  localStorage.setItem("user-theme", targetTheme);
+// -------------------------------------------------------------------------
+// 14. Live Content Customizer Drawer
+// -------------------------------------------------------------------------
+function toggleCustomizerDrawer() {
+  const drawer = document.getElementById("customizerDrawer");
+  if (!drawer) return;
+  drawer.classList.toggle("open");
   
-  // Re-render chart to adapt colors
-  const activeBtn = document.querySelector(".chart-control-btn.active");
-  const metric = activeBtn ? activeBtn.getAttribute("data-metric") : "inflation";
-  renderMacroChart(metric);
+  if (drawer.classList.contains("open")) {
+    const jsonArea = document.getElementById("customizerJsonArea");
+    if (jsonArea) {
+      jsonArea.value = JSON.stringify(window.PORTFOLIO_DATA, null, 2);
+    }
+  }
 }
 
-// Initialization on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-  // Theme check
-  const savedTheme = localStorage.getItem("user-theme") || "light";
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  
-  // Render initial components
-  renderPapers("all", "");
-  renderProjects();
-  renderMacroChart("inflation");
-  
-  // Theme button
-  const themeToggle = document.getElementById("themeToggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", toggleTheme);
-  }
-  
-  // Mobile menu toggle
-  const mobileToggle = document.getElementById("mobileToggle");
-  const navLinks = document.getElementById("navLinks");
-  if (mobileToggle && navLinks) {
-    mobileToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
+function applyLiveCustomization() {
+  try {
+    const jsonArea = document.getElementById("customizerJsonArea");
+    if (!jsonArea) return;
+    const updated = JSON.parse(jsonArea.value);
+    window.PORTFOLIO_DATA = updated;
     
-    // Close on link click
-    navLinks.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => navLinks.classList.remove("open"));
-    });
+    // Re-render whole page
+    renderHeroAndProfile();
+    renderCompetencies();
+    renderExperience(activeCategory, activeSearchQuery);
+    renderResearch(activeSearchQuery);
+    renderProjects(activeSearchQuery);
+    renderEducation();
+    renderCertificationsAndVolunteering();
+    renderCreativeWorks();
+
+    showSnackbar("Website refreshed with updated data!");
+    toggleCustomizerDrawer();
+  } catch (err) {
+    alert("JSON Parsing error: " + err.message);
   }
-  
-  // Filter tabs for papers
-  document.querySelectorAll(".filter-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      const filter = btn.getAttribute("data-filter");
-      const searchVal = document.getElementById("paperSearchInput")?.value || "";
-      renderPapers(filter, searchVal);
-    });
-  });
-  
-  // Search input for papers
-  const searchInput = document.getElementById("paperSearchInput");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const activeFilter = document.querySelector(".filter-btn.active")?.getAttribute("data-filter") || "all";
-      renderPapers(activeFilter, e.target.value);
-    });
-  }
-  
-  // Chart control tabs
-  document.querySelectorAll(".chart-control-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".chart-control-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderMacroChart(btn.getAttribute("data-metric"));
-    });
-  });
-  
-  // Contact form submission handle
-  const contactForm = document.getElementById("academicContactForm");
+}
+
+function downloadConfigJs() {
+  const jsonArea = document.getElementById("customizerJsonArea");
+  const content = "const PORTFOLIO_DATA = " + jsonArea.value + ";\nif (typeof window !== 'undefined') { window.PORTFOLIO_DATA = PORTFOLIO_DATA; }";
+  const blob = new Blob([content], { type: "application/javascript" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "portfolio-data.js";
+  a.click();
+  showSnackbar("Downloaded updated portfolio-data.js!");
+}
+
+function setupNavigationEvents() {
+  // Contact form submission
+  const contactForm = document.getElementById("directInquiryForm");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      showToast("Thank you. Your message has been received.");
+      showSnackbar("Inquiry transmitted. Thank you, Ashikul will reply shortly.");
       contactForm.reset();
     });
   }
-});
+}
