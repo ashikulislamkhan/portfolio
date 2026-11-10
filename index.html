@@ -1,105 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashikul Islam Khan | Economics & Policy Researcher · Data Analyst</title>
   <meta name="description" content="Professional portfolio of MD. Ashikul Islam (Ashikul Islam Khan) - Economics Undergraduate at University of Dhaka, Development Economics & Policy Researcher, and Aspiring Data Analyst.">
   
-  <!-- Typography Preconnect -->
+  <!-- Modern Confident Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- iOS Liquid Glass Top Bar -->
+  <!-- Highly Transparent iOS Liquid Glass Header Bar -->
   <header class="site-header">
     <div class="header-glass-bar liquid-glass">
-      <div class="brand-wrapper">
-        <div class="brand-avatar">AK</div>
-        <div class="brand-text-block">
-          <span class="brand-title" id="brandNameText">Ashikul Islam Khan</span>
-          <span class="brand-badge">University of Dhaka · Economics</span>
+      <div class="brand-block">
+        <div class="brand-badge-circle">AK</div>
+        <div>
+          <span class="brand-name" id="brandNameText">Ashikul Islam Khan</span>
+          <div class="brand-affiliation">Department of Economics · University of Dhaka</div>
         </div>
       </div>
 
-      <div class="header-actions">
+      <div class="header-cta-actions">
         <button class="btn-glass" onclick="openCvModal()">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           <span>Curriculum Vitae</span>
         </button>
-        <button class="btn-glass" onclick="toggleCustomizerDrawer()" title="Live Content Editor & Data Configuration">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-          <span style="font-size: 0.8rem;">Edit Data</span>
-        </button>
-        <button class="btn-icon-glass" onclick="toggleThemeMode()" title="Toggle Light / Dark mode" aria-label="Toggle theme">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
+        <a href="#contact" class="btn-glass btn-electric">
+          <span>Get in Touch</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Main Hero View -->
+  <!-- Hero Section -->
   <main>
     <section class="section" id="hero">
-      <div class="container hero-layout">
+      <div class="container hero-grid">
         <div>
-          <div class="hero-status-pill">
-            <span class="pulse-dot"></span>
+          <div class="hero-status-tag">
+            <span class="pulse-indicator"></span>
             <span id="heroStatusText">Final Year Undergraduate · Available for Research & Analytics Roles</span>
           </div>
 
-          <h1 class="hero-name" id="heroFullName">MD. ASHIKUL ISLAM</h1>
-          <p class="hero-tagline" id="heroTagline">
+          <h1 class="hero-title">
+            <span id="heroFullName">MD. ASHIKUL ISLAM</span><br>
+            <span class="hero-gradient-text">Economics & Policy Researcher</span>
+          </h1>
+
+          <p class="hero-subtitle" id="heroTagline">
             Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist
           </p>
 
-          <p class="hero-bio" id="heroBio">
+          <p class="hero-description" id="heroBio">
             Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers.
           </p>
 
-          <div class="hero-cta-group">
-            <a href="#research" class="btn-glass btn-glass-primary">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              View Research Works
+          <div class="hero-cta-bar">
+            <a href="#research" class="btn-glass btn-electric">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              Explore Research Works
             </a>
             <a href="http://cal.com/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-              Book a Meeting
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Schedule Meeting
             </a>
             <button onclick="copyDirectEmail()" class="btn-glass">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               Copy Email
             </button>
           </div>
         </div>
 
         <!-- Right Side Liquid Glass Dossier -->
-        <aside class="liquid-glass-card hero-glass-dossier">
-          <div class="dossier-headline">
-            <h3 style="font-size: 1.15rem;">Academic Dossier</h3>
-            <span class="pill-tag pill-tag-mono">Verified Profile</span>
+        <aside class="liquid-glass-card dossier-card">
+          <div class="dossier-top">
+            <div>
+              <h3 style="font-size: 1.25rem;">Academic Dossier</h3>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Credentials</span>
+            </div>
+            <span class="pill-badge pill-badge-emerald">Active Scholar</span>
           </div>
 
-          <div class="dossier-stats-grid" id="dossierStatsGrid">
+          <div class="stats-counter-grid" id="dossierStatsGrid">
             <!-- Populated via app.js -->
           </div>
 
-          <ul class="dossier-contact-list" id="dossierContactList">
+          <ul class="quick-contact-list" id="dossierContactList">
             <!-- Populated via app.js -->
           </ul>
 
-          <div style="display: flex; gap: 0.5rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--glass-border-subtle); flex-wrap: wrap;">
-            <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+          <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--glass-border-subtle); flex-wrap: wrap;">
+            <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.45rem 0.65rem; font-size: 0.8rem;">
               LinkedIn
             </a>
-            <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+            <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.45rem 0.65rem; font-size: 0.8rem;">
               ResearchGate
             </a>
-            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.35rem 0.6rem; font-size: 0.775rem;">
+            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="btn-glass" style="flex: 1; padding: 0.45rem 0.65rem; font-size: 0.8rem;">
               GitHub
             </a>
           </div>
@@ -107,13 +111,36 @@
       </div>
     </section>
 
-    <!-- Core Competencies -->
+    <!-- Vieve-Style Dynamic Marquee Ribbon -->
+    <div class="marquee-ribbon">
+      <div class="marquee-track">
+        <div class="marquee-item">DEVELOPMENT ECONOMICS <span class="marquee-dot"></span></div>
+        <div class="marquee-item">ENERGY JUSTICE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">INFLATION TARGETING <span class="marquee-dot"></span></div>
+        <div class="marquee-item">DATA SCIENCE & SQL <span class="marquee-dot"></span></div>
+        <div class="marquee-item">UNIVERSITY OF DHAKA <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CAB YOUTH PARLIAMENT <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CLIMATE RESILIENCE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">ECONOMETRIC MODELING <span class="marquee-dot"></span></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="marquee-item">DEVELOPMENT ECONOMICS <span class="marquee-dot"></span></div>
+        <div class="marquee-item">ENERGY JUSTICE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">INFLATION TARGETING <span class="marquee-dot"></span></div>
+        <div class="marquee-item">DATA SCIENCE & SQL <span class="marquee-dot"></span></div>
+        <div class="marquee-item">UNIVERSITY OF DHAKA <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CAB YOUTH PARLIAMENT <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CLIMATE RESILIENCE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">ECONOMETRIC MODELING <span class="marquee-dot"></span></div>
+      </div>
+    </div>
+
+    <!-- Core Competencies Section -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Skills & Methodology</span>
-          <h2 class="section-heading">Core Competencies</h2>
-          <p class="section-subtext">Econometric modeling, quantitative programming, and visual policy communication.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Analytical Toolkit</span>
+          <h2 class="section-title">Core Competencies</h2>
+          <p class="section-caption">Econometric modeling, quantitative programming, and visual policy communication.</p>
         </div>
 
         <div class="competencies-grid" id="competenciesContainer">
@@ -122,89 +149,89 @@
       </div>
     </section>
 
-    <!-- Unified Search & Segmented Experience Controls -->
+    <!-- Professional & Leadership Experience Section -->
     <section class="section" id="experience" style="padding-top: 0;">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Career Trajectory</span>
-          <h2 class="section-heading">Professional & Leadership Experience</h2>
-          <p class="section-subtext">Research internships, parliamentary youth advocacy, and student executive governance.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Career Milestones</span>
+          <h2 class="section-title">Professional & Leadership Experience</h2>
+          <p class="section-caption">Policy research, parliamentary advocacy, and executive student governance.</p>
         </div>
 
-        <!-- iOS Liquid Glass Segmented Tabs -->
-        <div class="tabs-outer-wrap">
-          <div class="liquid-segmented-tabs">
-            <button class="liquid-tab-btn active" data-category="all">All Experiences</button>
-            <button class="liquid-tab-btn" data-category="work">Research & Policy Roles</button>
-            <button class="liquid-tab-btn" data-category="leadership">Executive & Campus Leadership</button>
+        <!-- iOS Segmented Liquid Glass Tabs -->
+        <div class="segmented-tabs-wrapper">
+          <div class="segmented-tabs-bar">
+            <button class="tab-pill-btn active" data-category="all">All Experiences</button>
+            <button class="tab-pill-btn" data-category="work">Research & Policy Roles</button>
+            <button class="tab-pill-btn" data-category="leadership">Executive Leadership</button>
           </div>
         </div>
 
         <!-- Liquid Search Bar -->
-        <div class="search-liquid-bar liquid-glass">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="globalSearchInput" class="search-liquid-input" placeholder="Live search across roles, research, or tools...">
+        <div class="search-pill-container">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="globalSearchInput" class="search-pill-input" placeholder="Search experiences, research, or tools...">
         </div>
 
-        <div class="experience-list" id="experienceContainer">
+        <div class="experience-timeline" id="experienceContainer">
           <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Research Works Section -->
+    <!-- Research Works & Publications Section -->
     <section class="section" id="research">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Scholarly Manuscripts</span>
-          <h2 class="section-heading">Research Works & Publications</h2>
-          <p class="section-subtext">Empirical macroeconomic evaluations, development puzzles, and energy justice frameworks.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Academic Output</span>
+          <h2 class="section-title">Research Works & Publications</h2>
+          <p class="section-caption">Empirical macroeconomic evaluations, development models, and energy justice frameworks.</p>
         </div>
 
-        <div class="research-grid" id="researchContainer">
+        <div class="research-cards-grid" id="researchContainer">
           <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Applications & Software Built -->
+    <!-- Applications & Software Built Section -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Software & Digital Utilities</span>
-          <h2 class="section-heading">Applications Built</h2>
-          <p class="section-subtext">Offline-first web tools, secure file distribution, and messaging utilities.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Software Engineering</span>
+          <h2 class="section-title">Applications Built</h2>
+          <p class="section-caption">Privacy-first offline utilities, web tools, and secure communication platforms.</p>
         </div>
 
-        <div class="projects-grid" id="projectsContainer">
+        <div class="apps-grid" id="projectsContainer">
           <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Education & Training Qualifications -->
+    <!-- Education, Certifications & Volunteering -->
     <section class="section" id="education">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Academic Background</span>
-          <h2 class="section-heading">Educational Qualifications</h2>
-          <p class="section-subtext">Rigorous foundational coursework and academic achievements.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Education & Academic Foundations</h2>
+          <p class="section-caption">Formal degree training, specialized workshops, and volunteer engagement.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;" id="educationContainer">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;" id="educationContainer">
           <!-- Populated via app.js -->
         </div>
 
         <!-- Certifications & Volunteering Grid -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
           <div>
-            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Training & Certifications</h3>
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Training & Certifications</h3>
             <div style="display: flex; flex-direction: column; gap: 1rem;" id="certificationsContainer">
               <!-- Populated via app.js -->
             </div>
           </div>
           <div>
-            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Volunteering Works</h3>
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Volunteering Works</h3>
             <div style="display: flex; flex-direction: column; gap: 1rem;" id="volunteeringContainer">
               <!-- Populated via app.js -->
             </div>
@@ -213,67 +240,67 @@
 
         <!-- Creative Works & Campaigns -->
         <div style="margin-top: 3.5rem;">
-          <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Creative Video Campaigns & Direction (ECC & Summits)</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;" id="creativeWorksContainer">
+          <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Creative Campaigns & Video Direction (ECC & Summits)</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;" id="creativeWorksContainer">
             <!-- Populated via app.js -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Collaboration Section -->
+    <!-- Contact Section -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-headline-group">
-          <span class="section-eyebrow">Get In Touch</span>
-          <h2 class="section-heading">Connect & Collaborate</h2>
-          <p class="section-subtext">Open to research assistantships, policy evaluation projects, and analytical roles.</p>
+        <div class="section-header-center">
+          <span class="section-tag">Inquiries</span>
+          <h2 class="section-title">Connect & Collaborate</h2>
+          <p class="section-caption">Open to research assistantships, policy evaluation initiatives, and data analytics projects.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;">
           <!-- Inquiry Form -->
           <div class="liquid-glass-card">
-            <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Transmit Inquiry</h3>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Transmit Inquiry</h3>
             <form id="directInquiryForm">
               <div style="margin-bottom: 1rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Full Name</label>
-                <input type="text" class="input-glass" placeholder="Dr. / Prof. / Full Name" required>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">Full Name</label>
+                <input type="text" class="btn-glass" style="width: 100%; border-radius: var(--radius-sub); text-align: left; padding: 0.75rem 1rem;" placeholder="Dr. / Prof. / Full Name" required>
               </div>
               <div style="margin-bottom: 1rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Email Address</label>
-                <input type="email" class="input-glass" placeholder="name@organization.com" required>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">Email Address</label>
+                <input type="email" class="btn-glass" style="width: 100%; border-radius: var(--radius-sub); text-align: left; padding: 0.75rem 1rem;" placeholder="name@organization.com" required>
               </div>
-              <div style="margin-bottom: 1rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.35rem;">Message</label>
-                <textarea class="input-glass" style="min-height: 100px; resize: vertical;" placeholder="Outline collaboration, research scope, or inquiry..." required></textarea>
+              <div style="margin-bottom: 1.25rem;">
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">Message</label>
+                <textarea class="btn-glass" style="width: 100%; border-radius: var(--radius-sub); text-align: left; padding: 0.75rem 1rem; min-height: 110px; resize: vertical;" placeholder="Outline the research scope, fellowship, or inquiry..." required></textarea>
               </div>
-              <button type="submit" class="btn-glass btn-glass-primary" style="width: 100%;">
-                Send Message
+              <button type="submit" class="btn-glass btn-electric" style="width: 100%; padding: 0.85rem;">
+                Send Academic Message
               </button>
             </form>
           </div>
 
           <!-- Direct Channels -->
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
             <div class="liquid-glass-card" onclick="copyDirectEmail()" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between;">
               <div>
-                <h4 style="font-size: 0.95rem; font-weight: 600;">Direct Email</h4>
-                <span style="font-size: 0.825rem; color: var(--accent-text);">inboxashikulislam@gmail.com</span>
+                <h4 style="font-size: 1.05rem; font-weight: 700;">Direct Academic Email</h4>
+                <span style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 600;">inboxashikulislam@gmail.com</span>
               </div>
-              <button class="btn-glass" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">Copy</button>
+              <button class="btn-glass" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">Copy</button>
             </div>
 
             <a href="http://cal.com/ashikul-islam-khan" target="_blank" rel="noopener" class="liquid-glass-card" style="display: flex; align-items: center; justify-content: space-between;">
               <div>
-                <h4 style="font-size: 0.95rem; font-weight: 600;">Schedule Virtual Discussion</h4>
-                <span style="font-size: 0.825rem; color: var(--text-muted);">cal.com/ashikul-islam-khan</span>
+                <h4 style="font-size: 1.05rem; font-weight: 700;">Virtual Discussion Calendar</h4>
+                <span style="font-size: 0.875rem; color: var(--text-muted);">cal.com/ashikul-islam-khan</span>
               </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
 
             <div class="liquid-glass-card">
-              <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem;">Department Location</h4>
-              <p style="font-size: 0.825rem; color: var(--text-muted);">
+              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">Campus Department</h4>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">
                 Department of Economics, Arts Building, University of Dhaka, Dhaka-1000, Bangladesh.
               </p>
             </div>
@@ -283,151 +310,129 @@
     </section>
   </main>
 
-  <!-- iOS Liquid Glass Floating Bottom Dock -->
-  <nav class="ios-glass-dock" aria-label="Floating Navigation Dock">
-    <button class="dock-item active" data-target="hero" onclick="scrollToSection('hero')" aria-label="Overview">
+  <!-- Highly Transparent iOS Liquid Glass Bottom Dock -->
+  <!-- (Clean: Customizer and Theme buttons removed as requested) -->
+  <nav class="ios-liquid-dock" aria-label="Floating Navigation Dock">
+    <button class="dock-action-btn active" data-target="hero" onclick="scrollToSection('hero')" aria-label="Overview">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span class="dock-tooltip">Overview</span>
+      <span class="dock-tooltip-bubble">Overview</span>
     </button>
-    <button class="dock-item" data-target="skills" onclick="scrollToSection('skills')" aria-label="Skills">
+    <button class="dock-action-btn" data-target="skills" onclick="scrollToSection('skills')" aria-label="Skills">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      <span class="dock-tooltip">Competencies</span>
+      <span class="dock-tooltip-bubble">Competencies</span>
     </button>
-    <button class="dock-item" data-target="experience" onclick="scrollToSection('experience')" aria-label="Experience">
+    <button class="dock-action-btn" data-target="experience" onclick="scrollToSection('experience')" aria-label="Experience">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-      <span class="dock-tooltip">Experience</span>
+      <span class="dock-tooltip-bubble">Experience</span>
     </button>
-    <button class="dock-item" data-target="research" onclick="scrollToSection('research')" aria-label="Research">
+    <button class="dock-action-btn" data-target="research" onclick="scrollToSection('research')" aria-label="Research">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-      <span class="dock-tooltip">Research</span>
+      <span class="dock-tooltip-bubble">Research</span>
     </button>
-    <button class="dock-item" data-target="projects" onclick="scrollToSection('projects')" aria-label="Projects">
+    <button class="dock-action-btn" data-target="projects" onclick="scrollToSection('projects')" aria-label="Projects">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-      <span class="dock-tooltip">Apps</span>
+      <span class="dock-tooltip-bubble">Apps</span>
+    </button>
+    <button class="dock-action-btn" data-target="education" onclick="scrollToSection('education')" aria-label="Education">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      <span class="dock-tooltip-bubble">Education</span>
     </button>
 
-    <div class="dock-divider"></div>
+    <div class="dock-separator"></div>
 
-    <button class="dock-item" onclick="openCvModal()" aria-label="Curriculum Vitae">
+    <button class="dock-action-btn" onclick="openCvModal()" aria-label="Curriculum Vitae">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-      <span class="dock-tooltip">Curriculum Vitae</span>
+      <span class="dock-tooltip-bubble">CV (PDF)</span>
     </button>
-    <button class="dock-item" onclick="toggleCustomizerDrawer()" aria-label="Edit Data">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-      <span class="dock-tooltip">Customizer</span>
-    </button>
-    <button class="dock-item" onclick="toggleThemeMode()" aria-label="Toggle Theme">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
-      <span class="dock-tooltip">Theme</span>
+    <button class="dock-action-btn" onclick="scrollToSection('contact')" aria-label="Contact">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      <span class="dock-tooltip-bubble">Contact</span>
     </button>
   </nav>
 
-  <!-- iOS Liquid Glass Snackbar (Toast) -->
-  <div class="liquid-snackbar" id="liquidSnackbar" role="status">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+  <!-- Highly Transparent iOS Liquid Glass Snackbar (Toast) -->
+  <div class="liquid-snackbar-toast" id="liquidSnackbar" role="status">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-electric);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
     <span id="snackbarText">Action completed successfully</span>
   </div>
 
   <!-- BibTeX Citation Modal -->
   <div class="glass-modal-backdrop" id="bibtexModalBackdrop">
     <div class="glass-modal-window">
-      <div class="modal-header-glass">
+      <div class="modal-header-bar">
         <div>
-          <h3 style="font-size: 1.15rem;" id="bibtexPaperTitle">BibTeX Citation</h3>
-          <span style="font-size: 0.75rem; color: var(--text-muted);">Standard academic citation format</span>
+          <h3 style="font-size: 1.25rem;" id="bibtexPaperTitle">BibTeX Citation</h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Standard academic citation format</span>
         </div>
-        <button class="btn-icon-glass" onclick="closeBibtexModal()">
+        <button class="btn-glass" onclick="closeBibtexModal()" style="padding: 0.35rem 0.65rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-      <div class="modal-body-scroll">
-        <pre class="code-snippet-box" id="bibtexCodeSnippet"></pre>
+      <div class="modal-scroll-body">
+        <pre class="code-box-display" id="bibtexCodeSnippet"></pre>
       </div>
-      <div style="padding: 1rem 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle);">
+      <div style="padding: 1.25rem 1.75rem; display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid rgba(0, 0, 0, 0.08);">
         <button class="btn-glass" onclick="closeBibtexModal()">Close</button>
-        <button class="btn-glass btn-glass-primary" onclick="copyBibtexSnippet()">Copy Citation</button>
+        <button class="btn-glass btn-electric" onclick="copyBibtexSnippet()">Copy Citation</button>
       </div>
     </div>
   </div>
 
   <!-- Curriculum Vitae Viewer Modal -->
   <div class="glass-modal-backdrop" id="cvModalBackdrop">
-    <div class="glass-modal-window" style="max-width: 860px;">
-      <div class="modal-header-glass">
+    <div class="glass-modal-window">
+      <div class="modal-header-bar">
         <div>
-          <h3 style="font-size: 1.25rem;">Curriculum Vitae Document</h3>
-          <span style="font-size: 0.78rem; color: var(--text-muted);">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</span>
+          <h3 style="font-size: 1.35rem;">Curriculum Vitae</h3>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</span>
         </div>
         <div style="display: flex; gap: 0.5rem;">
-          <button class="btn-glass" onclick="printCvDocument()">
+          <button class="btn-glass btn-electric" onclick="printCvDocument()">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
             Print / Save PDF
           </button>
-          <button class="btn-icon-glass" onclick="closeCvModal()">
+          <button class="btn-glass" onclick="closeCvModal()" style="padding: 0.35rem 0.65rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
         </div>
       </div>
-      <div class="modal-body-scroll" style="font-size: 0.875rem; line-height: 1.65;">
-        <div style="border-bottom: 1px solid var(--glass-border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-          <h2 style="font-size: 1.6rem; margin-bottom: 0.25rem;">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</h2>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">
+      <div class="modal-scroll-body" style="font-size: 0.9rem; line-height: 1.65;">
+        <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.08); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.75rem; margin-bottom: 0.25rem;">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</h2>
+          <div style="font-size: 0.875rem; color: var(--text-muted);">
             Shahbag, Dhaka, Bangladesh · +880 1753-932582 · inboxashikulislam@gmail.com · ashikulislamkhan.github.io
           </div>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Professional Summary</h4>
-          <p style="font-size: 0.85rem;">Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI.</p>
+          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Professional Summary</h4>
+          <p>Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI.</p>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Work & Leadership Experience</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Research Intern</strong> — International Institute of SDGs & Public Policy Research (IISPPR) (Sep 2026 – Present)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Youth Parliamentarian</strong> — Consumers Association of Bangladesh (CAB) (Sep 2025 – Present)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Graphic Designer</strong> — Political and Policy Science Research Foundation (PPSRF) (May 2025 – Present)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Vice President (Administration)</strong> — Economics Cultural Club, University of Dhaka (Sep 2024 – Present)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Associate Member</strong> — Economics Study Center, University of Dhaka (May 2024 – Oct 2026)</p>
+          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Work & Leadership Experience</h4>
+          <p style="margin-bottom: 0.4rem;"><strong>Research Intern</strong> — International Institute of SDGs & Public Policy Research (IISPPR) (Sep 2026 – Present)</p>
+          <p style="margin-bottom: 0.4rem;"><strong>Youth Parliamentarian</strong> — Consumers Association of Bangladesh (CAB) (Sep 2025 – Present)</p>
+          <p style="margin-bottom: 0.4rem;"><strong>Graphic Designer</strong> — Political and Policy Science Research Foundation (PPSRF) (May 2025 – Present)</p>
+          <p style="margin-bottom: 0.4rem;"><strong>Vice President (Administration)</strong> — Economics Cultural Club, University of Dhaka (Sep 2024 – Present)</p>
+          <p style="margin-bottom: 0.4rem;"><strong>Associate Member</strong> — Economics Study Center, University of Dhaka (May 2024 – Oct 2026)</p>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--accent-text); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Research Manuscripts</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Should Bangladesh Bank's Policy Move Towards Inflation Targeting?</strong> (Jan 2026)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform</strong> (Dec 2025)</p>
-          <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Energy Justice in Protecting Energy Rights</strong> (CAB Youth Parliament 2025 Handbook, Nov 2025)</p>
+          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Research Manuscripts</h4>
+          <p style="margin-bottom: 0.35rem;"><strong>Should Bangladesh Bank's Policy Move Towards Inflation Targeting?</strong> (Jan 2026)</p>
+          <p style="margin-bottom: 0.35rem;"><strong>The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform</strong> (Dec 2025)</p>
+          <p style="margin-bottom: 0.35rem;"><strong>Energy Justice in Protecting Energy Rights</strong> (CAB Youth Parliament 2025 Handbook, Nov 2025)</p>
         </div>
       </div>
-      <div style="padding: 1rem 1.5rem; display: flex; justify-content: flex-end; gap: 0.5rem; border-top: 1px solid var(--glass-border-subtle);">
+      <div style="padding: 1.25rem 1.75rem; display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid rgba(0, 0, 0, 0.08);">
         <button class="btn-glass" onclick="closeCvModal()">Close</button>
-        <button class="btn-glass btn-glass-primary" onclick="printCvDocument()">Print / Save PDF</button>
+        <button class="btn-glass btn-electric" onclick="printCvDocument()">Print / Save PDF</button>
       </div>
     </div>
   </div>
 
-  <!-- Live Content Customizer Drawer -->
-  <aside class="customizer-drawer" id="customizerDrawer">
-    <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--glass-border-subtle); display: flex; align-items: center; justify-content: space-between;">
-      <div>
-        <h3 style="font-size: 1.1rem;">Portfolio Customizer</h3>
-        <span style="font-size: 0.75rem; color: var(--text-muted);">Edit live JSON data configuration</span>
-      </div>
-      <button class="btn-icon-glass" onclick="toggleCustomizerDrawer()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div style="flex: 1; padding: 1rem 1.5rem; overflow-y: auto;">
-      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
-        Modify your profile, add new research papers, or update work experience here. Click <strong>Apply Changes</strong> to re-render in real time or <strong>Export File</strong> to save your new <code>portfolio-data.js</code>.
-      </p>
-      <textarea id="customizerJsonArea" style="width: 100%; height: calc(100% - 100px); font-family: var(--font-mono); font-size: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--glass-border-subtle); background: var(--bg-surface); color: var(--text-primary); padding: 0.75rem; outline: none;"></textarea>
-    </div>
-    <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--glass-border-subtle); display: flex; gap: 0.5rem;">
-      <button class="btn-glass" onclick="downloadConfigJs()" style="flex: 1; font-size: 0.775rem;">Export File</button>
-      <button class="btn-glass btn-glass-primary" onclick="applyLiveCustomization()" style="flex: 1; font-size: 0.775rem;">Apply Changes</button>
-    </div>
-  </aside>
-
-  <!-- Data Store & Controller Scripts -->
+  <!-- Data Store & Reactive Controller -->
   <script src="portfolio-data.js"></script>
   <script src="app.js"></script>
 </body>
