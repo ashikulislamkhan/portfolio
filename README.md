@@ -2,22 +2,21 @@
 
 > **Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist**  
 > *Department of Economics, University of Dhaka*  
-> **Live Site:** [https://ashikulislamkhan.github.io/portfolio/](https://ashikulislamkhan.github.io/portfolio/)
+> **Live Site:** [https://ashikulislamkhan.github.io/portfolio/](https://ashikulislamkhan.github.io/portfolio/)  
+> **Curriculum Vitae:** [https://ashikulislamkhan.github.io/portfolio/cv.html](https://ashikulislamkhan.github.io/portfolio/cv.html)
 
 ---
 
 ## 🎨 Theme & Architecture (Tomasz Gajda Design System)
 
 Built based on the iconic **Tomasz Gajda Figma Community Portfolio Template** (`node-id: 7-4`):
-- **Tomasz Gajda Minimalist Aesthetic**: High-contrast geometric layouts, bold Montserrat typography, signature diamond section dividers (`--◆--`), and crisp border styling.
-- **Top-Right Dark/Light Mode Switcher**: Dedicated theme switcher icon on the top right that smoothly toggles between Daylight and Dusk (dark) modes with persistent state in `localStorage`.
-- **Tomasz Gajda Hero Layout**: "Hi, I am" intro, bold full name, role headline, social links bar, dual CTA buttons (`Contact me` and `Download CV (PDF)`), and profile badge with University of Dhaka statistics.
+- **Hero Depth Showcase**: Overlapping panoramic cover banner (`images/cover.jpg`) with portrait photo (`images/profile.jpg`), elevated 3D depth shadows, active status badge, and Department of Economics branding.
+- **Dedicated Curriculum Vitae Subpage (`cv.html`)**: Complete, official CV formatted as a clean printable document with quick "Print Direct" and "Download PDF (Drive)" buttons.
+- **Direct Form Email Delivery to `inboxashikulislam@gmail.com`**: Integrated via FormSubmit AJAX service so inquiries sent through the contact form are dispatched immediately to Ashikul's primary email address with mailto fallback.
+- **Top-Right Dark/Light Mode Switcher**: Dedicated theme switcher icon that smoothly transitions between Daylight and Dusk (dark) modes with persistent state in `localStorage`.
 - **Categorized Skills Matrix**: Clean grouped competency cards for *Research & Economics*, *Technical Skills*, *Creative & Design Skills*, and *Professional Skills*.
-- **Interactive Portfolio Showcase**: Dynamic filter tabs (`All Works`, `Research Papers`, `Software & Code`, `Creative & Media`) with working links to ResearchGate, BibTeX citations, and GitHub repositories.
-- **Dedicated Full Curriculum Vitae Section**: Complete, verbatim CV containing all career appointments, research manuscripts, education, certifications, volunteering, and languages.
-- **Direct Google Drive PDF Access**: Clicking *Print / Save PDF* immediately opens your official Google Drive folder:  
-  `https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link`
-- **100% Dynamic & Editable from GitHub**: All content is separated into [`portfolio-data.js`](portfolio-data.js) for effortless editing.
+- **Interactive Portfolio Showcase**: Filter tabs for *All Works*, *Research Papers*, *Software & Code*, and *Creative & Media* with working links to ResearchGate, live web platforms, GitHub, YouTube videos, and Google Drive conference assets.
+- **100% Dynamic & Editable from GitHub**: All content is separated into [`portfolio-data.js`](portfolio-data.js).
 
 ---
 
@@ -31,6 +30,7 @@ Built based on the iconic **Tomasz Gajda Figma Community Portfolio Template** (`
    - **Add Workplaces or Internships**: Add an entry inside `workExperience: [ ... ]`.
    - **Add Research Papers**: Add an entry inside `researchWorks: [ ... ]`.
    - **Add Software Projects**: Add an entry inside `projects: [ ... ]`.
+   - **Add Videos or Branding**: Add an entry inside `creativeWorks: [ ... ]`.
    - **Update Certifications / Volunteering**: Update `certifications` or `volunteering`.
 5. Click **"Commit changes..."** and save.
 6. GitHub Pages will build and deploy your updates live within 30–60 seconds!

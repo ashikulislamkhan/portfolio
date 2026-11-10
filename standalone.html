@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashikul Islam Khan | Portfolio & Curriculum Vitae</title>
-  <meta name="description" content="Portfolio and Curriculum Vitae of Ashikul Islam Khan — Economics Undergraduate at University of Dhaka, Policy Research Enthusiast, Aspiring Data Analyst, Graphic Designer, Video Editor, Climate Activist.">
+  <meta name="description" content="Portfolio of Ashikul Islam Khan — Economics Undergraduate at University of Dhaka, Policy Research Enthusiast, Aspiring Data Analyst, Graphic Designer, Video Editor, Climate Activist.">
   
   <!-- Tomasz Gajda Signature Fonts: Montserrat & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +149,7 @@ ul, ol {
    Tomasz Gajda Signature Section Dividers
    ========================================================================== */
 .section {
-  padding: 6rem 0;
+  padding: 5.5rem 0;
 }
 
 .section-alt {
@@ -158,7 +158,7 @@ ul, ol {
 
 .tg-section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .tg-section-title {
@@ -207,7 +207,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Header & Navigation (Tomasz Gajda Minimalist Nav)
+   Header & Navigation
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -280,12 +280,12 @@ ul, ol {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -313,6 +313,27 @@ ul, ol {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+.nav-link.nav-link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+}
+
+.nav-link.nav-link-badge:hover,
+.nav-link.nav-link-badge.active {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.nav-link.nav-link-badge::after {
+  display: none;
 }
 
 .nav-actions {
@@ -368,18 +389,152 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section (Tomasz Gajda Signature Hero Layout)
+   Hero Depth Showcase Header (Cover Banner & Profile Photo with Depth Effect)
+   ========================================================================== */
+.hero-depth-container {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.hero-cover-wrap {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--border-medium);
+  box-shadow: var(--shadow-md);
+  background-color: var(--bg-secondary);
+}
+
+.hero-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-cover-wrap:hover .hero-cover-img {
+  transform: scale(1.02);
+}
+
+.hero-cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-cover-overlay {
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 0.75) 100%);
+}
+
+/* Avatar Frame Overlapping with 3D Depth */
+.hero-avatar-depth-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: -85px;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-avatar-frame {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  border-radius: 16px;
+  padding: 6px;
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-primary);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35), 0 0 0 2px var(--border-subtle);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-avatar-frame:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 28px 55px -10px rgba(0, 0, 0, 0.45);
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.avatar-status-dot {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-emerald);
+  border: 3px solid var(--bg-card);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(32, 201, 151, 0.4);
+}
+
+.hero-avatar-meta {
+  padding-bottom: 0.5rem;
+}
+
+.hero-avatar-name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.hero-avatar-dept {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.hero-avatar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-meta-pill {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Hero Section Layout
    ========================================================================== */
 .hero-section {
-  padding: 6.5rem 0 5.5rem 0;
+  padding: 3rem 0 5rem 0;
   position: relative;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .hero-content {
@@ -389,17 +544,17 @@ ul, ol {
 
 .hero-greeting {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero-name {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -410,9 +565,9 @@ ul, ol {
 
 .hero-tagline {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--text-secondary);
   border-left: 3px solid var(--border-primary);
   padding-left: 1rem;
@@ -420,7 +575,7 @@ ul, ol {
 }
 
 .hero-bio {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -430,7 +585,7 @@ ul, ol {
 .hero-socials {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
   margin-bottom: 2.25rem;
 }
 
@@ -464,10 +619,10 @@ ul, ol {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
-/* Tomasz Gajda Button Styles */
+/* Button Styles */
 .tg-btn {
   display: inline-flex;
   align-items: center;
@@ -475,7 +630,7 @@ ul, ol {
   gap: 0.65rem;
   padding: 0.85rem 1.85rem;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -512,7 +667,7 @@ ul, ol {
   height: 16px;
 }
 
-/* Hero Right Profile Box */
+/* Profile Card */
 .hero-visual {
   position: relative;
 }
@@ -543,7 +698,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -582,59 +737,59 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .du-seal-icon {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--text-primary);
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .affiliation-details h4 {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .affiliation-details p {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
 }
 
 .profile-stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.75rem;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-item {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  padding: 1rem;
+  padding: 0.85rem;
   text-align: center;
 }
 
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--text-primary);
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -737,7 +892,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Skills Section (Grouped Competencies)
+   Skills Section
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -820,16 +975,16 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Experience & Leadership Section
+   Experience Section
    ========================================================================== */
 .experience-layout {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .exp-category-block {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .exp-category-heading {
@@ -937,7 +1092,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Portfolio Section (Tomasz Gajda Project Grid & Filters)
+   Portfolio Section
    ========================================================================== */
 .portfolio-filters {
   display: flex;
@@ -1109,8 +1264,70 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Full Curriculum Vitae Section (Verbatim requested CV)
+   CV Showcase Banner (On Main Page)
    ========================================================================== */
+.cv-preview-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.cv-preview-lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.8;
+}
+
+.cv-preview-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.cv-highlight-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.cv-highlight-box h4 {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.cv-highlight-box p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cv-preview-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* ==========================================================================
+   Full Dedicated CV Page Styles (cv.html)
+   ========================================================================== */
+.cv-page-wrap {
+  padding: 3rem 0 6rem 0;
+}
+
 .cv-container-card {
   background-color: var(--bg-card);
   border: 2px solid var(--border-medium);
@@ -1158,7 +1375,6 @@ ul, ol {
   gap: 1rem;
 }
 
-/* CV Layout Structure */
 .cv-header {
   border-bottom: 2px solid var(--border-primary);
   padding-bottom: 2rem;
@@ -1230,7 +1446,6 @@ ul, ol {
   color: var(--text-secondary);
 }
 
-/* CV Competencies 4-column grid */
 .cv-competencies-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1267,7 +1482,6 @@ ul, ol {
   color: var(--text-primary);
 }
 
-/* CV Experience Entries */
 .cv-entry {
   margin-bottom: 1.75rem;
 }
@@ -1316,7 +1530,6 @@ ul, ol {
   line-height: 1.6;
 }
 
-/* CV Research List */
 .cv-research-item {
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
@@ -1359,7 +1572,6 @@ ul, ol {
   line-height: 1.6;
 }
 
-/* CV Education, Certifications, Volunteering, Languages */
 .cv-grid-2col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1396,7 +1608,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Contact Section (Tomasz Gajda Minimalist Form)
+   Contact Section
    ========================================================================== */
 .contact-grid {
   display: grid;
@@ -1468,13 +1680,13 @@ ul, ol {
   text-decoration: underline;
 }
 
-/* Contact Form */
 .tg-contact-form {
   background-color: var(--bg-card);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
+  position: relative;
 }
 
 .form-group {
@@ -1573,7 +1785,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Toast / Liquid Notification
+   Toast Notification
    ========================================================================== */
 .liquid-toast {
   position: fixed;
@@ -1701,6 +1913,10 @@ ul, ol {
     grid-template-columns: 1fr;
   }
 
+  .cv-preview-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .cv-competencies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1735,11 +1951,40 @@ ul, ol {
   }
 
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 2.35rem;
+  }
+
+  .hero-cover-wrap {
+    height: 180px;
+  }
+
+  .hero-avatar-depth-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -65px;
+    gap: 1rem;
+  }
+
+  .hero-avatar-frame {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-avatar-pills {
+    justify-content: center;
   }
 
   .cv-container-card {
     padding: 2rem 1.5rem;
+  }
+
+  .cv-preview-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .cv-preview-highlights {
+    grid-template-columns: 1fr;
   }
 
   .cv-competencies-grid {
@@ -1776,6 +2021,7 @@ ul, ol {
     padding: 0 !important;
   }
 
+  .cv-page-wrap,
   #curriculum-vitae {
     padding: 0 !important;
   }
@@ -1810,7 +2056,7 @@ ul, ol {
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#curriculum-vitae" class="nav-link">CV</a>
+        <a href="cv.html" class="nav-link nav-link-badge">Curriculum Vitae</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -1841,106 +2087,139 @@ ul, ol {
   </header>
 
   <!-- =========================================================================
-       Hero Section (Tomasz Gajda Signature Hero Layout)
+       Hero Section with Depth Effect Photo & Cover Showcase
        ========================================================================= -->
   <main>
     <section class="section hero-section" id="hero">
-      <div class="container hero-grid">
-        <!-- Left Hero Content -->
-        <div class="hero-content">
-          <span class="hero-greeting">Hi, I am</span>
-          <h1 class="hero-name" id="heroFullName">Ashikul Islam Khan</h1>
+      <div class="container">
+        
+        <!-- Depth Effect Header: Wide Cover Banner with Overlapping Profile Avatar -->
+        <div class="hero-depth-container">
+          <div class="hero-cover-wrap">
+            <img src="images/cover.jpg" alt="Ashikul Islam Khan Cover Banner" class="hero-cover-img" />
+            <div class="hero-cover-overlay"></div>
+          </div>
           
-          <div class="hero-tagline" id="heroTagline">
-            Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist
-          </div>
-
-          <p class="hero-bio" id="heroBio">
-            Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
-          </p>
-
-          <!-- Quick Social Links Bar -->
-          <div class="hero-socials">
-            <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub Profile">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-            <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn Profile">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-            <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="social-icon-btn" title="ResearchGate Publications">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            </a>
-            <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=39HR9nwAAAAJ" target="_blank" rel="noopener" class="social-icon-btn" title="Google Scholar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-            </a>
-            <a href="mailto:inboxashikulislam@gmail.com" class="social-icon-btn" title="Send Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            </a>
-          </div>
-
-          <!-- Hero Action Buttons -->
-          <div class="hero-buttons">
-            <a href="#contact" class="tg-btn tg-btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              <span>Contact me</span>
-            </a>
-            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-outline" title="Print/Save PDF on Google Drive">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>Download CV (PDF)</span>
-            </a>
+          <div class="hero-avatar-depth-wrap">
+            <div class="hero-avatar-frame">
+              <img src="images/profile.jpg" alt="Ashikul Islam Khan" class="hero-avatar-img" />
+              <span class="avatar-status-dot" title="Available for Roles"></span>
+            </div>
+            <div class="hero-avatar-meta">
+              <h2 class="hero-avatar-name">Ashikul Islam Khan</h2>
+              <div class="hero-avatar-dept">Department of Economics · University of Dhaka</div>
+              <div class="hero-avatar-pills">
+                <span class="hero-meta-pill">Development Economics</span>
+                <span class="hero-meta-pill">Policy Research</span>
+                <span class="hero-meta-pill">Data Analytics</span>
+                <span class="hero-meta-pill">Visual Media</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Right Hero Visual / Profile Card -->
-        <div class="hero-visual">
-          <div class="profile-card">
-            <div class="profile-badge-row">
-              <div class="status-pill">
-                <span class="pulse-indicator"></span>
-                <span>Available for Roles</span>
-              </div>
-              <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Dhaka, BD</span>
+        <!-- Main Hero Details Grid -->
+        <div class="hero-grid">
+          <!-- Left Hero Content -->
+          <div class="hero-content">
+            <span class="hero-greeting">Hi, I am</span>
+            <h1 class="hero-name" id="heroFullName">Ashikul Islam Khan</h1>
+            
+            <div class="hero-tagline" id="heroTagline">
+              Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist
             </div>
 
-            <div class="affiliation-box">
-              <div class="du-seal-icon">DU</div>
-              <div class="affiliation-details">
-                <h4>University of Dhaka</h4>
-                <p>Department of Economics · Final Year</p>
-              </div>
+            <p class="hero-bio" id="heroBio">
+              Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
+            </p>
+
+            <!-- Quick Social Links Bar -->
+            <div class="hero-socials">
+              <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="social-icon-btn" title="ResearchGate Publications">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=39HR9nwAAAAJ" target="_blank" rel="noopener" class="social-icon-btn" title="Google Scholar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </a>
+              <a href="mailto:inboxashikulislam@gmail.com" class="social-icon-btn" title="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
             </div>
 
-            <div class="profile-stats-grid" id="heroStatsGrid">
-              <div class="stat-item">
-                <span class="stat-number">Univ of Dhaka</span>
-                <span class="stat-label">Institution</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">Final Year</span>
-                <span class="stat-label">BSS Economics</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">3 Papers</span>
-                <span class="stat-label">Policy Research</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">Score: 129</span>
-                <span class="stat-label">Duolingo English</span>
-              </div>
+            <!-- Hero Action Buttons -->
+            <div class="hero-buttons">
+              <a href="#contact" class="tg-btn tg-btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>Contact me</span>
+              </a>
+              <a href="cv.html" class="tg-btn tg-btn-outline" title="Open Curriculum Vitae Subpage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>Curriculum Vitae</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-outline" title="Download Official PDF Resume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>PDF (Drive)</span>
+              </a>
             </div>
+          </div>
 
-            <div class="profile-contact-quick">
-              <div class="quick-row">
-                <span class="quick-label">Location</span>
-                <span class="quick-val">Shahbag, Dhaka, Bangladesh</span>
+          <!-- Right Hero Visual / Profile Statistics Card -->
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-badge-row">
+                <div class="status-pill">
+                  <span class="pulse-indicator"></span>
+                  <span>Available for Roles</span>
+                </div>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Dhaka, BD</span>
               </div>
-              <div class="quick-row">
-                <span class="quick-label">Direct Email</span>
-                <a href="mailto:inboxashikulislam@gmail.com" class="quick-val" style="color: var(--accent-electric);">inboxashikulislam@gmail.com</a>
+
+              <div class="affiliation-box">
+                <div class="du-seal-icon">DU</div>
+                <div class="affiliation-details">
+                  <h4>University of Dhaka</h4>
+                  <p>Department of Economics · Final Year</p>
+                </div>
               </div>
-              <div class="quick-row">
-                <span class="quick-label">Phone</span>
-                <a href="tel:+8801753932582" class="quick-val">+880 1753-932582</a>
+
+              <div class="profile-stats-grid" id="heroStatsGrid">
+                <div class="stat-item">
+                  <span class="stat-number">University of Dhaka</span>
+                  <span class="stat-label">Institution</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Final Year</span>
+                  <span class="stat-label">BSS Economics</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">3 Papers</span>
+                  <span class="stat-label">Policy Research</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Score: 129</span>
+                  <span class="stat-label">Duolingo English</span>
+                </div>
+              </div>
+
+              <div class="profile-contact-quick">
+                <div class="quick-row">
+                  <span class="quick-label">Location</span>
+                  <span class="quick-val">Shahbag, Dhaka, Bangladesh</span>
+                </div>
+                <div class="quick-row">
+                  <span class="quick-label">Direct Email</span>
+                  <a href="mailto:inboxashikulislam@gmail.com" class="quick-val" style="color: var(--accent-electric);">inboxashikulislam@gmail.com</a>
+                </div>
+                <div class="quick-row">
+                  <span class="quick-label">Phone</span>
+                  <a href="tel:+8801753932582" class="quick-val">+880 1753-932582</a>
+                </div>
               </div>
             </div>
           </div>
@@ -1949,7 +2228,7 @@ ul, ol {
     </section>
 
     <!-- =========================================================================
-         About Me Section (Tomasz Gajda Section Header & Clean Cards)
+         About Me Section
          ========================================================================= -->
     <section class="section section-alt" id="about">
       <div class="container">
@@ -2054,7 +2333,7 @@ ul, ol {
     </section>
 
     <!-- =========================================================================
-         Portfolio Section (Recent Work, Research Papers & Apps)
+         Portfolio Section (Recent Work, Research Papers, Apps & Media)
          ========================================================================= -->
     <section class="section" id="portfolio">
       <div class="container">
@@ -2084,7 +2363,7 @@ ul, ol {
     </section>
 
     <!-- =========================================================================
-         Full Curriculum Vitae Section (Verbatim specifications)
+         Curriculum Vitae Showcase Section (Links to Dedicated Subpage cv.html)
          ========================================================================= -->
     <section class="section section-alt" id="curriculum-vitae">
       <div class="container">
@@ -2095,300 +2374,41 @@ ul, ol {
             <span class="tg-divider-diamond"></span>
             <span class="tg-divider-line"></span>
           </div>
-          <p class="tg-section-subtitle">Complete, verified academic and professional curriculum vitae.</p>
+          <p class="tg-section-subtitle">Academic profile, career appointments, and published research.</p>
         </div>
 
-        <div class="cv-container-card">
-          <!-- Action Banner -->
-          <div class="cv-action-banner">
-            <div class="cv-banner-info">
-              <span class="cv-banner-title">Official Curriculum Vitae</span>
-              <span class="cv-banner-desc">Updated for academic research and professional data analyst roles.</span>
-            </div>
-            <div class="cv-banner-actions">
-              <button onclick="window.print()" class="tg-btn tg-btn-outline" style="padding: 0.65rem 1.25rem;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-                <span>Print Direct</span>
-              </button>
-              <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-primary" style="padding: 0.65rem 1.25rem;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Print / Save PDF (Drive)</span>
-              </a>
-            </div>
-          </div>
+        <div class="cv-preview-card">
+          <p class="cv-preview-lead">
+            Explore my comprehensive curriculum vitae detailing academic achievements at the University of Dhaka, peer-reviewed and conference publications, technical proficiencies, organizational leadership, and international training certifications.
+          </p>
 
-          <!-- CV Header -->
-          <div class="cv-header">
-            <h1 class="cv-name">Ashikul Islam Khan</h1>
-            <p class="cv-tagline">Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist</p>
-            <div class="cv-contact-bar">
-              <span class="cv-contact-item">📍 Shahbag, Dhaka, Bangladesh</span>
-              <span class="cv-contact-item">📧 <a href="mailto:inboxashikulislam@gmail.com">inboxashikulislam@gmail.com</a></span>
-              <span class="cv-contact-item">📞 <a href="tel:+8801753932582">+880 1753-932582</a></span>
-              <span class="cv-contact-item">🌐 Portfolio: <a href="http://ashikulislamkhan.github.io/" target="_blank" rel="noopener">ashikulislamkhan.github.io</a></span>
-              <span class="cv-contact-item">🔗 LinkedIn: <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener">linkedin.com/in/ashikul-islam-khan</a></span>
+          <div class="cv-preview-highlights">
+            <div class="cv-highlight-box">
+              <h4>Academic Status</h4>
+              <p>Bachelor of Social Science (BSS) in Economics (Final Year), University of Dhaka.</p>
+            </div>
+            <div class="cv-highlight-box">
+              <h4>Research Record</h4>
+              <p>Energy Justice policy paper published by CAB; 2 empirical working papers in monetary and development economics.</p>
+            </div>
+            <div class="cv-highlight-box">
+              <h4>Core Toolkit</h4>
+              <p>SQL, Python, Power BI, Advanced Excel, Econometric Analysis, Graphic Design & Video Editing.</p>
+            </div>
+            <div class="cv-highlight-box">
+              <h4>Leadership</h4>
+              <p>Vice President (Admin) @ Economics Cultural Club DU; Associate Member @ Economics Study Center.</p>
             </div>
           </div>
 
-          <!-- Professional Summary -->
-          <div class="cv-block">
-            <h3 class="cv-block-title">Professional Summary</h3>
-            <p class="cv-summary-text">
-              Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
-            </p>
-          </div>
-
-          <!-- Core Competencies -->
-          <div class="cv-block">
-            <h3 class="cv-block-title">Core Competencies</h3>
-            <div class="cv-competencies-grid">
-              <div class="cv-comp-col">
-                <h4>Research & Economics</h4>
-                <ul class="cv-comp-list">
-                  <li>Policy Research</li>
-                  <li>Development Economics</li>
-                  <li>Econometrics</li>
-                  <li>Data Analysis</li>
-                  <li>Academic Writing</li>
-                  <li>Policy Analysis</li>
-                </ul>
-              </div>
-              <div class="cv-comp-col">
-                <h4>Technical Skills</h4>
-                <ul class="cv-comp-list">
-                  <li>SQL</li>
-                  <li>Python</li>
-                  <li>Power BI</li>
-                  <li>Advanced Excel</li>
-                  <li>Microsoft Office Suite</li>
-                  <li>Data Visualization</li>
-                </ul>
-              </div>
-              <div class="cv-comp-col">
-                <h4>Creative & Design Skills</h4>
-                <ul class="cv-comp-list">
-                  <li>Graphic Design</li>
-                  <li>Video Editing</li>
-                  <li>Cinematography</li>
-                  <li>Visual Storytelling</li>
-                  <li>Branding & Social Media Design</li>
-                </ul>
-              </div>
-              <div class="cv-comp-col">
-                <h4>Professional Skills</h4>
-                <ul class="cv-comp-list">
-                  <li>Leadership</li>
-                  <li>Communication</li>
-                  <li>Project Management</li>
-                  <li>Public Speaking & Presentation</li>
-                  <li>Team Collaboration</li>
-                  <li>Climate Advocacy</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Professional Experience -->
-          <div class="cv-block">
-            <h3 class="cv-block-title">Professional Experience</h3>
-            
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Research Intern</span>
-                <span class="cv-entry-date">September 2026 – Present</span>
-              </div>
-              <div class="cv-entry-sub">International Institute of SDGs & Public Policy Research (IISPPR) (Remote)</div>
-              <ul class="cv-bullets">
-                <li>Conduct research on Sustainable Development Goals and public policy.</li>
-                <li>Assist in literature reviews, policy analysis, and research documentation.</li>
-                <li>Collaborate with researchers on policy evaluation projects.</li>
-                <li>Strengthen analytical and evidence-based research skills.</li>
-              </ul>
-            </div>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Youth Parliamentarian</span>
-                <span class="cv-entry-date">September 2025 – Present</span>
-              </div>
-              <div class="cv-entry-sub">Consumers Association of Bangladesh (CAB)</div>
-              <ul class="cv-bullets">
-                <li>Authored and published a policy paper on Energy Justice and Consumer Rights.</li>
-                <li>Presented research before policymakers and national stakeholders.</li>
-                <li>Conduct policy research on consumer rights, energy justice, and sustainable governance.</li>
-                <li>Participate in parliamentary sessions and policy discussions.</li>
-              </ul>
-            </div>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Graphic Designer</span>
-                <span class="cv-entry-date">May 2025 – Present</span>
-              </div>
-              <div class="cv-entry-sub">Political and Policy Science Research Foundation (PPSRF)</div>
-              <ul class="cv-bullets">
-                <li>Designed official branding and promotional materials for national conferences.</li>
-                <li>Developed visual identity for major policy and democracy events.</li>
-                <li>Collaborated with organizing committees on digital and print communications.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Leadership Experience -->
-          <div class="cv-block">
-            <h3 class="cv-block-title">Leadership Experience</h3>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Vice President (Administration)</span>
-                <span class="cv-entry-date">September 2024 – Present</span>
-              </div>
-              <div class="cv-entry-sub">Economics Cultural Club, University of Dhaka</div>
-              <ul class="cv-bullets">
-                <li>Lead club administration and executive operations.</li>
-                <li>Coordinate large-scale university events.</li>
-                <li>Manage organizing committees and volunteers.</li>
-                <li>Previously served as Secretary (Talent Acquisition).</li>
-              </ul>
-            </div>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Associate Member</span>
-                <span class="cv-entry-date">May 2024 – October 2026</span>
-              </div>
-              <div class="cv-entry-sub">Economics Study Center</div>
-              <ul class="cv-bullets">
-                <li>Organized Bangladesh Economics Summit.</li>
-                <li>Coordinated seminars, workshops, and academic events.</li>
-                <li>Worked with internal and external stakeholders.</li>
-              </ul>
-            </div>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Associate (Organizing)</span>
-                <span class="cv-entry-date">October 2023 – October 2026</span>
-              </div>
-              <div class="cv-entry-sub">Economics Career Alliance</div>
-              <ul class="cv-bullets">
-                <li>Assisted in organizing career expos, competitions, and departmental events.</li>
-                <li>Managed logistics and participant coordination.</li>
-              </ul>
-            </div>
-
-            <div class="cv-entry">
-              <div class="cv-entry-head">
-                <span class="cv-entry-role">Joint Coordinator of E3F</span>
-                <span class="cv-entry-date">2021 – 2023</span>
-              </div>
-              <div class="cv-entry-sub">ARANYAK</div>
-              <ul class="cv-bullets">
-                <li>Led environmental awareness initiatives.</li>
-                <li>Organized tree plantation and sustainability campaigns.</li>
-                <li>Coordinated community outreach activities.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Research Works -->
-          <div class="cv-block">
-            <h3 class="cv-block-title">Research Works</h3>
-
-            <div class="cv-research-item">
-              <div class="cv-research-title">
-                <a href="https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds" target="_blank" rel="noopener">
-                  Should Bangladesh Bank's Policy Move Towards Inflation Targeting?
-                </a>
-              </div>
-              <div class="cv-research-meta">Monetary Economics Paper (2026) · (Unpublished)</div>
-              <p class="cv-research-desc">Analyzed 27 years of Bangladesh Bank data using exchange rate pass-through analysis.</p>
-            </div>
-
-            <div class="cv-research-item">
-              <div class="cv-research-title">
-                <a href="https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle" target="_blank" rel="noopener">
-                  The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform
-                </a>
-              </div>
-              <div class="cv-research-meta">Development Economics Paper (2025) · (Unpublished)</div>
-              <p class="cv-research-desc">Examined Cuba's development model, institutional reforms, and human development.</p>
-            </div>
-
-            <div class="cv-research-item">
-              <div class="cv-research-title">
-                <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener">
-                  Energy Justice in Protecting Energy Rights
-                </a>
-              </div>
-              <div class="cv-research-meta">Conference Paper (Published, CAB Youth Parliament 2025 Handbook)</div>
-              <p class="cv-research-desc">Examined energy justice, renewable energy governance, and consumer rights in Bangladesh.</p>
-            </div>
-          </div>
-
-          <!-- Education, Certifications, Volunteering, Languages -->
-          <div class="cv-grid-2col">
-            <!-- Education -->
-            <div class="cv-block" style="margin-bottom: 0;">
-              <h3 class="cv-block-title">Education</h3>
-              <div class="cv-edu-item">
-                <div class="cv-edu-degree">🎓 Bachelor of Social Science (BSS) in Economics</div>
-                <div class="cv-edu-inst">University of Dhaka | <strong>(Final Year)</strong></div>
-              </div>
-              <div class="cv-edu-item">
-                <div class="cv-edu-degree">🎓 Higher Secondary Certificate (HSC)</div>
-                <div class="cv-edu-inst">Amrita Lal Dey College, Barishal | GPA: 5.00</div>
-              </div>
-              <div class="cv-edu-item">
-                <div class="cv-edu-degree">🎓 Secondary School Certificate (SSC)</div>
-                <div class="cv-edu-inst">Kaunia Govt. Secondary School, Barishal | GPA: 5.00</div>
-              </div>
-            </div>
-
-            <!-- Training & Certifications -->
-            <div class="cv-block" style="margin-bottom: 0;">
-              <h3 class="cv-block-title">Training & Certifications</h3>
-              <div class="cv-cert-item">
-                🏅 Students in Energy Security and Just Energy Transition Workshop — Consumers Association of Bangladesh (2026)
-              </div>
-              <div class="cv-cert-item">
-                🏅 Climate and Environmental Policy 101 — ASEAN Youth Organization (2026)
-              </div>
-              <div class="cv-cert-item">
-                🏅 Air Diary Challenge — Youth4Nature Fellowship Program (2026)
-              </div>
-            </div>
-          </div>
-
-          <div class="cv-grid-2col" style="margin-top: 2rem;">
-            <!-- Volunteering -->
-            <div class="cv-block" style="margin-bottom: 0;">
-              <h3 class="cv-block-title">Volunteering</h3>
-              <div class="cv-entry" style="margin-bottom: 1rem;">
-                <div class="cv-entry-role" style="font-size: 0.95rem;">Volunteer (Public Relations)</div>
-                <div class="cv-entry-sub" style="font-size: 0.85rem; margin-bottom: 0.25rem;">South Asian Network on Economic Modelling (SANEM)</div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">Supported public relations and participant engagement during the 8th SANEM Annual Economists' Conference.</p>
-              </div>
-              <div class="cv-entry" style="margin-bottom: 0;">
-                <div class="cv-entry-role" style="font-size: 0.95rem;">Volunteer (Logistics)</div>
-                <div class="cv-entry-sub" style="font-size: 0.85rem; margin-bottom: 0.25rem;">Economics Study Center</div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">Assisted with logistics for the 6th and 7th Bangladesh Economics Summit.</p>
-              </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="cv-block" style="margin-bottom: 0;">
-              <h3 class="cv-block-title">Languages</h3>
-              <div class="cv-lang-item"><strong>Bangla:</strong> Native</div>
-              <div class="cv-lang-item"><strong>English:</strong> Fluent (Duolingo English Test Score: 129)</div>
-            </div>
-          </div>
-
-          <!-- Bottom Action Redirect Button -->
-          <div style="margin-top: 3rem; text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
-            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-primary" style="padding: 0.9rem 2.25rem;">
+          <div class="cv-preview-buttons">
+            <a href="cv.html" class="tg-btn tg-btn-primary" style="padding: 0.95rem 2.25rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>View Full Curriculum Vitae Page</span>
+            </a>
+            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-outline" style="padding: 0.95rem 2.25rem;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span>Download Official PDF on Google Drive</span>
+              <span>Download PDF on Google Drive</span>
             </a>
           </div>
         </div>
@@ -2396,7 +2416,7 @@ ul, ol {
     </section>
 
     <!-- =========================================================================
-         Contact Section (Tomasz Gajda Minimalist Form & Details)
+         Contact Section (Direct Form with Real Email Delivery)
          ========================================================================= -->
     <section class="section" id="contact">
       <div class="container">
@@ -2414,7 +2434,7 @@ ul, ol {
           <!-- Left Details Panel -->
           <div class="contact-info-panel">
             <p class="contact-lead">
-              Have a project, research paper, data challenge, or creative campaign in mind? Reach out directly or send a message through the form.
+              Have a project, research paper, data challenge, or creative campaign in mind? Reach out directly or send a message through the form. Every message is delivered straight to my primary inbox.
             </p>
 
             <div class="contact-details-list">
@@ -2460,31 +2480,37 @@ ul, ol {
             </div>
           </div>
 
-          <!-- Right Contact Form -->
+          <!-- Right Contact Form with direct FormSubmit endpoint -->
           <form class="tg-contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+            <!-- FormSubmit direct inbox forwarding fields -->
+            <input type="hidden" name="_subject" id="formSubmitSubject" value="New Portfolio Message for Ashikul Islam Khan">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Ashikul Islam Khan. I have received your message and will respond shortly.">
+
             <div class="form-group">
               <label for="senderName" class="form-label">Your Name</label>
-              <input type="text" id="senderName" class="form-input" placeholder="e.g. Dr. Alex Morgan" required>
+              <input type="text" name="name" id="senderName" class="form-input" placeholder="e.g. Dr. Alex Morgan" required>
             </div>
 
             <div class="form-group">
               <label for="senderEmail" class="form-label">Your Email</label>
-              <input type="email" id="senderEmail" class="form-input" placeholder="e.g. alex@institution.org" required>
+              <input type="email" name="email" id="senderEmail" class="form-input" placeholder="e.g. alex@institution.org" required>
             </div>
 
             <div class="form-group">
               <label for="msgSubject" class="form-label">Subject</label>
-              <input type="text" id="msgSubject" class="form-input" placeholder="Research Collaboration / Analytics Inquiry" required>
+              <input type="text" name="subject" id="msgSubject" class="form-input" placeholder="Research Collaboration / Analytics Inquiry" required>
             </div>
 
             <div class="form-group">
               <label for="msgContent" class="form-label">Your Message</label>
-              <textarea id="msgContent" class="form-textarea" placeholder="Describe the scope of work or research opportunity..." required></textarea>
+              <textarea name="message" id="msgContent" class="form-textarea" placeholder="Describe the scope of work or research opportunity..." required></textarea>
             </div>
 
-            <button type="submit" class="tg-btn tg-btn-primary" style="width: 100%;">
+            <button type="submit" id="submitBtn" class="tg-btn tg-btn-primary" style="width: 100%;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              <span>Submit Message</span>
+              <span id="submitBtnText">Submit Message to Ashikul</span>
             </button>
           </form>
         </div>
@@ -2493,7 +2519,7 @@ ul, ol {
   </main>
 
   <!-- =========================================================================
-       Footer (Tomasz Gajda Back-to-Top & Socials)
+       Footer
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container footer-content">
@@ -2526,17 +2552,13 @@ ul, ol {
     </div>
   </footer>
 
-  <!-- =========================================================================
-       Liquid Toast Notification
-       ========================================================================= -->
+  <!-- Toast Notification -->
   <div class="liquid-toast" id="liquidToast" role="alert" aria-live="polite">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
     <span id="toastMessage">Action completed</span>
   </div>
 
-  <!-- =========================================================================
-       BibTeX Modal
-       ========================================================================= -->
+  <!-- BibTeX Modal -->
   <div class="modal-overlay" id="bibtexModal" onclick="closeBibtexModal(event)">
     <div class="modal-dialog" onclick="event.stopPropagation()">
       <div class="modal-head">
@@ -2554,7 +2576,7 @@ ul, ol {
     </div>
   </div>
 
-  <!-- Portfolio Data Store and Controller -->
+  <!-- Data Store & Controller -->
   <script>
 /**
  * =========================================================================
@@ -2581,10 +2603,13 @@ const PORTFOLIO_DATA = {
     institution: "Department of Economics, University of Dhaka",
     statusBadge: "Final Year Undergraduate · Available for Research, Analytics & Creative Roles",
     
+    avatarImage: "images/profile.jpg",
+    coverImage: "images/cover.jpg",
+    
     summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
     socials: {
-      portfolio: "http://ashikulislamkhan.github.io/",
+      portfolio: "https://ashikulislamkhan.github.io/portfolio/",
       linkedin: "https://linkedin.com/in/ashikul-islam-khan",
       github: "https://github.com/ashikulislamkhan",
       researchgate: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
@@ -2595,7 +2620,7 @@ const PORTFOLIO_DATA = {
     },
 
     quickStats: [
-      { label: "University", val: "Univ of Dhaka" },
+      { label: "University", val: "University of Dhaka" },
       { label: "Program", val: "BSS Economics (Final Year)" },
       { label: "Research Manuscripts", val: "3 Papers" },
       { label: "English Proficiency", val: "Duolingo 129" }
@@ -2797,7 +2822,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 6. APPLICATIONS BUILT
+  // 6. APPLICATIONS BUILT (Software / Code Projects)
   // -----------------------------------------------------------------------
   projects: [
     {
@@ -2805,6 +2830,7 @@ const PORTFOLIO_DATA = {
       tagline: "Free Cloud File Sharing Platform",
       description: "A fast, fully free web-based file-sharing cloud utility designed for effortless peer-to-peer file transfer.",
       stack: ["JavaScript", "Cloud API", "Web Application"],
+      liveUrl: "https://ashikulislamkhan.github.io/airshare/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -2812,6 +2838,7 @@ const PORTFOLIO_DATA = {
       tagline: "100% Client-Side Offline File Converter",
       description: "A secure, privacy-first file converting website that processes documents and media fully offline within your browser.",
       stack: ["WebAssembly", "JavaScript", "HTML5 API"],
+      liveUrl: "https://ashikulislamkhan.github.io/Konvert/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -2819,6 +2846,7 @@ const PORTFOLIO_DATA = {
       tagline: "Offline Social Media Frame Applicator",
       description: "A fully offline canvas tool for overlaying campaign badges, graduation borders, and event frames onto profile pictures.",
       stack: ["HTML5 Canvas", "JavaScript", "Image Processing"],
+      liveUrl: "https://ashikulislamkhan.github.io/framefuse/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -2826,12 +2854,100 @@ const PORTFOLIO_DATA = {
       tagline: "Anonymous Web-Based Texting App",
       description: "A minimalist anonymous communication web application focused on instant, privacy-conscious ephemeral text messages.",
       stack: ["WebSockets", "JavaScript", "Responsive UI"],
+      liveUrl: "https://anonymous2you.github.io/anonymous2you/",
       githubUrl: "https://github.com/ashikulislamkhan"
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 7. EDUCATIONAL QUALIFICATIONS
+  // 7. CREATIVE & MEDIA WORKS (Branding, Graphic Design & Video Campaigns)
+  // -----------------------------------------------------------------------
+  creativeWorks: [
+    {
+      type: "design",
+      title: "1st Political Science Conference organized by PPSRF",
+      category: "Graphics Design and Branding",
+      role: "Lead Graphic Designer",
+      year: "2025",
+      description: "Designed every conference material, worked for branding, press releases, banner graphics, and comprehensive printing collateral.",
+      link: "https://drive.google.com/drive/u/3/folders/1t1Lb46hnu_ZShuSxa8_DAmGXiSoyJPg0"
+    },
+    {
+      type: "design",
+      title: "World Democracy Congress organized by PPSRF",
+      category: "Graphics Design and Branding",
+      role: "Lead Graphic Designer",
+      year: "2025",
+      description: "Designed every conference material, worked for branding, press releases, digital assets, and high-impact printing collateral.",
+      link: "https://drive.google.com/drive/u/3/folders/1t1Lb46hnu_ZShuSxa8_DAmGXiSoyJPg0"
+    },
+    {
+      type: "video",
+      title: "ECC Freshers’ Breeze 2025 Promo",
+      category: "Video Production",
+      role: "Direction, Script & Video Production",
+      year: "2025",
+      description: "Direction, scriptwriting, and complete video production for the Economics Cultural Club flagship Freshers' Breeze celebration.",
+      link: "https://youtu.be/gwYpUs_u058?si=nmTo3FQDXZlKoYbz"
+    },
+    {
+      type: "video",
+      title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo",
+      category: "Video Production",
+      role: "Scripting, Acting & Full Edit",
+      year: "2025",
+      description: "Conceptualization, acting, scriptwriting, and editing for the national EconQuest Economics Olympiad promo video.",
+      link: "https://youtu.be/R9BU7k6T4Z0?si=aj8ZzO_DnPTXthxL"
+    },
+    {
+      type: "video",
+      title: "6th Bangladesh Economics Summit (BES 2025) Official Promo",
+      category: "Video Production",
+      role: "Cinematography & Editing",
+      year: "2025",
+      description: "Cinematography and video editing for the Economics Study Center's marquee academic conference promo.",
+      link: "https://youtu.be/ffnw9URoQSo?si=LckPwyu-t2NfHotH"
+    },
+    {
+      type: "video",
+      title: "ECC Saytajit Ray Birthday Tribute Reel 2026",
+      category: "Visual Storytelling",
+      role: "Visual Storytelling & Editing",
+      year: "2026",
+      description: "Creative visual tribute and editorial reel celebrating the legacy of maestro Satyajit Ray.",
+      link: "https://www.youtube.com/shorts/bV4knxbPAIw"
+    },
+    {
+      type: "video",
+      title: "ECC Nobohorshe Noboborshe 1432 Promo",
+      category: "Motion Design",
+      role: "Motion Design & Video Production",
+      year: "2025",
+      description: "Motion design, cultural typography, and video production for Pohela Boishakh celebrations.",
+      link: "https://youtu.be/nx6KFFn9GWc?si=TwZhMZe4HVvlxqmy"
+    },
+    {
+      type: "video",
+      title: "ECC Freshers’ Breeze 2024 Promo",
+      category: "Video Production",
+      role: "Cinematography & Editing",
+      year: "2024",
+      description: "Visual editing and promotional campaign reel for the Economics Cultural Club 2024 fresher reception.",
+      link: "https://youtu.be/NkWdXJUUpto?si=i2H-PAfeTbu9e0hM"
+    },
+    {
+      type: "video",
+      title: "ECA Orientation Promo 2025",
+      category: "Video Production",
+      role: "Video Production & Direction",
+      year: "2025",
+      description: "Official orientation promotional reel for the Economics Career Alliance, University of Dhaka.",
+      link: "https://youtu.be/UmKYPnaFNNc?si=rBbYsR0lOpNRkeKv"
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 8. EDUCATIONAL QUALIFICATIONS
   // -----------------------------------------------------------------------
   education: [
     {
@@ -2855,7 +2971,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 8. TRAINING & CERTIFICATIONS
+  // 9. TRAINING & CERTIFICATIONS
   // -----------------------------------------------------------------------
   certifications: [
     {
@@ -2876,7 +2992,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 9. VOLUNTEERING WORKS
+  // 10. VOLUNTEERING WORKS
   // -----------------------------------------------------------------------
   volunteering: [
     {
@@ -2889,17 +3005,6 @@ const PORTFOLIO_DATA = {
       organization: "Economics Study Center",
       description: "Assisted with logistics for the 6th and 7th Bangladesh Economics Summit."
     }
-  ],
-
-  // -----------------------------------------------------------------------
-  // 10. CREATIVE & MEDIA WORKS (Canva/Video Inspirations)
-  // -----------------------------------------------------------------------
-  creativeWorks: [
-    { title: "ECC Freshers’ Breeze 2025 Promo", role: "Direction, Script & Video Production", year: "2025" },
-    { title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo", role: "Scripting, Acting & Full Edit", year: "2025" },
-    { title: "6th Bangladesh Economics Summit (BES 2025) Official Promo", role: "Cinematography & Editing", year: "2025" },
-    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing", year: "2026" },
-    { title: "ECC Nobohorshe Noboborshe 1432 Promo", role: "Motion Design & Video Production", year: "2025" }
   ],
 
   // -----------------------------------------------------------------------
@@ -2916,7 +3021,7 @@ if (typeof window !== "undefined") {
 }
 
 </script>
-<script>
+  <script>
 /**
  * =========================================================================
  * ASHIKUL ISLAM KHAN - PORTFOLIO INTERACTION ENGINE
@@ -2935,7 +3040,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", savedTheme);
   updateThemeIcon(savedTheme);
 
-  // 2. Render Dynamic Components from PORTFOLIO_DATA
+  // 2. Render Dynamic Components from PORTFOLIO_DATA (if present on page)
   renderHeroProfile();
   renderCompetencies();
   renderExperience();
@@ -3016,6 +3121,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
 // 3. Render Hero & Profile Data
 // -------------------------------------------------------------------------
 function renderHeroProfile() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
   const data = window.PORTFOLIO_DATA.profile;
   if (!data) return;
 
@@ -3042,14 +3148,14 @@ function renderHeroProfile() {
 }
 
 // -------------------------------------------------------------------------
-// 4. Render Core Competencies (Tomasz Gajda Grid)
+// 4. Render Core Competencies
 // -------------------------------------------------------------------------
 function renderCompetencies() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
   const container = document.getElementById("competenciesContainer");
   const compList = window.PORTFOLIO_DATA.competencies;
   if (!container || !compList) return;
 
-  // Icon mapping for each competency
   const iconMap = {
     "trending-up": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>`,
     "cpu": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>`,
@@ -3081,6 +3187,8 @@ function renderCompetencies() {
 // 5. Render Experience (Professional & Leadership)
 // -------------------------------------------------------------------------
 function renderExperience() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
+
   // Professional Experience
   const wpContainer = document.getElementById("workplacesContainer");
   const workList = window.PORTFOLIO_DATA.workExperience;
@@ -3139,7 +3247,7 @@ function filterPortfolio(filterKey) {
 
 function renderPortfolio(filterKey) {
   const container = document.getElementById("portfolioGridContainer");
-  if (!container) return;
+  if (!container || typeof window.PORTFOLIO_DATA === "undefined") return;
 
   const research = window.PORTFOLIO_DATA.researchWorks || [];
   const projects = window.PORTFOLIO_DATA.projects || [];
@@ -3165,7 +3273,7 @@ function renderPortfolio(filterKey) {
             <div class="project-tech-stack">
               <span class="tech-tag">Econometrics</span>
               <span class="tech-tag">Policy Research</span>
-              <span class="tech-tag">Univ of Dhaka</span>
+              <span class="tech-tag">University of Dhaka</span>
             </div>
             <div class="project-card-actions">
               <a href="${item.link}" target="_blank" rel="noopener" class="btn-card-action btn-accent" title="Read paper on ResearchGate">
@@ -3190,7 +3298,7 @@ function renderPortfolio(filterKey) {
         <article class="project-card">
           <div class="project-card-header">
             <span class="project-tag">Software / App</span>
-            <span class="project-status">Open Source</span>
+            <span class="project-status">Live Project</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-title">${item.name}</h3>
@@ -3202,9 +3310,13 @@ function renderPortfolio(filterKey) {
               ${item.stack.map(st => `<span class="tech-tag">${st}</span>`).join("")}
             </div>
             <div class="project-card-actions">
-              <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-card-action btn-accent" style="width: 100%;" title="View Source on GitHub">
+              <a href="${item.liveUrl}" target="_blank" rel="noopener" class="btn-card-action btn-accent" title="Launch Live Web Platform">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>Launch App</span>
+              </a>
+              <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-card-action" title="View Source on GitHub">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                <span>GitHub Repository</span>
+                <span>Source</span>
               </a>
             </div>
           </div>
@@ -3213,30 +3325,42 @@ function renderPortfolio(filterKey) {
     });
   }
 
-  // 3. Creative & Media Works
+  // 3. Creative & Media Works (Branding, Graphic Design & Video Campaigns)
   if (filterKey === "all" || filterKey === "media") {
     media.forEach(item => {
+      const isDesign = item.type === "design";
+      const actionLabel = isDesign ? "Drive Assets" : "Watch Video";
+      const iconSvg = isDesign
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>`
+        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+
       cardsHtml.push(`
         <article class="project-card">
           <div class="project-card-header">
-            <span class="project-tag">Creative & Media</span>
+            <span class="project-tag">${item.category || "Creative & Media"}</span>
             <span class="project-status">${item.year}</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-title">${item.title}</h3>
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.75rem;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: ${isDesign ? 'var(--accent-electric)' : 'var(--accent-gold)'}; margin-bottom: 0.75rem;">
               ${item.role}
             </div>
-            <p class="project-desc">Produced visual storytelling, motion direction, and cinematic video editing for major university and institutional summit campaigns.</p>
+            <p class="project-desc">${item.description}</p>
             <div class="project-tech-stack">
-              <span class="tech-tag">Video Editing</span>
-              <span class="tech-tag">Cinematography</span>
-              <span class="tech-tag">Visual Storytelling</span>
+              ${isDesign ? `
+                <span class="tech-tag">Graphic Design</span>
+                <span class="tech-tag">Branding</span>
+                <span class="tech-tag">Press & Print</span>
+              ` : `
+                <span class="tech-tag">Cinematography</span>
+                <span class="tech-tag">Video Editing</span>
+                <span class="tech-tag">Visual Storytelling</span>
+              `}
             </div>
             <div class="project-card-actions">
-              <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-card-action" style="width: 100%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14v-4z"></path><rect x="3" y="6" width="12" height="12" rx="2"></rect></svg>
-                <span>Campaign Portfolio</span>
+              <a href="${item.link}" target="_blank" rel="noopener" class="btn-card-action btn-accent" style="width: 100%;" title="Open ${item.title}">
+                ${iconSvg}
+                <span>${actionLabel}</span>
               </a>
             </div>
           </div>
@@ -3285,29 +3409,57 @@ function copyBibtexFromModal() {
 }
 
 // -------------------------------------------------------------------------
-// 8. Contact Form Handler
+// 8. Contact Form Handler (FormSubmit Direct Inbox Forwarding)
 // -------------------------------------------------------------------------
-function handleContactSubmit(event) {
+async function handleContactSubmit(event) {
   event.preventDefault();
+  
+  const submitBtn = document.getElementById("submitBtn");
+  const submitBtnText = document.getElementById("submitBtnText");
+  const form = document.getElementById("contactForm");
+
   const name = document.getElementById("senderName")?.value || "";
   const email = document.getElementById("senderEmail")?.value || "";
-  const subject = document.getElementById("msgSubject")?.value || "";
+  const subject = document.getElementById("msgSubject")?.value || "Portfolio Contact Inquiry";
   const content = document.getElementById("msgContent")?.value || "";
 
-  // Prepare mailto link as fallback
-  const mailtoUrl = `mailto:inboxashikulislam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + content)}`;
-  
-  // Show toast notification
-  showToast("Preparing your message dispatch...");
-  
-  // Open mail client
-  setTimeout(() => {
-    window.location.href = mailtoUrl;
-  }, 400);
+  // Loading state
+  if (submitBtn) submitBtn.disabled = true;
+  if (submitBtnText) submitBtnText.textContent = "Sending to Ashikul...";
 
-  // Reset form
-  const form = document.getElementById("contactForm");
-  if (form) form.reset();
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/inboxashikulislam@gmail.com", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        _subject: `[Portfolio Inquiry] ${subject} - from ${name}`,
+        message: content,
+        _template: "table"
+      })
+    });
+
+    if (response.ok) {
+      showToast("Message delivered directly to inboxashikulislam@gmail.com!");
+      if (form) form.reset();
+    } else {
+      throw new Error("FormSubmit dispatch error");
+    }
+  } catch (err) {
+    // Graceful fallback to mailto if user is offline or fetch is blocked
+    showToast("Opening direct mail client...");
+    const mailtoUrl = `mailto:inboxashikulislam@gmail.com?subject=${encodeURIComponent("[Portfolio] " + subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + content)}`;
+    setTimeout(() => {
+      window.location.href = mailtoUrl;
+    }, 500);
+  } finally {
+    if (submitBtn) submitBtn.disabled = false;
+    if (submitBtnText) submitBtnText.textContent = "Submit Message to Ashikul";
+  }
 }
 
 // -------------------------------------------------------------------------
@@ -3324,15 +3476,16 @@ function showToast(message) {
   if (toastTimer) clearTimeout(toastTimer);
   toastTimer = setTimeout(() => {
     toast.classList.remove("show");
-  }, 2800);
+  }, 3200);
 }
 
 // -------------------------------------------------------------------------
-// 10. Nav Scroll Observer (Active Section Highlight)
+// 10. Nav Scroll Observer (Active Section Highlight on index.html)
 // -------------------------------------------------------------------------
 function setupNavScrollObserver() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link[href^='#']");
+  if (!sections.length || !navLinks.length) return;
 
   window.addEventListener("scroll", () => {
     let current = "";

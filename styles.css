@@ -135,7 +135,7 @@ ul, ol {
    Tomasz Gajda Signature Section Dividers
    ========================================================================== */
 .section {
-  padding: 6rem 0;
+  padding: 5.5rem 0;
 }
 
 .section-alt {
@@ -144,7 +144,7 @@ ul, ol {
 
 .tg-section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .tg-section-title {
@@ -193,7 +193,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Header & Navigation (Tomasz Gajda Minimalist Nav)
+   Header & Navigation
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -266,12 +266,12 @@ ul, ol {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -299,6 +299,27 @@ ul, ol {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+.nav-link.nav-link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+}
+
+.nav-link.nav-link-badge:hover,
+.nav-link.nav-link-badge.active {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.nav-link.nav-link-badge::after {
+  display: none;
 }
 
 .nav-actions {
@@ -354,18 +375,152 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section (Tomasz Gajda Signature Hero Layout)
+   Hero Depth Showcase Header (Cover Banner & Profile Photo with Depth Effect)
+   ========================================================================== */
+.hero-depth-container {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.hero-cover-wrap {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--border-medium);
+  box-shadow: var(--shadow-md);
+  background-color: var(--bg-secondary);
+}
+
+.hero-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-cover-wrap:hover .hero-cover-img {
+  transform: scale(1.02);
+}
+
+.hero-cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-cover-overlay {
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 0.75) 100%);
+}
+
+/* Avatar Frame Overlapping with 3D Depth */
+.hero-avatar-depth-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: -85px;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-avatar-frame {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  border-radius: 16px;
+  padding: 6px;
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-primary);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35), 0 0 0 2px var(--border-subtle);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-avatar-frame:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 28px 55px -10px rgba(0, 0, 0, 0.45);
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.avatar-status-dot {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-emerald);
+  border: 3px solid var(--bg-card);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(32, 201, 151, 0.4);
+}
+
+.hero-avatar-meta {
+  padding-bottom: 0.5rem;
+}
+
+.hero-avatar-name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.hero-avatar-dept {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.hero-avatar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-meta-pill {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Hero Section Layout
    ========================================================================== */
 .hero-section {
-  padding: 6.5rem 0 5.5rem 0;
+  padding: 3rem 0 5rem 0;
   position: relative;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .hero-content {
@@ -375,17 +530,17 @@ ul, ol {
 
 .hero-greeting {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero-name {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -396,9 +551,9 @@ ul, ol {
 
 .hero-tagline {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--text-secondary);
   border-left: 3px solid var(--border-primary);
   padding-left: 1rem;
@@ -406,7 +561,7 @@ ul, ol {
 }
 
 .hero-bio {
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -416,7 +571,7 @@ ul, ol {
 .hero-socials {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
   margin-bottom: 2.25rem;
 }
 
@@ -450,10 +605,10 @@ ul, ol {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
-/* Tomasz Gajda Button Styles */
+/* Button Styles */
 .tg-btn {
   display: inline-flex;
   align-items: center;
@@ -461,7 +616,7 @@ ul, ol {
   gap: 0.65rem;
   padding: 0.85rem 1.85rem;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -498,7 +653,7 @@ ul, ol {
   height: 16px;
 }
 
-/* Hero Right Profile Box */
+/* Profile Card */
 .hero-visual {
   position: relative;
 }
@@ -529,7 +684,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -568,59 +723,59 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .du-seal-icon {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--text-primary);
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .affiliation-details h4 {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .affiliation-details p {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
 }
 
 .profile-stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 1.75rem;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
 }
 
 .stat-item {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  padding: 1rem;
+  padding: 0.85rem;
   text-align: center;
 }
 
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--text-primary);
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -723,7 +878,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Skills Section (Grouped Competencies)
+   Skills Section
    ========================================================================== */
 .skills-grid {
   display: grid;
@@ -806,16 +961,16 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Experience & Leadership Section
+   Experience Section
    ========================================================================== */
 .experience-layout {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .exp-category-block {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .exp-category-heading {
@@ -923,7 +1078,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Portfolio Section (Tomasz Gajda Project Grid & Filters)
+   Portfolio Section
    ========================================================================== */
 .portfolio-filters {
   display: flex;
@@ -1095,8 +1250,70 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Full Curriculum Vitae Section (Verbatim requested CV)
+   CV Showcase Banner (On Main Page)
    ========================================================================== */
+.cv-preview-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.cv-preview-lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.8;
+}
+
+.cv-preview-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.cv-highlight-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.cv-highlight-box h4 {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.cv-highlight-box p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cv-preview-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* ==========================================================================
+   Full Dedicated CV Page Styles (cv.html)
+   ========================================================================== */
+.cv-page-wrap {
+  padding: 3rem 0 6rem 0;
+}
+
 .cv-container-card {
   background-color: var(--bg-card);
   border: 2px solid var(--border-medium);
@@ -1144,7 +1361,6 @@ ul, ol {
   gap: 1rem;
 }
 
-/* CV Layout Structure */
 .cv-header {
   border-bottom: 2px solid var(--border-primary);
   padding-bottom: 2rem;
@@ -1216,7 +1432,6 @@ ul, ol {
   color: var(--text-secondary);
 }
 
-/* CV Competencies 4-column grid */
 .cv-competencies-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1253,7 +1468,6 @@ ul, ol {
   color: var(--text-primary);
 }
 
-/* CV Experience Entries */
 .cv-entry {
   margin-bottom: 1.75rem;
 }
@@ -1302,7 +1516,6 @@ ul, ol {
   line-height: 1.6;
 }
 
-/* CV Research List */
 .cv-research-item {
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
@@ -1345,7 +1558,6 @@ ul, ol {
   line-height: 1.6;
 }
 
-/* CV Education, Certifications, Volunteering, Languages */
 .cv-grid-2col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1382,7 +1594,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Contact Section (Tomasz Gajda Minimalist Form)
+   Contact Section
    ========================================================================== */
 .contact-grid {
   display: grid;
@@ -1454,13 +1666,13 @@ ul, ol {
   text-decoration: underline;
 }
 
-/* Contact Form */
 .tg-contact-form {
   background-color: var(--bg-card);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
+  position: relative;
 }
 
 .form-group {
@@ -1559,7 +1771,7 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Toast / Liquid Notification
+   Toast Notification
    ========================================================================== */
 .liquid-toast {
   position: fixed;
@@ -1687,6 +1899,10 @@ ul, ol {
     grid-template-columns: 1fr;
   }
 
+  .cv-preview-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .cv-competencies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1721,11 +1937,40 @@ ul, ol {
   }
 
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 2.35rem;
+  }
+
+  .hero-cover-wrap {
+    height: 180px;
+  }
+
+  .hero-avatar-depth-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -65px;
+    gap: 1rem;
+  }
+
+  .hero-avatar-frame {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-avatar-pills {
+    justify-content: center;
   }
 
   .cv-container-card {
     padding: 2rem 1.5rem;
+  }
+
+  .cv-preview-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .cv-preview-highlights {
+    grid-template-columns: 1fr;
   }
 
   .cv-competencies-grid {
@@ -1762,6 +2007,7 @@ ul, ol {
     padding: 0 !important;
   }
 
+  .cv-page-wrap,
   #curriculum-vitae {
     padding: 0 !important;
   }

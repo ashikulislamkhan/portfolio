@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", savedTheme);
   updateThemeIcon(savedTheme);
 
-  // 2. Render Dynamic Components from PORTFOLIO_DATA
+  // 2. Render Dynamic Components from PORTFOLIO_DATA (if present on page)
   renderHeroProfile();
   renderCompetencies();
   renderExperience();
@@ -97,6 +97,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
 // 3. Render Hero & Profile Data
 // -------------------------------------------------------------------------
 function renderHeroProfile() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
   const data = window.PORTFOLIO_DATA.profile;
   if (!data) return;
 
@@ -123,14 +124,14 @@ function renderHeroProfile() {
 }
 
 // -------------------------------------------------------------------------
-// 4. Render Core Competencies (Tomasz Gajda Grid)
+// 4. Render Core Competencies
 // -------------------------------------------------------------------------
 function renderCompetencies() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
   const container = document.getElementById("competenciesContainer");
   const compList = window.PORTFOLIO_DATA.competencies;
   if (!container || !compList) return;
 
-  // Icon mapping for each competency
   const iconMap = {
     "trending-up": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>`,
     "cpu": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>`,
@@ -162,6 +163,8 @@ function renderCompetencies() {
 // 5. Render Experience (Professional & Leadership)
 // -------------------------------------------------------------------------
 function renderExperience() {
+  if (typeof window.PORTFOLIO_DATA === "undefined") return;
+
   // Professional Experience
   const wpContainer = document.getElementById("workplacesContainer");
   const workList = window.PORTFOLIO_DATA.workExperience;
@@ -220,7 +223,7 @@ function filterPortfolio(filterKey) {
 
 function renderPortfolio(filterKey) {
   const container = document.getElementById("portfolioGridContainer");
-  if (!container) return;
+  if (!container || typeof window.PORTFOLIO_DATA === "undefined") return;
 
   const research = window.PORTFOLIO_DATA.researchWorks || [];
   const projects = window.PORTFOLIO_DATA.projects || [];
@@ -246,7 +249,7 @@ function renderPortfolio(filterKey) {
             <div class="project-tech-stack">
               <span class="tech-tag">Econometrics</span>
               <span class="tech-tag">Policy Research</span>
-              <span class="tech-tag">Univ of Dhaka</span>
+              <span class="tech-tag">University of Dhaka</span>
             </div>
             <div class="project-card-actions">
               <a href="${item.link}" target="_blank" rel="noopener" class="btn-card-action btn-accent" title="Read paper on ResearchGate">
@@ -271,7 +274,7 @@ function renderPortfolio(filterKey) {
         <article class="project-card">
           <div class="project-card-header">
             <span class="project-tag">Software / App</span>
-            <span class="project-status">Open Source</span>
+            <span class="project-status">Live Project</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-title">${item.name}</h3>
@@ -283,9 +286,13 @@ function renderPortfolio(filterKey) {
               ${item.stack.map(st => `<span class="tech-tag">${st}</span>`).join("")}
             </div>
             <div class="project-card-actions">
-              <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-card-action btn-accent" style="width: 100%;" title="View Source on GitHub">
+              <a href="${item.liveUrl}" target="_blank" rel="noopener" class="btn-card-action btn-accent" title="Launch Live Web Platform">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>Launch App</span>
+              </a>
+              <a href="${item.githubUrl}" target="_blank" rel="noopener" class="btn-card-action" title="View Source on GitHub">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                <span>GitHub Repository</span>
+                <span>Source</span>
               </a>
             </div>
           </div>
@@ -294,30 +301,42 @@ function renderPortfolio(filterKey) {
     });
   }
 
-  // 3. Creative & Media Works
+  // 3. Creative & Media Works (Branding, Graphic Design & Video Campaigns)
   if (filterKey === "all" || filterKey === "media") {
     media.forEach(item => {
+      const isDesign = item.type === "design";
+      const actionLabel = isDesign ? "Drive Assets" : "Watch Video";
+      const iconSvg = isDesign
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>`
+        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+
       cardsHtml.push(`
         <article class="project-card">
           <div class="project-card-header">
-            <span class="project-tag">Creative & Media</span>
+            <span class="project-tag">${item.category || "Creative & Media"}</span>
             <span class="project-status">${item.year}</span>
           </div>
           <div class="project-card-body">
             <h3 class="project-title">${item.title}</h3>
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.75rem;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: ${isDesign ? 'var(--accent-electric)' : 'var(--accent-gold)'}; margin-bottom: 0.75rem;">
               ${item.role}
             </div>
-            <p class="project-desc">Produced visual storytelling, motion direction, and cinematic video editing for major university and institutional summit campaigns.</p>
+            <p class="project-desc">${item.description}</p>
             <div class="project-tech-stack">
-              <span class="tech-tag">Video Editing</span>
-              <span class="tech-tag">Cinematography</span>
-              <span class="tech-tag">Visual Storytelling</span>
+              ${isDesign ? `
+                <span class="tech-tag">Graphic Design</span>
+                <span class="tech-tag">Branding</span>
+                <span class="tech-tag">Press & Print</span>
+              ` : `
+                <span class="tech-tag">Cinematography</span>
+                <span class="tech-tag">Video Editing</span>
+                <span class="tech-tag">Visual Storytelling</span>
+              `}
             </div>
             <div class="project-card-actions">
-              <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-card-action" style="width: 100%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14v-4z"></path><rect x="3" y="6" width="12" height="12" rx="2"></rect></svg>
-                <span>Campaign Portfolio</span>
+              <a href="${item.link}" target="_blank" rel="noopener" class="btn-card-action btn-accent" style="width: 100%;" title="Open ${item.title}">
+                ${iconSvg}
+                <span>${actionLabel}</span>
               </a>
             </div>
           </div>
@@ -366,29 +385,57 @@ function copyBibtexFromModal() {
 }
 
 // -------------------------------------------------------------------------
-// 8. Contact Form Handler
+// 8. Contact Form Handler (FormSubmit Direct Inbox Forwarding)
 // -------------------------------------------------------------------------
-function handleContactSubmit(event) {
+async function handleContactSubmit(event) {
   event.preventDefault();
+  
+  const submitBtn = document.getElementById("submitBtn");
+  const submitBtnText = document.getElementById("submitBtnText");
+  const form = document.getElementById("contactForm");
+
   const name = document.getElementById("senderName")?.value || "";
   const email = document.getElementById("senderEmail")?.value || "";
-  const subject = document.getElementById("msgSubject")?.value || "";
+  const subject = document.getElementById("msgSubject")?.value || "Portfolio Contact Inquiry";
   const content = document.getElementById("msgContent")?.value || "";
 
-  // Prepare mailto link as fallback
-  const mailtoUrl = `mailto:inboxashikulislam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + content)}`;
-  
-  // Show toast notification
-  showToast("Preparing your message dispatch...");
-  
-  // Open mail client
-  setTimeout(() => {
-    window.location.href = mailtoUrl;
-  }, 400);
+  // Loading state
+  if (submitBtn) submitBtn.disabled = true;
+  if (submitBtnText) submitBtnText.textContent = "Sending to Ashikul...";
 
-  // Reset form
-  const form = document.getElementById("contactForm");
-  if (form) form.reset();
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/inboxashikulislam@gmail.com", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        _subject: `[Portfolio Inquiry] ${subject} - from ${name}`,
+        message: content,
+        _template: "table"
+      })
+    });
+
+    if (response.ok) {
+      showToast("Message delivered directly to inboxashikulislam@gmail.com!");
+      if (form) form.reset();
+    } else {
+      throw new Error("FormSubmit dispatch error");
+    }
+  } catch (err) {
+    // Graceful fallback to mailto if user is offline or fetch is blocked
+    showToast("Opening direct mail client...");
+    const mailtoUrl = `mailto:inboxashikulislam@gmail.com?subject=${encodeURIComponent("[Portfolio] " + subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + content)}`;
+    setTimeout(() => {
+      window.location.href = mailtoUrl;
+    }, 500);
+  } finally {
+    if (submitBtn) submitBtn.disabled = false;
+    if (submitBtnText) submitBtnText.textContent = "Submit Message to Ashikul";
+  }
 }
 
 // -------------------------------------------------------------------------
@@ -405,15 +452,16 @@ function showToast(message) {
   if (toastTimer) clearTimeout(toastTimer);
   toastTimer = setTimeout(() => {
     toast.classList.remove("show");
-  }, 2800);
+  }, 3200);
 }
 
 // -------------------------------------------------------------------------
-// 10. Nav Scroll Observer (Active Section Highlight)
+// 10. Nav Scroll Observer (Active Section Highlight on index.html)
 // -------------------------------------------------------------------------
 function setupNavScrollObserver() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link[href^='#']");
+  if (!sections.length || !navLinks.length) return;
 
   window.addEventListener("scroll", () => {
     let current = "";

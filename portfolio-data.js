@@ -23,10 +23,13 @@ const PORTFOLIO_DATA = {
     institution: "Department of Economics, University of Dhaka",
     statusBadge: "Final Year Undergraduate · Available for Research, Analytics & Creative Roles",
     
+    avatarImage: "images/profile.jpg",
+    coverImage: "images/cover.jpg",
+    
     summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
     socials: {
-      portfolio: "http://ashikulislamkhan.github.io/",
+      portfolio: "https://ashikulislamkhan.github.io/portfolio/",
       linkedin: "https://linkedin.com/in/ashikul-islam-khan",
       github: "https://github.com/ashikulislamkhan",
       researchgate: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
@@ -37,7 +40,7 @@ const PORTFOLIO_DATA = {
     },
 
     quickStats: [
-      { label: "University", val: "Univ of Dhaka" },
+      { label: "University", val: "University of Dhaka" },
       { label: "Program", val: "BSS Economics (Final Year)" },
       { label: "Research Manuscripts", val: "3 Papers" },
       { label: "English Proficiency", val: "Duolingo 129" }
@@ -239,7 +242,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 6. APPLICATIONS BUILT
+  // 6. APPLICATIONS BUILT (Software / Code Projects)
   // -----------------------------------------------------------------------
   projects: [
     {
@@ -247,6 +250,7 @@ const PORTFOLIO_DATA = {
       tagline: "Free Cloud File Sharing Platform",
       description: "A fast, fully free web-based file-sharing cloud utility designed for effortless peer-to-peer file transfer.",
       stack: ["JavaScript", "Cloud API", "Web Application"],
+      liveUrl: "https://ashikulislamkhan.github.io/airshare/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -254,6 +258,7 @@ const PORTFOLIO_DATA = {
       tagline: "100% Client-Side Offline File Converter",
       description: "A secure, privacy-first file converting website that processes documents and media fully offline within your browser.",
       stack: ["WebAssembly", "JavaScript", "HTML5 API"],
+      liveUrl: "https://ashikulislamkhan.github.io/Konvert/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -261,6 +266,7 @@ const PORTFOLIO_DATA = {
       tagline: "Offline Social Media Frame Applicator",
       description: "A fully offline canvas tool for overlaying campaign badges, graduation borders, and event frames onto profile pictures.",
       stack: ["HTML5 Canvas", "JavaScript", "Image Processing"],
+      liveUrl: "https://ashikulislamkhan.github.io/framefuse/",
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
@@ -268,12 +274,100 @@ const PORTFOLIO_DATA = {
       tagline: "Anonymous Web-Based Texting App",
       description: "A minimalist anonymous communication web application focused on instant, privacy-conscious ephemeral text messages.",
       stack: ["WebSockets", "JavaScript", "Responsive UI"],
+      liveUrl: "https://anonymous2you.github.io/anonymous2you/",
       githubUrl: "https://github.com/ashikulislamkhan"
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 7. EDUCATIONAL QUALIFICATIONS
+  // 7. CREATIVE & MEDIA WORKS (Branding, Graphic Design & Video Campaigns)
+  // -----------------------------------------------------------------------
+  creativeWorks: [
+    {
+      type: "design",
+      title: "1st Political Science Conference organized by PPSRF",
+      category: "Graphics Design and Branding",
+      role: "Lead Graphic Designer",
+      year: "2025",
+      description: "Designed every conference material, worked for branding, press releases, banner graphics, and comprehensive printing collateral.",
+      link: "https://drive.google.com/drive/u/3/folders/1t1Lb46hnu_ZShuSxa8_DAmGXiSoyJPg0"
+    },
+    {
+      type: "design",
+      title: "World Democracy Congress organized by PPSRF",
+      category: "Graphics Design and Branding",
+      role: "Lead Graphic Designer",
+      year: "2025",
+      description: "Designed every conference material, worked for branding, press releases, digital assets, and high-impact printing collateral.",
+      link: "https://drive.google.com/drive/u/3/folders/1t1Lb46hnu_ZShuSxa8_DAmGXiSoyJPg0"
+    },
+    {
+      type: "video",
+      title: "ECC Freshers’ Breeze 2025 Promo",
+      category: "Video Production",
+      role: "Direction, Script & Video Production",
+      year: "2025",
+      description: "Direction, scriptwriting, and complete video production for the Economics Cultural Club flagship Freshers' Breeze celebration.",
+      link: "https://youtu.be/gwYpUs_u058?si=nmTo3FQDXZlKoYbz"
+    },
+    {
+      type: "video",
+      title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo",
+      category: "Video Production",
+      role: "Scripting, Acting & Full Edit",
+      year: "2025",
+      description: "Conceptualization, acting, scriptwriting, and editing for the national EconQuest Economics Olympiad promo video.",
+      link: "https://youtu.be/R9BU7k6T4Z0?si=aj8ZzO_DnPTXthxL"
+    },
+    {
+      type: "video",
+      title: "6th Bangladesh Economics Summit (BES 2025) Official Promo",
+      category: "Video Production",
+      role: "Cinematography & Editing",
+      year: "2025",
+      description: "Cinematography and video editing for the Economics Study Center's marquee academic conference promo.",
+      link: "https://youtu.be/ffnw9URoQSo?si=LckPwyu-t2NfHotH"
+    },
+    {
+      type: "video",
+      title: "ECC Saytajit Ray Birthday Tribute Reel 2026",
+      category: "Visual Storytelling",
+      role: "Visual Storytelling & Editing",
+      year: "2026",
+      description: "Creative visual tribute and editorial reel celebrating the legacy of maestro Satyajit Ray.",
+      link: "https://www.youtube.com/shorts/bV4knxbPAIw"
+    },
+    {
+      type: "video",
+      title: "ECC Nobohorshe Noboborshe 1432 Promo",
+      category: "Motion Design",
+      role: "Motion Design & Video Production",
+      year: "2025",
+      description: "Motion design, cultural typography, and video production for Pohela Boishakh celebrations.",
+      link: "https://youtu.be/nx6KFFn9GWc?si=TwZhMZe4HVvlxqmy"
+    },
+    {
+      type: "video",
+      title: "ECC Freshers’ Breeze 2024 Promo",
+      category: "Video Production",
+      role: "Cinematography & Editing",
+      year: "2024",
+      description: "Visual editing and promotional campaign reel for the Economics Cultural Club 2024 fresher reception.",
+      link: "https://youtu.be/NkWdXJUUpto?si=i2H-PAfeTbu9e0hM"
+    },
+    {
+      type: "video",
+      title: "ECA Orientation Promo 2025",
+      category: "Video Production",
+      role: "Video Production & Direction",
+      year: "2025",
+      description: "Official orientation promotional reel for the Economics Career Alliance, University of Dhaka.",
+      link: "https://youtu.be/UmKYPnaFNNc?si=rBbYsR0lOpNRkeKv"
+    }
+  ],
+
+  // -----------------------------------------------------------------------
+  // 8. EDUCATIONAL QUALIFICATIONS
   // -----------------------------------------------------------------------
   education: [
     {
@@ -297,7 +391,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 8. TRAINING & CERTIFICATIONS
+  // 9. TRAINING & CERTIFICATIONS
   // -----------------------------------------------------------------------
   certifications: [
     {
@@ -318,7 +412,7 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 9. VOLUNTEERING WORKS
+  // 10. VOLUNTEERING WORKS
   // -----------------------------------------------------------------------
   volunteering: [
     {
@@ -331,17 +425,6 @@ const PORTFOLIO_DATA = {
       organization: "Economics Study Center",
       description: "Assisted with logistics for the 6th and 7th Bangladesh Economics Summit."
     }
-  ],
-
-  // -----------------------------------------------------------------------
-  // 10. CREATIVE & MEDIA WORKS (Canva/Video Inspirations)
-  // -----------------------------------------------------------------------
-  creativeWorks: [
-    { title: "ECC Freshers’ Breeze 2025 Promo", role: "Direction, Script & Video Production", year: "2025" },
-    { title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo", role: "Scripting, Acting & Full Edit", year: "2025" },
-    { title: "6th Bangladesh Economics Summit (BES 2025) Official Promo", role: "Cinematography & Editing", year: "2025" },
-    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing", year: "2026" },
-    { title: "ECC Nobohorshe Noboborshe 1432 Promo", role: "Motion Design & Video Production", year: "2025" }
   ],
 
   // -----------------------------------------------------------------------

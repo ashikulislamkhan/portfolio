@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Ashikul Islam Khan</title>
+  <meta name="description" content="Official Curriculum Vitae of Ashikul Islam Khan — Economics Undergraduate at University of Dhaka, Policy Research Enthusiast, Aspiring Data Analyst.">
+  
+  <!-- Tomasz Gajda Typography: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Navigation Header
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-monogram">AK</div>
+        <div class="brand-text">
+          <span class="brand-title">Ashikul Islam Khan</span>
+          <span class="brand-subtitle">University of Dhaka · Economics</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About me</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+        <a href="cv.html" class="nav-link nav-link-badge active">Curriculum Vitae</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions: Theme Switcher on Top Right -->
+      <div class="nav-actions">
+        <button class="theme-switch-btn" id="themeToggleBtn" onclick="toggleThemeMode()" title="Switch Light / Dark Theme" aria-label="Toggle Theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Nav Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" onclick="toggleMobileNav()" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Curriculum Vitae Dedicated Subpage Layout
+       ========================================================================= -->
+  <main class="cv-page-wrap">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="tg-section-header" style="margin-bottom: 2.5rem;">
+        <h1 class="tg-section-title">Curriculum Vitae</h1>
+        <div class="tg-divider">
+          <span class="tg-divider-line"></span>
+          <span class="tg-divider-diamond"></span>
+          <span class="tg-divider-line"></span>
+        </div>
+        <p class="tg-section-subtitle">Official verified academic and professional curriculum vitae.</p>
+      </div>
+
+      <!-- CV Document Container Card -->
+      <div class="cv-container-card">
+        
+        <!-- Action Banner -->
+        <div class="cv-action-banner">
+          <div class="cv-banner-info">
+            <span class="cv-banner-title">Official Curriculum Vitae</span>
+            <span class="cv-banner-desc">Updated for economic research, public policy analysis, and data analyst roles.</span>
+          </div>
+          <div class="cv-banner-actions">
+            <a href="index.html" class="tg-btn tg-btn-outline" style="padding: 0.65rem 1.15rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              <span>Back to Home</span>
+            </a>
+            <button onclick="window.print()" class="tg-btn tg-btn-outline" style="padding: 0.65rem 1.15rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print Direct</span>
+            </button>
+            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-primary" style="padding: 0.65rem 1.25rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Print / Save PDF (Drive)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CV Header -->
+        <div class="cv-header">
+          <h1 class="cv-name">Ashikul Islam Khan</h1>
+          <p class="cv-tagline">Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist</p>
+          <div class="cv-contact-bar">
+            <span class="cv-contact-item">📍 Shahbag, Dhaka, Bangladesh</span>
+            <span class="cv-contact-item">📧 <a href="mailto:inboxashikulislam@gmail.com">inboxashikulislam@gmail.com</a></span>
+            <span class="cv-contact-item">📞 <a href="tel:+8801753932582">+880 1753-932582</a></span>
+            <span class="cv-contact-item">🌐 Portfolio: <a href="https://ashikulislamkhan.github.io/portfolio/" target="_blank" rel="noopener">ashikulislamkhan.github.io</a></span>
+            <span class="cv-contact-item">🔗 LinkedIn: <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener">linkedin.com/in/ashikul-islam-khan</a></span>
+          </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="cv-block">
+          <h3 class="cv-block-title">Professional Summary</h3>
+          <p class="cv-summary-text">
+            Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
+          </p>
+        </div>
+
+        <!-- Core Competencies -->
+        <div class="cv-block">
+          <h3 class="cv-block-title">Core Competencies</h3>
+          <div class="cv-competencies-grid">
+            <div class="cv-comp-col">
+              <h4>Research & Economics</h4>
+              <ul class="cv-comp-list">
+                <li>Policy Research</li>
+                <li>Development Economics</li>
+                <li>Econometrics</li>
+                <li>Data Analysis</li>
+                <li>Academic Writing</li>
+                <li>Policy Analysis</li>
+              </ul>
+            </div>
+            <div class="cv-comp-col">
+              <h4>Technical Skills</h4>
+              <ul class="cv-comp-list">
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Power BI</li>
+                <li>Advanced Excel</li>
+                <li>Microsoft Office Suite</li>
+                <li>Data Visualization</li>
+              </ul>
+            </div>
+            <div class="cv-comp-col">
+              <h4>Creative & Design Skills</h4>
+              <ul class="cv-comp-list">
+                <li>Graphic Design</li>
+                <li>Video Editing</li>
+                <li>Cinematography</li>
+                <li>Visual Storytelling</li>
+                <li>Branding & Social Media Design</li>
+              </ul>
+            </div>
+            <div class="cv-comp-col">
+              <h4>Professional Skills</h4>
+              <ul class="cv-comp-list">
+                <li>Leadership</li>
+                <li>Communication</li>
+                <li>Project Management</li>
+                <li>Public Speaking & Presentation</li>
+                <li>Team Collaboration</li>
+                <li>Climate Advocacy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="cv-block">
+          <h3 class="cv-block-title">Professional Experience</h3>
+          
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Research Intern</span>
+              <span class="cv-entry-date">September 2026 – Present</span>
+            </div>
+            <div class="cv-entry-sub">International Institute of SDGs & Public Policy Research (IISPPR) (Remote)</div>
+            <ul class="cv-bullets">
+              <li>Conduct research on Sustainable Development Goals and public policy.</li>
+              <li>Assist in literature reviews, policy analysis, and research documentation.</li>
+              <li>Collaborate with researchers on policy evaluation projects.</li>
+              <li>Strengthen analytical and evidence-based research skills.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Youth Parliamentarian</span>
+              <span class="cv-entry-date">September 2025 – Present</span>
+            </div>
+            <div class="cv-entry-sub">Consumers Association of Bangladesh (CAB)</div>
+            <ul class="cv-bullets">
+              <li>Authored and published a policy paper on Energy Justice and Consumer Rights.</li>
+              <li>Presented research before policymakers and national stakeholders.</li>
+              <li>Conduct policy research on consumer rights, energy justice, and sustainable governance.</li>
+              <li>Participate in parliamentary sessions and policy discussions.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Graphic Designer</span>
+              <span class="cv-entry-date">May 2025 – Present</span>
+            </div>
+            <div class="cv-entry-sub">Political and Policy Science Research Foundation (PPSRF)</div>
+            <ul class="cv-bullets">
+              <li>Designed official branding and promotional materials for national conferences.</li>
+              <li>Developed visual identity for major policy and democracy events.</li>
+              <li>Collaborated with organizing committees on digital and print communications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Leadership Experience -->
+        <div class="cv-block">
+          <h3 class="cv-block-title">Leadership Experience</h3>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Vice President (Administration)</span>
+              <span class="cv-entry-date">September 2024 – Present</span>
+            </div>
+            <div class="cv-entry-sub">Economics Cultural Club, University of Dhaka</div>
+            <ul class="cv-bullets">
+              <li>Lead club administration and executive operations.</li>
+              <li>Coordinate large-scale university events.</li>
+              <li>Manage organizing committees and volunteers.</li>
+              <li>Previously served as Secretary (Talent Acquisition).</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Associate Member</span>
+              <span class="cv-entry-date">May 2024 – October 2026</span>
+            </div>
+            <div class="cv-entry-sub">Economics Study Center</div>
+            <ul class="cv-bullets">
+              <li>Organized Bangladesh Economics Summit.</li>
+              <li>Coordinated seminars, workshops, and academic events.</li>
+              <li>Worked with internal and external stakeholders.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Associate (Organizing)</span>
+              <span class="cv-entry-date">October 2023 – October 2026</span>
+            </div>
+            <div class="cv-entry-sub">Economics Career Alliance</div>
+            <ul class="cv-bullets">
+              <li>Assisted in organizing career expos, competitions, and departmental events.</li>
+              <li>Managed logistics and participant coordination.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-head">
+              <span class="cv-entry-role">Joint Coordinator of E3F</span>
+              <span class="cv-entry-date">2021 – 2023</span>
+            </div>
+            <div class="cv-entry-sub">ARANYAK</div>
+            <ul class="cv-bullets">
+              <li>Led environmental awareness initiatives.</li>
+              <li>Organized tree plantation and sustainability campaigns.</li>
+              <li>Coordinated community outreach activities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Research Works -->
+        <div class="cv-block">
+          <h3 class="cv-block-title">Research Works</h3>
+
+          <div class="cv-research-item">
+            <div class="cv-research-title">
+              <a href="https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds" target="_blank" rel="noopener">
+                Should Bangladesh Bank's Policy Move Towards Inflation Targeting?
+              </a>
+            </div>
+            <div class="cv-research-meta">Monetary Economics Paper (2026) · (Unpublished)</div>
+            <p class="cv-research-desc">Analyzed 27 years of Bangladesh Bank data using exchange rate pass-through analysis.</p>
+          </div>
+
+          <div class="cv-research-item">
+            <div class="cv-research-title">
+              <a href="https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle" target="_blank" rel="noopener">
+                The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform
+              </a>
+            </div>
+            <div class="cv-research-meta">Development Economics Paper (2025) · (Unpublished)</div>
+            <p class="cv-research-desc">Examined Cuba's development model, institutional reforms, and human development.</p>
+          </div>
+
+          <div class="cv-research-item">
+            <div class="cv-research-title">
+              <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener">
+                Energy Justice in Protecting Energy Rights
+              </a>
+            </div>
+            <div class="cv-research-meta">Conference Paper (Published, CAB Youth Parliament 2025 Handbook)</div>
+            <p class="cv-research-desc">Examined energy justice, renewable energy governance, and consumer rights in Bangladesh.</p>
+          </div>
+        </div>
+
+        <!-- Education, Certifications, Volunteering, Languages -->
+        <div class="cv-grid-2col">
+          <!-- Education -->
+          <div class="cv-block" style="margin-bottom: 0;">
+            <h3 class="cv-block-title">Education</h3>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">🎓 Bachelor of Social Science (BSS) in Economics</div>
+              <div class="cv-edu-inst">University of Dhaka | <strong>(Final Year)</strong></div>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">🎓 Higher Secondary Certificate (HSC)</div>
+              <div class="cv-edu-inst">Amrita Lal Dey College, Barishal | GPA: 5.00</div>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-degree">🎓 Secondary School Certificate (SSC)</div>
+              <div class="cv-edu-inst">Kaunia Govt. Secondary School, Barishal | GPA: 5.00</div>
+            </div>
+          </div>
+
+          <!-- Training & Certifications -->
+          <div class="cv-block" style="margin-bottom: 0;">
+            <h3 class="cv-block-title">Training & Certifications</h3>
+            <div class="cv-cert-item">
+              🏅 Students in Energy Security and Just Energy Transition Workshop — Consumers Association of Bangladesh (2026)
+            </div>
+            <div class="cv-cert-item">
+              🏅 Climate and Environmental Policy 101 — ASEAN Youth Organization (2026)
+            </div>
+            <div class="cv-cert-item">
+              🏅 Air Diary Challenge — Youth4Nature Fellowship Program (2026)
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-grid-2col" style="margin-top: 2rem;">
+          <!-- Volunteering -->
+          <div class="cv-block" style="margin-bottom: 0;">
+            <h3 class="cv-block-title">Volunteering</h3>
+            <div class="cv-entry" style="margin-bottom: 1rem;">
+              <div class="cv-entry-role" style="font-size: 0.95rem;">Volunteer (Public Relations)</div>
+              <div class="cv-entry-sub" style="font-size: 0.85rem; margin-bottom: 0.25rem;">South Asian Network on Economic Modelling (SANEM)</div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">Supported public relations and participant engagement during the 8th SANEM Annual Economists' Conference.</p>
+            </div>
+            <div class="cv-entry" style="margin-bottom: 0;">
+              <div class="cv-entry-role" style="font-size: 0.95rem;">Volunteer (Logistics)</div>
+              <div class="cv-entry-sub" style="font-size: 0.85rem; margin-bottom: 0.25rem;">Economics Study Center</div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary);">Assisted with logistics for the 6th and 7th Bangladesh Economics Summit.</p>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="cv-block" style="margin-bottom: 0;">
+            <h3 class="cv-block-title">Languages</h3>
+            <div class="cv-lang-item"><strong>Bangla:</strong> Native</div>
+            <div class="cv-lang-item"><strong>English:</strong> Fluent (Duolingo English Test Score: 129)</div>
+          </div>
+        </div>
+
+        <!-- Bottom Action Redirect Button -->
+        <div style="margin-top: 3rem; text-align: center; padding-top: 2.25rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="index.html" class="tg-btn tg-btn-outline" style="padding: 0.9rem 1.85rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Return to Portfolio</span>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="tg-btn tg-btn-primary" style="padding: 0.9rem 2.25rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Official PDF on Google Drive</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="#" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <span>Back to Top</span>
+      </a>
+
+      <div class="footer-socials">
+        <a href="https://github.com/ashikulislamkhan" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://www.researchgate.net/profile/Ashikul-Islam-Khan" target="_blank" rel="noopener" class="social-icon-btn" title="ResearchGate">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        </a>
+        <a href="mailto:inboxashikulislam@gmail.com" class="social-icon-btn" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        © 2026 Ashikul Islam Khan · Department of Economics, University of Dhaka.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="liquid-toast" id="liquidToast" role="alert" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">Action completed</span>
+  </div>
+
+  <script src="portfolio-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
