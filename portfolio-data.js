@@ -3,11 +3,9 @@
  * ASHIKUL ISLAM KHAN - PORTFOLIO CONFIGURATION DATA STORE
  * =========================================================================
  * 
- * 💡 EDITING GUIDE:
- * Every segment of this website is dynamically driven by this file.
- * To add, remove, or modify any section:
- * 1. Simply edit the objects or arrays below.
- * 2. Save the file. The website updates automatically!
+ * 💡 EDITING GUIDE (GitHub-First):
+ * You can edit this file directly on GitHub by pressing the pencil icon or '.'!
+ * Every segment of the portfolio renders dynamically from this configuration.
  * =========================================================================
  */
 
@@ -16,84 +14,78 @@ const PORTFOLIO_DATA = {
   // 1. PRIMARY PERSONAL PROFILE
   // -----------------------------------------------------------------------
   profile: {
-    fullName: "MD. ASHIKUL ISLAM",
-    preferredName: "Ashikul Islam Khan",
-    headline: "Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist",
+    fullName: "Ashikul Islam Khan",
+    headline: "Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist",
     location: "Shahbag, Dhaka, Bangladesh",
     email: "inboxashikulislam@gmail.com",
     academicEmail: "s-2022112154@econ.du.ac.bd",
     phone: "+880 1753-932582",
     institution: "Department of Economics, University of Dhaka",
-    statusBadge: "Final Year Undergraduate · Available for Research & Analytics Roles",
+    statusBadge: "Final Year Undergraduate · Available for Research, Analytics & Creative Roles",
     
-    bio: "Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI, supported by strong organizational and leadership skills. Seeking to apply analytical and research expertise to advance evidence-based policymaking, climate resilience, and sustainable socio-economic development in the international development sector.",
+    summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
     socials: {
+      portfolio: "http://ashikulislamkhan.github.io/",
       linkedin: "https://linkedin.com/in/ashikul-islam-khan",
       github: "https://github.com/ashikulislamkhan",
       researchgate: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
       googlescholar: "https://scholar.google.com/citations?hl=en&authuser=3&user=39HR9nwAAAAJ",
       orcid: "https://orcid.org/0009-0001-2470-6484",
       calendly: "http://cal.com/ashikul-islam-khan",
-      resumePdf: "https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=sharing",
-      instagram: "https://instagram.com/ashikplays19",
-      xTwitter: "https://x.com/AshikulIslamK"
+      resumeDrive: "https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link"
     },
 
     quickStats: [
       { label: "University", val: "Univ of Dhaka" },
-      { label: "Program", val: "BSS Economics" },
-      { label: "Research Papers", val: "3 Manuscripts" },
-      { label: "English Score", val: "Duolingo 129" }
+      { label: "Program", val: "BSS Economics (Final Year)" },
+      { label: "Research Manuscripts", val: "3 Papers" },
+      { label: "English Proficiency", val: "Duolingo 129" }
     ]
   },
 
   // -----------------------------------------------------------------------
-  // 2. CORE COMPETENCIES & TOOLKIT
+  // 2. CORE COMPETENCIES (Categorized)
   // -----------------------------------------------------------------------
   competencies: [
     {
-      category: "Economics & Research",
+      category: "Research & Economics",
       icon: "trending-up",
-      skills: ["Econometrics", "Policy Research", "Data Analysis", "Academic Writing", "Policy Advocacy", "Development Economics", "Environmental Economics", "Exchange Rate Pass-Through"]
+      skills: ["Policy Research", "Development Economics", "Econometrics", "Data Analysis", "Academic Writing", "Policy Analysis"]
     },
     {
-      category: "Technical & Data Science",
+      category: "Technical Skills",
       icon: "cpu",
-      skills: ["Python", "SQL", "Power BI", "Advanced Excel", "Data Visualization", "Microsoft Office Applications", "Stata (Basic)", "QGIS (Spatial Analysis)"]
+      skills: ["SQL", "Python", "Power BI", "Advanced Excel", "Microsoft Office Suite", "Data Visualization"]
     },
     {
-      category: "Creative & Media Production",
+      category: "Creative & Design Skills",
       icon: "film",
-      skills: ["Graphic Designing", "Cinematography", "Video Editing", "Visual Storytelling", "Brand Identity", "Social Media Design", "Promotional Campaigns"]
+      skills: ["Graphic Design", "Video Editing", "Cinematography", "Visual Storytelling", "Branding & Social Media Design"]
     },
     {
-      category: "Leadership & Civic Action",
+      category: "Professional Skills",
       icon: "award",
-      skills: ["Leadership", "Communication", "Project Management", "Public Speaking & Presentation", "Climate Activism", "Cross-team Collaboration", "Event Logistics"]
+      skills: ["Leadership", "Communication", "Project Management", "Public Speaking & Presentation", "Team Collaboration", "Climate Advocacy"]
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 3. WORK & PROFESSIONAL EXPERIENCE
+  // 3. PROFESSIONAL EXPERIENCE (Workplaces)
   // -----------------------------------------------------------------------
   workExperience: [
     {
       id: "iisppr-intern",
       role: "Research Intern",
       organization: "International Institute of SDGs & Public Policy Research (IISPPR)",
-      location: "Aligarh, India (Remote)",
-      period: "Joined Sep 2026",
-      type: "Research & Policy",
-      achievements: [
-        "Selected as a Research Intern at the International Institute of SDGs & Public Policy Research.",
-        "Engaged in research on sustainable development and public policy.",
-        "Committed to strengthening research, analytical, and policy evaluation skills through practical experience."
-      ],
+      location: "Remote",
+      period: "September 2026 – Present",
+      type: "Research & Public Policy",
       responsibilities: [
-        "Support research activities related to the Sustainable Development Goals and public policy.",
-        "Assist with literature reviews, data analysis, and research documentation.",
-        "Collaborate with the research team on ongoing projects and policy initiatives."
+        "Conduct research on Sustainable Development Goals and public policy.",
+        "Assist in literature reviews, policy analysis, and research documentation.",
+        "Collaborate with researchers on policy evaluation projects.",
+        "Strengthen analytical and evidence-based research skills."
       ]
     },
     {
@@ -101,17 +93,16 @@ const PORTFOLIO_DATA = {
       role: "Youth Parliamentarian",
       organization: "Consumers Association of Bangladesh (CAB)",
       location: "Dhaka, Bangladesh",
-      period: "Sep 2025 – Present",
-      type: "Policy & Governance",
+      period: "September 2025 – Present",
+      type: "Policy & Energy Governance",
       achievements: [
         "Authored and published a policy paper on Energy Justice and Consumer Rights in the CAB Youth Parliament 2025 Handbook.",
-        "Presented research findings before national leaders, policymakers, and stakeholders.",
-        "Contributed to evidence-based policy discussions on CAB's 13-point Energy Justice agenda."
+        "Presented research findings before national leaders, policymakers, and stakeholders."
       ],
       responsibilities: [
-        "Conducted policy research on energy justice, consumer rights, and sustainable energy governance.",
-        "Participated in parliamentary sessions, seminars, press briefings, and stakeholder engagements.",
-        "Collaborated with Youth Parliament members to develop and communicate policy recommendations."
+        "Conduct policy research on consumer rights, energy justice, and sustainable governance.",
+        "Participate in parliamentary sessions, seminars, press briefings, and policy discussions.",
+        "Collaborate with Youth Parliament members on CAB's 13-point Energy Justice agenda."
       ]
     },
     {
@@ -123,12 +114,11 @@ const PORTFOLIO_DATA = {
       type: "Design & Communications",
       achievements: [
         "Designed official visual materials for the 1st Political Science Conference.",
-        "Selected as Graphic Designer for the World Democracy Congress.",
-        "Contributed to the visual identity of PPSRF's flagship academic and policy events."
+        "Selected as Graphic Designer for the World Democracy Congress."
       ],
       responsibilities: [
         "Designed branding, promotional, and event materials for conferences and institutional activities.",
-        "Collaborated with organizing committees to produce high-quality visual communications.",
+        "Collaborated with organizing committees on digital and print communications.",
         "Maintained design consistency across digital and print media."
       ]
     }
@@ -143,50 +133,35 @@ const PORTFOLIO_DATA = {
       role: "Vice President (Administration)",
       organization: "Economics Cultural Club, University of Dhaka",
       location: "Dhaka, Bangladesh",
-      period: "Sep 2024 – Present",
-      achievements: [
-        "Promoted from Secretary (Talent Acquisition) to Vice President (Administration).",
-        "Led talent selection for ECC Talent Hunt 2025 and 2026.",
-        "Organized flagship events including ECC Freshers' Breeze and ECC Nobohorshe Noboborshe."
-      ],
+      period: "September 2024 – Present",
+      tagline: "Previously served as Secretary (Talent Acquisition)",
       responsibilities: [
-        "Co-direct club administration, executive strategy, and daily operations with the President.",
-        "Resolve internal administrative bottlenecks to maintain smooth organizational workflow.",
-        "Direct organizing committees, volunteers, and stakeholders for seamless event execution."
+        "Lead club administration and executive operations.",
+        "Coordinate large-scale university events.",
+        "Manage organizing committees and volunteers."
       ]
     },
     {
       id: "esc-member",
       role: "Associate Member",
-      organization: "Economics Study Center, University of Dhaka",
+      organization: "Economics Study Center",
       location: "Dhaka, Bangladesh",
-      period: "May 2024 – Oct 2026",
-      achievements: [
-        "Contributed to the successful organization of the 6th Bangladesh Economics Summit (2025) and 7th Bangladesh Economics Summit (2026).",
-        "Supported the planning and execution of major academic programs and events at the Economics Study Center.",
-        "Strengthened organizational effectiveness through logistics coordination and cross-team collaboration."
-      ],
+      period: "May 2024 – October 2026",
       responsibilities: [
-        "Coordinated logistics and event operations for seminars, study circles, workshops, and flagship programs.",
-        "Collaborated with internal teams and external stakeholders using leadership, communication, coordination, and public relations skills.",
-        "Assisted in planning, organizing, and managing academic and policy-related events."
+        "Organized Bangladesh Economics Summit.",
+        "Coordinated seminars, workshops, and academic events.",
+        "Worked with internal and external stakeholders."
       ]
     },
     {
       id: "eca-associate",
       role: "Associate (Organizing)",
-      organization: "Economics Career Alliance, University of Dhaka",
+      organization: "Economics Career Alliance",
       location: "Dhaka, Bangladesh",
-      period: "Oct 2023 – Oct 2026",
-      achievements: [
-        "Contributed to organizing ECA Quizverse, ECA Career Expo, and The Colosseum II.",
-        "Supported the successful execution of career development and student engagement initiatives.",
-        "Strengthened event operations through effective logistics and team coordination."
-      ],
+      period: "October 2023 – October 2026",
       responsibilities: [
-        "Coordinated logistics and event management for career-focused programs.",
-        "Collaborated with organizing teams to plan and execute departmental events.",
-        "Communicated with participants, volunteers, and stakeholders to ensure smooth event operations."
+        "Assisted in organizing career expos, competitions, and departmental events.",
+        "Managed logistics and participant coordination."
       ]
     },
     {
@@ -195,33 +170,26 @@ const PORTFOLIO_DATA = {
       organization: "ARANYAK",
       location: "Barishal, Bangladesh",
       period: "2021 – 2023",
-      achievements: [
-        "Led environmental awareness and conservation initiatives promoting climate action and sustainability.",
-        "Organized tree plantation campaigns and environmental education programs for students and local communities.",
-        "Designed and implemented conservation activities that strengthened youth engagement in environmental stewardship."
-      ],
       responsibilities: [
-        "Planned and coordinated environmental campaigns, seminars, and community outreach programs.",
-        "Led tree plantation initiatives and promoted climate and environmental awareness among students and the public.",
-        "Collaborated with volunteers and local stakeholders to implement conservation and sustainability initiatives."
+        "Led environmental awareness initiatives.",
+        "Organized tree plantation and sustainability campaigns.",
+        "Coordinated community outreach activities."
       ]
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 5. RESEARCH PAPERS & PUBLICATIONS
+  // 5. RESEARCH WORKS & MANUSCRIPTS
   // -----------------------------------------------------------------------
   researchWorks: [
     {
       id: "inflation-targeting-2026",
       title: "Should Bangladesh Bank's Policy Move Towards Inflation Targeting?",
-      genre: "Monetary Economics Paper",
+      genre: "Monetary Economics Paper (2026)",
       institution: "Department of Economics, University of Dhaka",
-      date: "Jan 2026",
       location: "Dhaka, Bangladesh",
-      status: "Unpublished Research Manuscript",
-      description: "Analyzed 27 years of Bangladesh Bank data to evaluate the feasibility of inflation targeting using exchange rate pass-through (ERPT) econometric analysis.",
-      methodology: ["Exchange Rate Pass-Through", "Time Series Econometrics", "27-Year Macro Dataset"],
+      status: "Unpublished",
+      description: "Analyzed 27 years of Bangladesh Bank data using exchange rate pass-through analysis to evaluate the feasibility of inflation targeting.",
       link: "https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds",
       bibtex: `@article{khan2026inflation,
   title={Should Bangladesh Bank's Policy Move Towards Inflation Targeting?},
@@ -235,13 +203,11 @@ const PORTFOLIO_DATA = {
     {
       id: "cuban-development-puzzle-2025",
       title: "The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform",
-      genre: "Development Economics Paper",
+      genre: "Development Economics Paper (2025)",
       institution: "Department of Economics, University of Dhaka",
-      date: "Dec 2025",
       location: "Dhaka, Bangladesh",
-      status: "Unpublished Research Manuscript",
-      description: "Examined Cuba's development model by analyzing the relationship between human development, economic performance, institutional reforms, and sustainable development, with a focus on resilience, human capital, and policy challenges.",
-      methodology: ["Comparative Development", "Human Capital Index", "Institutional Policy Analysis"],
+      status: "Unpublished",
+      description: "Examined Cuba's development model, institutional reforms, human development, resilience, and policy challenges.",
       link: "https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle",
       bibtex: `@article{khan2025cuba,
   title={The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform},
@@ -255,13 +221,11 @@ const PORTFOLIO_DATA = {
     {
       id: "energy-justice-2025",
       title: "Energy Justice in Protecting Energy Rights",
-      genre: "Conference Paper",
+      genre: "Conference Paper (Nov 2025)",
       institution: "CAB Youth Parliament 2025",
-      date: "Nov 2025",
       location: "Dhaka, Bangladesh",
-      status: "Published in Handbook",
-      description: "Published in the CAB Youth Parliament 2025 Handbook. Examined energy justice, consumer rights, renewable energy governance, and climate justice in Bangladesh.",
-      methodology: ["Policy Evaluation", "Consumer Equity Framework", "Renewable Energy Transition"],
+      status: "Published, CAB Youth Parliament 2025 Handbook",
+      description: "Examined energy justice, renewable energy governance, and consumer rights in Bangladesh.",
       link: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
       bibtex: `@inproceedings{khan2025energyjustice,
   title={Energy Justice in Protecting Energy Rights},
@@ -275,43 +239,35 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 6. APPS & SOFTWARE PROJECTS
+  // 6. APPLICATIONS BUILT
   // -----------------------------------------------------------------------
   projects: [
     {
-      id: "airshare",
       name: "AirShare",
       tagline: "Free Cloud File Sharing Platform",
-      description: "A lightweight, secure, and completely free web-based file-sharing cloud platform engineered for frictionless peer-to-peer file exchanges with automatic link expiration.",
-      stack: ["Web Technologies", "Cloud Storage API", "JavaScript", "Responsive UI"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A fast, fully free web-based file-sharing cloud utility designed for effortless peer-to-peer file transfer.",
+      stack: ["JavaScript", "Cloud API", "Web Application"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "konvert",
       name: "KonVert",
       tagline: "100% Client-Side Offline File Converter",
-      description: "A privacy-centric file conversion web application that processes files fully offline within the user's browser, eliminating data upload overhead and bandwidth usage.",
-      stack: ["WebAssembly", "JavaScript (ES6)", "HTML5 File API", "Tailwind CSS"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A secure, privacy-first file converting website that processes documents and media fully offline within your browser.",
+      stack: ["WebAssembly", "JavaScript", "HTML5 API"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "framefuse",
       name: "FrameFuse",
       tagline: "Offline Social Media Frame Applicator",
-      description: "A fast, offline-first canvas manipulation tool allowing organizations and conference attendees to seamlessly overlay campaign badges and event frames onto profile photos.",
-      stack: ["HTML5 Canvas", "JavaScript", "Image Processing", "Offline-first"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A fully offline canvas tool for overlaying campaign badges, graduation borders, and event frames onto profile pictures.",
+      stack: ["HTML5 Canvas", "JavaScript", "Image Processing"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "a2y",
       name: "A2Y",
-      tagline: "Anonymous Web-Based Texting Utility",
-      description: "A minimalist anonymous communication web application prioritizing zero-log confidentiality and instantaneous ephemeral text transmissions.",
-      stack: ["WebSockets / Serverless", "JavaScript", "Security Architecture"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      tagline: "Anonymous Web-Based Texting App",
+      description: "A minimalist anonymous communication web application focused on instant, privacy-conscious ephemeral text messages.",
+      stack: ["WebSockets", "JavaScript", "Responsive UI"],
       githubUrl: "https://github.com/ashikulislamkhan"
     }
   ],
@@ -324,22 +280,19 @@ const PORTFOLIO_DATA = {
       degree: "Bachelor of Social Science (BSS) in Economics",
       institution: "University of Dhaka",
       timeline: "Final Year Undergraduate",
-      location: "Dhaka, Bangladesh",
-      detail: "Specializing in Development Economics, Econometrics, and Public Policy Analysis."
+      location: "Dhaka, Bangladesh"
     },
     {
       degree: "Higher Secondary Certificate (HSC) in Humanities",
       institution: "Amrita Lal Dey College, Barishal",
-      timeline: "Graduated",
-      location: "Barishal, Bangladesh",
-      detail: "Result: GPA 5.00 / 5.00"
+      timeline: "GPA: 5.00 / 5.00",
+      location: "Barishal, Bangladesh"
     },
     {
       degree: "Secondary School Certificate (SSC) in Humanities",
       institution: "Kaunia Govt. Secondary School, Barishal",
-      timeline: "Graduated",
-      location: "Barishal, Bangladesh",
-      detail: "Result: GPA 5.00 / 5.00"
+      timeline: "GPA: 5.00 / 5.00",
+      location: "Barishal, Bangladesh"
     }
   ],
 
@@ -350,20 +303,17 @@ const PORTFOLIO_DATA = {
     {
       title: "Students in Energy Security and Just Energy Transition Workshop",
       issuer: "Consumers Association of Bangladesh (CAB)",
-      year: "2026",
-      location: "Dhaka, Bangladesh"
+      year: "2026"
     },
     {
       title: "Climate and Environmental Policy 101",
-      issuer: "AYO Academy | ASEAN Youth Organization",
-      year: "2026",
-      location: "International"
+      issuer: "ASEAN Youth Organization",
+      year: "2026"
     },
     {
       title: "Air Diary Challenge",
       issuer: "Youth4Nature Fellowship Program",
-      year: "2026",
-      location: "Global"
+      year: "2026"
     }
   ],
 
@@ -373,49 +323,36 @@ const PORTFOLIO_DATA = {
   volunteering: [
     {
       role: "Volunteer (Public Relations)",
-      organization: "South Asian Network on Economic Modeling (SANEM)",
-      date: "Feb 2025",
-      location: "Dhaka, Bangladesh",
-      achievements: [
-        "Supported public relations and participant engagement for the 8th SANEM Annual Economists' Conference (SAEC) 2025.",
-        "Assisted in communication and coordination to ensure smooth event operations."
-      ]
+      organization: "South Asian Network on Economic Modelling (SANEM)",
+      description: "Supported public relations and participant engagement during the 8th SANEM Annual Economists' Conference."
     },
     {
       role: "Volunteer (Logistics)",
-      organization: "Economics Study Center, University of Dhaka",
-      date: "Feb 2025, Apr 2026",
-      location: "Dhaka, Bangladesh",
-      achievements: [
-        "Provided logistics support for the 6th and 7th Bangladesh Economics Summit (BES) 2025 & 2026.",
-        "Assisted in coordinating event operations and participant management."
-      ]
+      organization: "Economics Study Center",
+      description: "Assisted with logistics for the 6th and 7th Bangladesh Economics Summit."
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 10. CREATIVE & MEDIA WORKS (SUMMITS & ECC)
+  // 10. CREATIVE & MEDIA WORKS (Canva/Video Inspirations)
   // -----------------------------------------------------------------------
   creativeWorks: [
-    { title: "6th Bangladesh Economics Summit (BES 2025) Promo Campaign", role: "Cinematography & Editing" },
-    { title: "BES 2025 EconQuest Economics Olympiad Promo Video", role: "Visual Direction & Editing" },
-    { title: "ECC Freshers' Breeze 2025 Official Promo", role: "Direction & Video Production" },
-    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing" },
-    { title: "ECC Nobohorshe Noboborshe 1432 Cultural Promo", role: "Motion Design & Video Editing" }
+    { title: "ECC Freshers’ Breeze 2025 Promo", role: "Direction, Script & Video Production", year: "2025" },
+    { title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo", role: "Scripting, Acting & Full Edit", year: "2025" },
+    { title: "6th Bangladesh Economics Summit (BES 2025) Official Promo", role: "Cinematography & Editing", year: "2025" },
+    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing", year: "2026" },
+    { title: "ECC Nobohorshe Noboborshe 1432 Promo", role: "Motion Design & Video Production", year: "2025" }
   ],
 
   // -----------------------------------------------------------------------
-  // 11. LANGUAGES & PERSONAL
+  // 11. LANGUAGES
   // -----------------------------------------------------------------------
   languages: [
     { name: "Bangla", proficiency: "Native" },
     { name: "English", proficiency: "Fluent (Duolingo English Test Score: 129)" }
-  ],
-
-  personalInterests: ["Football", "Astrophotography", "Tree Plantation & Conservation", "Distance Running", "Music"]
+  ]
 };
 
-// Export for browser global context
 if (typeof window !== "undefined") {
   window.PORTFOLIO_DATA = PORTFOLIO_DATA;
 }

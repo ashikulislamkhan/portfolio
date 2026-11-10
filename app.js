@@ -4,31 +4,57 @@
  * =========================================================================
  */
 
-let activeCategory = "all";
-let activeSearchQuery = "";
 let snackbarTimer = null;
 
 // Initialize on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeIcon(savedTheme);
+
   // Render components dynamically from PORTFOLIO_DATA
   renderHeroAndProfile();
   renderCompetencies();
-  renderExperience(activeCategory, activeSearchQuery);
-  renderResearch(activeSearchQuery);
-  renderProjects(activeSearchQuery);
+  renderWorkplaces();
+  renderLeadership();
+  renderResearch();
+  renderProjects();
+  renderCreativeWorks();
   renderEducation();
   renderCertificationsAndVolunteering();
-  renderCreativeWorks();
 
-  // Setup reactive events
-  setupSegmentedTabs();
-  setupSearchInput();
+  // Setup Dock and Form Observers
   setupDockObserver();
   setupInquiryForm();
 });
 
 // -------------------------------------------------------------------------
-// 1. Render Hero & Profile Summary
+// 1. Theme Toggle (Top Right Switcher Icon)
+// -------------------------------------------------------------------------
+function toggleThemeMode() {
+  const current = document.documentElement.getAttribute("data-theme") || "light";
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("portfolio-theme", next);
+  updateThemeIcon(next);
+  showLiquidSnackbar(`Switched to ${next === "dark" ? "Dusk (Dark)" : "Daylight (Light)"} mode`);
+}
+
+function updateThemeIcon(theme) {
+  const btn = document.getElementById("themeToggleBtn");
+  if (!btn) return;
+  if (theme === "dark") {
+    // Show Moon / Dusk icon
+    btn.innerHTML = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+  } else {
+    // Show Sun / Daylight icon
+    btn.innerHTML = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+  }
+}
+
+// -------------------------------------------------------------------------
+// 2. Render Hero & Profile Summary
 // -------------------------------------------------------------------------
 function renderHeroAndProfile() {
   const data = window.PORTFOLIO_DATA.profile;
@@ -42,17 +68,17 @@ function renderHeroAndProfile() {
 
   if (heroName) heroName.textContent = data.fullName;
   if (heroTagline) heroTagline.textContent = data.headline;
-  if (heroBio) heroBio.textContent = data.bio;
+  if (heroBio) heroBio.textContent = data.summary;
   if (heroStatus) heroStatus.textContent = data.statusBadge;
-  if (brandName) brandName.textContent = data.preferredName;
+  if (brandName) brandName.textContent = data.fullName;
 
-  // Render Stats with Vieve-inspired confidence
+  // Stats Grid
   const statsContainer = document.getElementById("dossierStatsGrid");
   if (statsContainer && data.quickStats) {
     statsContainer.innerHTML = data.quickStats.map(stat => `
-      <div class="stat-box">
-        <span class="stat-val">${stat.val}</span>
-        <span class="stat-lbl">${stat.label}</span>
+      <div class="stat-counter-box">
+        <span class="stat-val-text">${stat.val}</span>
+        <span class="stat-lbl-text">${stat.label}</span>
       </div>
     `).join("");
   }
@@ -62,27 +88,27 @@ function renderHeroAndProfile() {
   if (contactContainer) {
     contactContainer.innerHTML = `
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Location</span>
-        <span class="tabular-nums" style="font-weight: 600;">${data.location}</span>
+        <span style="color: var(--text-muted); font-weight: 600;">Location</span>
+        <span class="tabular-nums" style="font-weight: 700;">${data.location}</span>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Direct Email</span>
-        <a href="mailto:${data.email}" style="color: var(--accent-electric); font-weight: 600;">${data.email}</a>
+        <span style="color: var(--text-muted); font-weight: 600;">Direct Email</span>
+        <a href="mailto:${data.email}" style="color: var(--accent-electric); font-weight: 700;">${data.email}</a>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Phone</span>
-        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="font-weight: 600;">${data.phone}</a>
+        <span style="color: var(--text-muted); font-weight: 600;">Phone</span>
+        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="font-weight: 700;">${data.phone}</a>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Department</span>
-        <span style="font-weight: 600;">Dept. of Economics</span>
+        <span style="color: var(--text-muted); font-weight: 600;">Department</span>
+        <span style="font-weight: 700;">Univ of Dhaka</span>
       </li>
     `;
   }
 }
 
 // -------------------------------------------------------------------------
-// 2. Render Core Competencies
+// 3. Render Core Competencies
 // -------------------------------------------------------------------------
 function renderCompetencies() {
   const container = document.getElementById("competenciesContainer");
@@ -90,63 +116,32 @@ function renderCompetencies() {
   if (!container || !list) return;
 
   container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card competency-card">
-      <div>
-        <h3>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--accent-electric);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          ${item.category}
-        </h3>
-        <div class="skill-chips-cloud">
-          ${item.skills.map(s => `<span class="pill-badge">${s}</span>`).join("")}
-        </div>
+    <div class="liquid-glass-card" style="padding: 2rem;">
+      <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.65rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--accent-electric);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        ${item.category}
+      </h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        ${item.skills.map(s => `<span class="pill-badge">${s}</span>`).join("")}
       </div>
     </div>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 3. Render Work & Leadership Experience
+// 4. Render Workplaces (Professional Experience)
 // -------------------------------------------------------------------------
-function renderExperience(category = "all", query = "") {
-  const container = document.getElementById("experienceContainer");
-  if (!container) return;
+function renderWorkplaces() {
+  const container = document.getElementById("workplacesContainer");
+  const list = window.PORTFOLIO_DATA.workExperience;
+  if (!container || !list) return;
 
-  const work = window.PORTFOLIO_DATA.workExperience || [];
-  const leadership = window.PORTFOLIO_DATA.leadershipExperience || [];
-  const combined = [...work, ...leadership];
-
-  const q = query.toLowerCase().trim();
-  const filtered = combined.filter(item => {
-    const isLeadership = leadership.some(l => l.id === item.id);
-    const matchesCategory = 
-      category === "all" ||
-      (category === "work" && !isLeadership) ||
-      (category === "leadership" && isLeadership);
-
-    const matchesSearch = !q || 
-      item.role.toLowerCase().includes(q) ||
-      item.organization.toLowerCase().includes(q) ||
-      (item.achievements && item.achievements.some(a => a.toLowerCase().includes(q))) ||
-      (item.responsibilities && item.responsibilities.some(r => r.toLowerCase().includes(q)));
-
-    return matchesCategory && matchesSearch;
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="liquid-glass-card" style="text-align: center; padding: 3rem;">
-        <p style="color: var(--text-muted); font-size: 1.05rem;">No experience entries found matching "${query}".</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => `
-    <article class="liquid-glass-card experience-card">
-      <div class="exp-header-row">
+  container.innerHTML = list.map(item => `
+    <article class="liquid-glass-card workplace-card">
+      <div class="workplace-top-row">
         <div>
-          <h3 class="exp-role-title">${item.role}</h3>
-          <span class="exp-org-badge">${item.organization}</span>
+          <h3 class="workplace-role-title">${item.role}</h3>
+          <span class="workplace-org-badge">${item.organization}</span>
         </div>
         <div style="text-align: right;">
           <span class="pill-badge pill-badge-emerald tabular-nums">${item.period}</span>
@@ -156,18 +151,18 @@ function renderExperience(category = "all", query = "") {
 
       ${item.achievements && item.achievements.length > 0 ? `
         <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 1rem;">
-          Key Achievements
+          Achievements
         </div>
-        <ul class="exp-bullet-list">
+        <ul class="workplace-bullet-list">
           ${item.achievements.map(ach => `<li>${ach}</li>`).join("")}
         </ul>
       ` : ""}
 
       ${item.responsibilities && item.responsibilities.length > 0 ? `
         <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 1rem;">
-          Core Responsibilities
+          Responsibilities
         </div>
-        <ul class="exp-bullet-list">
+        <ul class="workplace-bullet-list">
           ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
         </ul>
       ` : ""}
@@ -176,100 +171,98 @@ function renderExperience(category = "all", query = "") {
 }
 
 // -------------------------------------------------------------------------
-// 4. Render Research Works & Publications
+// 5. Render Leadership Experience
 // -------------------------------------------------------------------------
-function renderResearch(query = "") {
+function renderLeadership() {
+  const container = document.getElementById("leadershipContainer");
+  const list = window.PORTFOLIO_DATA.leadershipExperience;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <article class="liquid-glass-card workplace-card">
+      <div class="workplace-top-row">
+        <div>
+          <h3 class="workplace-role-title">${item.role}</h3>
+          <span class="workplace-org-badge">${item.organization}</span>
+          ${item.tagline ? `<div style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.15rem;">${item.tagline}</div>` : ""}
+        </div>
+        <div style="text-align: right;">
+          <span class="pill-badge tabular-nums">${item.period}</span>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">${item.location}</div>
+        </div>
+      </div>
+
+      <ul class="workplace-bullet-list">
+        ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
+      </ul>
+    </article>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 6. Render Research Works & Publications
+// -------------------------------------------------------------------------
+function renderResearch() {
   const container = document.getElementById("researchContainer");
   const list = window.PORTFOLIO_DATA.researchWorks;
   if (!container || !list) return;
 
-  const q = query.toLowerCase().trim();
-  const filtered = list.filter(item => {
-    return !q ||
-      item.title.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q) ||
-      item.genre.toLowerCase().includes(q) ||
-      (item.methodology && item.methodology.some(m => m.toLowerCase().includes(q)));
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="liquid-glass-card" style="text-align: center; padding: 3rem;">
-        <p style="color: var(--text-muted); font-size: 1.05rem;">No research manuscripts matching "${query}".</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => `
+  container.innerHTML = list.map(item => `
     <article class="liquid-glass-card research-card">
-      <div class="research-top-bar">
-        <span class="pill-badge pill-badge-amber">${item.genre} · ${item.date}</span>
+      <div class="research-meta-bar">
+        <span class="pill-badge pill-badge-amber">${item.genre}</span>
         <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">${item.status}</span>
       </div>
 
-      <h3 class="research-title">${item.title}</h3>
-      <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.85rem;">
+      <h3 class="research-title-text">${item.title}</h3>
+      <div style="font-size: 0.95rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.85rem;">
         ${item.institution} · ${item.location}
       </div>
 
-      <p style="font-size: 1rem; color: var(--text-sub); line-height: 1.65; margin-bottom: 1.25rem;">
+      <p style="font-size: 1.025rem; color: var(--text-sub); line-height: 1.65; margin-bottom: 1.25rem;">
         ${item.description}
       </p>
 
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        ${item.methodology.map(m => `<span class="pill-badge">${m}</span>`).join("")}
-      </div>
-
-      <div class="research-footer-actions">
+      <div class="research-action-footer">
         <div style="display: flex; gap: 0.75rem;">
-          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            ResearchGate Manuscript
+            ResearchGate
           </a>
-          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
             BibTeX Citation
           </button>
         </div>
-        <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted);">Empirical Econometric Analysis</span>
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">Empirical Econometric Analysis</span>
       </div>
     </article>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 5. Render Software & Apps Built
+// 7. Render Applications Built
 // -------------------------------------------------------------------------
-function renderProjects(query = "") {
+function renderProjects() {
   const container = document.getElementById("projectsContainer");
   const list = window.PORTFOLIO_DATA.projects;
   if (!container || !list) return;
 
-  const q = query.toLowerCase().trim();
-  const filtered = list.filter(item => {
-    return !q ||
-      item.name.toLowerCase().includes(q) ||
-      item.tagline.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q) ||
-      (item.stack && item.stack.some(s => s.toLowerCase().includes(q)));
-  });
-
-  container.innerHTML = filtered.map(item => `
+  container.innerHTML = list.map(item => `
     <div class="liquid-glass-card app-card">
       <div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-          <h3 class="app-title">${item.name}</h3>
+          <h3 class="workplace-role-title">${item.name}</h3>
           <span class="pill-badge pill-badge-emerald">Live Platform</span>
         </div>
-        <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.85rem;">
+        <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.85rem;">
           ${item.tagline}
         </div>
-        <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1.25rem;">
+        <p style="font-size: 0.925rem; color: var(--text-sub); margin-bottom: 1.25rem;">
           ${item.description}
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.5rem;">
-          ${item.stack.map(st => `<span class="pill-badge" style="font-size: 0.72rem;">${st}</span>`).join("")}
+          ${item.stack.map(st => `<span class="pill-badge" style="font-size: 0.75rem;">${st}</span>`).join("")}
         </div>
       </div>
       <div style="border-top: 1px solid var(--glass-border-subtle); padding-top: 1.25rem;">
@@ -283,7 +276,29 @@ function renderProjects(query = "") {
 }
 
 // -------------------------------------------------------------------------
-// 6. Render Education
+// 8. Render Creative Direction & Video Campaigns (Canva Style)
+// -------------------------------------------------------------------------
+function renderCreativeWorks() {
+  const container = document.getElementById("creativeWorksContainer");
+  const list = window.PORTFOLIO_DATA.creativeWorks;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+          <span class="pill-badge pill-badge-amber">Summit Video</span>
+          <span class="tabular-nums" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">${item.year}</span>
+        </div>
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">${item.title}</h4>
+        <div style="font-size: 0.85rem; color: var(--accent-electric); font-weight: 600;">${item.role}</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 9. Render Education
 // -------------------------------------------------------------------------
 function renderEducation() {
   const container = document.getElementById("educationContainer");
@@ -291,21 +306,21 @@ function renderEducation() {
   if (!container || !list) return;
 
   container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card" style="padding: 1.75rem;">
+    <div class="liquid-glass-card" style="padding: 1.85rem;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <h3 style="font-size: 1.25rem;">${item.degree}</h3>
         <span class="pill-badge pill-badge-emerald">${item.timeline}</span>
       </div>
-      <div style="font-size: 0.95rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.4rem;">
-        ${item.institution} · ${item.location}
+      <div style="font-size: 1rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.35rem;">
+        ${item.institution}
       </div>
-      <p style="font-size: 0.875rem; color: var(--text-muted);">${item.detail}</p>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">${item.location}</div>
     </div>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 7. Render Certifications & Volunteering
+// 10. Render Certifications & Volunteering
 // -------------------------------------------------------------------------
 function renderCertificationsAndVolunteering() {
   const certContainer = document.getElementById("certificationsContainer");
@@ -317,7 +332,7 @@ function renderCertificationsAndVolunteering() {
           <h4 style="font-size: 1.05rem; font-weight: 700;">${c.title}</h4>
           <span class="pill-badge tabular-nums">${c.year}</span>
         </div>
-        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 500;">${c.issuer}</div>
+        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 600;">${c.issuer}</div>
       </div>
     `).join("");
   }
@@ -327,68 +342,16 @@ function renderCertificationsAndVolunteering() {
   if (volContainer && vols) {
     volContainer.innerHTML = vols.map(v => `
       <div class="liquid-glass-card" style="padding: 1.35rem;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
-          <h4 style="font-size: 1.05rem; font-weight: 700;">${v.role}</h4>
-          <span class="pill-badge tabular-nums">${v.date}</span>
-        </div>
-        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 500; margin-bottom: 0.5rem;">${v.organization}</div>
-        <ul class="exp-bullet-list" style="font-size: 0.875rem;">
-          ${v.achievements.map(a => `<li>${a}</li>`).join("")}
-        </ul>
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">${v.role}</h4>
+        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.35rem;">${v.organization}</div>
+        <p style="font-size: 0.875rem; color: var(--text-sub);">${v.description}</p>
       </div>
     `).join("");
   }
 }
 
 // -------------------------------------------------------------------------
-// 8. Render Creative & Media Works
-// -------------------------------------------------------------------------
-function renderCreativeWorks() {
-  const container = document.getElementById("creativeWorksContainer");
-  const list = window.PORTFOLIO_DATA.creativeWorks;
-  if (!container || !list) return;
-
-  container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
-      <div>
-        <h4 style="font-size: 0.95rem; font-weight: 600;">${item.title}</h4>
-        <span style="font-size: 0.8rem; color: var(--accent-electric); font-weight: 500;">${item.role}</span>
-      </div>
-      <span class="pill-badge pill-badge-amber">Summit Video</span>
-    </div>
-  `).join("");
-}
-
-// -------------------------------------------------------------------------
-// 9. Interactive Segmented Tabs & Search Controls
-// -------------------------------------------------------------------------
-function setupSegmentedTabs() {
-  const tabs = document.querySelectorAll(".tab-pill-btn");
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      activeCategory = tab.getAttribute("data-category");
-      renderExperience(activeCategory, activeSearchQuery);
-      showLiquidSnackbar(`Viewing: ${tab.textContent.trim()}`);
-    });
-  });
-}
-
-function setupSearchInput() {
-  const input = document.getElementById("globalSearchInput");
-  if (!input) return;
-
-  input.addEventListener("input", (e) => {
-    activeSearchQuery = e.target.value;
-    renderExperience(activeCategory, activeSearchQuery);
-    renderResearch(activeSearchQuery);
-    renderProjects(activeSearchQuery);
-  });
-}
-
-// -------------------------------------------------------------------------
-// 10. iOS Liquid Glass Dock & Scroll Tracking
+// 11. Dock Observer (Active Section Highlighting)
 // -------------------------------------------------------------------------
 function setupDockObserver() {
   const sections = document.querySelectorAll("section[id]");
@@ -397,7 +360,7 @@ function setupDockObserver() {
   window.addEventListener("scroll", () => {
     let currentId = "";
     sections.forEach(sec => {
-      const top = sec.offsetTop - 200;
+      const top = sec.offsetTop - 220;
       if (window.scrollY >= top) {
         currentId = sec.getAttribute("id");
       }
@@ -420,7 +383,7 @@ function scrollToSection(sectionId) {
 }
 
 // -------------------------------------------------------------------------
-// 11. Highly Transparent iOS Liquid Glass Snackbar (Toast)
+// 12. Highly Transparent iOS Liquid Glass Snackbar
 // -------------------------------------------------------------------------
 function showLiquidSnackbar(message) {
   const bar = document.getElementById("liquidSnackbar");
@@ -437,7 +400,7 @@ function showLiquidSnackbar(message) {
 }
 
 // -------------------------------------------------------------------------
-// 12. Modals (BibTeX & CV Viewer)
+// 13. BibTeX Modal
 // -------------------------------------------------------------------------
 function openBibtexModal(paperId) {
   const papers = window.PORTFOLIO_DATA.researchWorks || [];
@@ -469,20 +432,9 @@ function copyBibtexSnippet() {
   });
 }
 
-function openCvModal() {
-  const modal = document.getElementById("cvModalBackdrop");
-  if (modal) modal.classList.add("active");
-}
-
-function closeCvModal() {
-  const modal = document.getElementById("cvModalBackdrop");
-  if (modal) modal.classList.remove("active");
-}
-
-function printCvDocument() {
-  window.print();
-}
-
+// -------------------------------------------------------------------------
+// 14. Email & Inquiry Form
+// -------------------------------------------------------------------------
 function copyDirectEmail() {
   const email = window.PORTFOLIO_DATA.profile.email;
   navigator.clipboard.writeText(email).then(() => {

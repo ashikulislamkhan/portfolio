@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashikul Islam Khan | Economics & Policy Researcher Â· Data Analyst</title>
-  <meta name="description" content="Professional portfolio of MD. Ashikul Islam (Ashikul Islam Khan) - Economics Undergraduate at University of Dhaka, Development Economics & Policy Researcher, and Aspiring Data Analyst.">
+  <title>Ashikul Islam Khan | Portfolio & Curriculum Vitae</title>
+  <meta name="description" content="Professional portfolio and CV of Ashikul Islam Khan - Economics Undergraduate at University of Dhaka, Policy Research Enthusiast, Aspiring Data Analyst, Graphic Designer, Video Editor, Climate Activist.">
   
   <!-- Modern Confident Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,52 +13,74 @@
   
   <style>
 /* ==========================================================================
-   ASHIKUL ISLAM KHAN - ULTRA-TRANSPARENT iOS LIQUID GLASS & VIEVE DYNAMIC UI
+   ASHIKUL ISLAM KHAN - ULTRA-TRANSPARENT iOS LIQUID GLASS DESIGN SYSTEM
+   Canva-Inspired Editorial Structure + Dark/Light Mode Theme Architecture
    ========================================================================== */
 
 :root {
-  /* Dynamic Canvas Gradients */
+  /* Daylight Theme (Light Mode) */
   --bg-gradient: radial-gradient(120% 80% at 50% -10%, #e8f2ff 0%, #f4f8fe 40%, #edf4fc 100%);
-  --bg-color: #f3f7fd;
+  --bg-canvas: #f3f7fd;
   
-  /* Highly Transparent iOS Liquid Glass */
-  --glass-ultra-bg: rgba(255, 255, 255, 0.45);
-  --glass-ultra-bg-hover: rgba(255, 255, 255, 0.65);
-  --glass-ultra-bg-active: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-bg: rgba(255, 255, 255, 0.48);
+  --glass-bg-hover: rgba(255, 255, 255, 0.72);
+  --glass-bg-active: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.85);
   --glass-border-subtle: rgba(255, 255, 255, 0.45);
-  --glass-shadow: 0 16px 40px -8px rgba(30, 58, 138, 0.09), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95);
-  --glass-blur: blur(32px) saturate(220%);
+  --glass-shadow: 0 16px 40px -8px rgba(30, 58, 138, 0.08), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95);
+  --glass-blur: blur(32px) saturate(210%);
   
-  /* Vibrant & Confident Typography Colors */
   --text-main: #0c1524;
   --text-sub: #334155;
   --text-muted: #64748b;
   --text-inverted: #ffffff;
   
-  /* Vieve-Inspired Dynamic Brand Accents */
   --accent-electric: #2563eb;
   --accent-electric-hover: #1d4ed8;
   --accent-cyan: #06b6d4;
   --accent-emerald: #10b981;
   --accent-amber: #f59e0b;
   --accent-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-  --accent-gradient-glow: 0 10px 28px -4px rgba(37, 99, 235, 0.35);
+  --accent-glow: 0 10px 28px -4px rgba(37, 99, 235, 0.35);
   --accent-subtle: rgba(37, 99, 235, 0.08);
 
-  /* Fonts */
   --font-display: "Plus Jakarta Sans", "Inter", -apple-system, sans-serif;
   --font-serif: "Newsreader", "Times New Roman", serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Sizing & Radii */
   --container-width: 1180px;
   --radius-pill: 9999px;
   --radius-card: 22px;
   --radius-sub: 14px;
 }
 
-/* Base Styles */
+[data-theme="dark"] {
+  /* Dusk Theme (Dark Mode) */
+  --bg-gradient: radial-gradient(120% 80% at 50% -10%, #0d1b33 0%, #090d16 50%, #060910 100%);
+  --bg-canvas: #090d16;
+  
+  --glass-bg: rgba(18, 26, 43, 0.55);
+  --glass-bg-hover: rgba(28, 40, 65, 0.75);
+  --glass-bg-active: rgba(38, 54, 88, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.65), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.18);
+  --glass-blur: blur(34px) saturate(220%);
+  
+  --text-main: #f8fafc;
+  --text-sub: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverted: #090d16;
+  
+  --accent-electric: #3b82f6;
+  --accent-electric-hover: #60a5fa;
+  --accent-glow: 0 10px 28px -4px rgba(59, 130, 246, 0.5);
+  --accent-subtle: rgba(59, 130, 246, 0.15);
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -73,14 +95,15 @@ html {
 
 body {
   font-family: var(--font-display);
-  background: var(--bg-color);
+  background: var(--bg-canvas);
   background-image: var(--bg-gradient);
   background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
   min-height: 100vh;
-  padding-bottom: 7rem;
+  padding-bottom: 7.5rem;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4 {
@@ -115,61 +138,49 @@ a {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   position: relative;
 }
 
 /* ==========================================================================
-   Highly Transparent iOS Liquid Glass Utility
+   Ultra-Transparent iOS Liquid Glass
    ========================================================================== */
 .liquid-glass {
-  background: var(--glass-ultra-bg);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: var(--radius-card);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .liquid-glass-card {
-  background: var(--glass-ultra-bg);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: var(--radius-card);
-  padding: 2rem;
+  padding: 2.25rem;
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.2s ease;
   position: relative;
   overflow: hidden;
 }
 
-.liquid-glass-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-  pointer-events: none;
-}
-
 .liquid-glass-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 24px 50px -10px rgba(37, 99, 235, 0.14), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1);
+  box-shadow: 0 24px 50px -10px rgba(37, 99, 235, 0.15), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1);
 }
 
-.liquid-glass-card:hover::before {
-  transform: translateX(100%);
+[data-theme="dark"] .liquid-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
-   Top Header Bar (Clean & Professional - No Edit Button)
+   Top Header Bar with Dark/Light Switch Icon
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -184,8 +195,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
-  padding: 0 1.5rem;
+  height: 4.25rem;
+  padding: 0 1.75rem;
   border-radius: var(--radius-pill);
 }
 
@@ -196,35 +207,59 @@ a {
 }
 
 .brand-badge-circle {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--accent-gradient);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: var(--accent-gradient-glow);
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: var(--accent-glow);
 }
 
 .brand-name {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .brand-affiliation {
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   color: var(--text-muted);
   font-weight: 500;
 }
 
-.header-cta-actions {
+.header-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
+}
+
+/* Theme Toggle Button (Top Right) */
+.theme-toggle-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  color: var(--accent-electric);
+  border-color: rgba(255, 255, 255, 1);
 }
 
 /* ==========================================================================
@@ -235,12 +270,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  padding: 0.65rem 1.35rem;
+  padding: 0.7rem 1.45rem;
   border-radius: var(--radius-pill);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  background: var(--glass-ultra-bg);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -251,7 +286,7 @@ a {
 }
 
 .btn-glass:hover {
-  background: var(--glass-ultra-bg-hover);
+  background: var(--glass-bg-hover);
   transform: translateY(-2px);
   border-color: #fff;
 }
@@ -260,7 +295,7 @@ a {
   background: var(--accent-gradient);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff !important;
-  box-shadow: var(--accent-gradient-glow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: var(--accent-glow), inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .btn-electric:hover {
@@ -276,73 +311,27 @@ a {
   border-radius: var(--radius-pill);
   font-size: 0.78rem;
   font-weight: 600;
-  background: rgba(37, 99, 235, 0.09);
-  border: 1px solid rgba(37, 99, 235, 0.18);
+  background: var(--accent-subtle);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   color: var(--accent-electric);
 }
 
 .pill-badge-emerald {
-  background: rgba(16, 185, 129, 0.1);
-  border-color: rgba(16, 185, 129, 0.25);
-  color: #059669;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.28);
+  color: #10b981;
 }
 
 .pill-badge-amber {
-  background: rgba(245, 158, 11, 0.1);
-  border-color: rgba(245, 158, 11, 0.25);
-  color: #d97706;
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.28);
+  color: #f59e0b;
 }
 
 /* ==========================================================================
-   Vieve-Style Infinite Marquee Ticker
+   Hero Section (Canva-Inspired Editorial Structure)
    ========================================================================== */
-.marquee-ribbon {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background: var(--glass-ultra-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
-  padding: 0.85rem 0;
-  margin: 3.5rem 0;
-  box-shadow: var(--glass-shadow);
-}
-
-.marquee-track {
-  display: inline-flex;
-  animation: marquee-scroll 28s linear infinite;
-}
-
-.marquee-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-sub);
-}
-
-.marquee-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-electric);
-}
-
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
-.hero-grid {
+.hero-layout {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3rem;
@@ -350,41 +339,41 @@ a {
   padding-top: 2rem;
 }
 
-.hero-status-tag {
+.hero-status-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   padding: 0.4rem 1rem;
   border-radius: var(--radius-pill);
   font-size: 0.825rem;
   font-weight: 600;
-  background: var(--glass-ultra-bg);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   margin-bottom: 1.25rem;
 }
 
-.pulse-indicator {
+.pulse-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #10b981;
   box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  animation: pulse-wave 2s infinite;
+  animation: pulse-ring 2s infinite;
 }
 
-@keyframes pulse-wave {
+@keyframes pulse-ring {
   0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
   70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-.hero-title {
-  font-size: 3.4rem;
+.hero-main-title {
+  font-size: 3.5rem;
   letter-spacing: -0.035em;
   line-height: 1.08;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-gradient-text {
@@ -393,34 +382,33 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-subtitle {
-  font-size: 1.35rem;
+.hero-tagline-text {
+  font-size: 1.2rem;
   color: var(--text-sub);
   margin-bottom: 1.25rem;
   font-weight: 500;
+  line-height: 1.45;
 }
 
-.hero-description {
-  font-size: 1.05rem;
+.hero-summary-box {
+  font-size: 1.025rem;
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 2rem;
-  max-width: 620px;
 }
 
-.hero-cta-bar {
+.hero-actions-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
 }
 
-/* Hero Right Dossier Card */
+/* Hero Right Profile Dossier */
 .dossier-card {
   padding: 2.25rem;
-  position: relative;
 }
 
-.dossier-top {
+.dossier-header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -429,15 +417,15 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.stats-counter-grid {
+.stats-grid-counter {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-bottom: 1.75rem;
 }
 
-.stat-box {
-  background: rgba(255, 255, 255, 0.4);
+.stat-counter-box {
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border-subtle);
   padding: 1rem 1.15rem;
   border-radius: var(--radius-sub);
@@ -445,22 +433,22 @@ a {
   flex-direction: column;
 }
 
-.stat-val {
-  font-size: 1.45rem;
+.stat-val-text {
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text-main);
 }
 
-.stat-lbl {
+.stat-lbl-text {
   font-size: 0.725rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--text-muted);
   letter-spacing: 0.05em;
 }
 
-.quick-contact-list {
+.quick-contact-stack {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -472,22 +460,22 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  padding: 0.6rem 0.85rem;
+  padding: 0.65rem 0.95rem;
   border-radius: var(--radius-sub);
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border-subtle);
 }
 
 /* ==========================================================================
-   Section Headlines & Segmented Liquid Tabs
+   Section Headlines
    ========================================================================== */
-.section-header-center {
+.section-headline-group {
   text-align: center;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 3rem;
 }
 
-.section-tag {
+.section-eyebrow {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -503,129 +491,25 @@ a {
   letter-spacing: -0.03em;
 }
 
-.section-caption {
+.section-subtext {
   font-size: 1.05rem;
   color: var(--text-muted);
 }
 
-/* iOS Segmented Liquid Glass Tabs */
-.segmented-tabs-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
-
-.segmented-tabs-bar {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem;
-  border-radius: var(--radius-pill);
-  background: var(--glass-ultra-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-.tab-pill-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.35rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-sub);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.tab-pill-btn:hover {
-  color: var(--text-main);
-}
-
-.tab-pill-btn.active {
-  background: #ffffff;
-  color: var(--accent-electric);
-  box-shadow: 0 4px 16px -2px rgba(37, 99, 235, 0.15), inset 0 1px 1px 0 #fff;
-}
-
-/* Search Liquid Bar */
-.search-pill-container {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-pill);
-  margin: 0 auto 3rem;
-  max-width: 500px;
-  background: var(--glass-ultra-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-}
-
-.search-pill-input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  color: var(--text-main);
-  font-size: 0.9rem;
-  font-family: inherit;
-}
-
 /* ==========================================================================
-   Competencies Grid (Vieve-Style Highlight Badges)
+   Canva-Inspired Showcase Segments (Workplaces, Leadership, Research)
    ========================================================================== */
-.competencies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.75rem;
-  margin-bottom: 3.5rem;
-}
-
-.competency-card {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.competency-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.skill-chips-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-/* ==========================================================================
-   Experience Cards (Vieve Dynamic Card Polish)
-   ========================================================================== */
-.experience-timeline {
+.experience-cards-stack {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.experience-card {
+.workplace-card {
   padding: 2.25rem;
 }
 
-.exp-header-row {
+.workplace-top-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -634,31 +518,29 @@ a {
   margin-bottom: 1rem;
 }
 
-.exp-role-title {
-  font-size: 1.4rem;
+.workplace-role-title {
+  font-size: 1.45rem;
   font-weight: 700;
 }
 
-.exp-org-badge {
-  font-size: 1.05rem;
+.workplace-org-badge {
+  font-size: 1.1rem;
   color: var(--accent-electric);
   font-weight: 600;
 }
 
-.exp-bullet-list {
+.workplace-bullet-list {
   list-style: disc;
   padding-left: 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.5rem;
   font-size: 0.95rem;
   color: var(--text-sub);
-  margin-top: 0.65rem;
+  margin-top: 0.75rem;
 }
 
-/* ==========================================================================
-   Research Works Cards
-   ========================================================================== */
+/* Research Cards */
 .research-cards-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -669,7 +551,7 @@ a {
   padding: 2.25rem;
 }
 
-.research-top-bar {
+.research-meta-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -678,13 +560,13 @@ a {
   margin-bottom: 1rem;
 }
 
-.research-title {
+.research-title-text {
   font-size: 1.55rem;
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
 
-.research-footer-actions {
+.research-action-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -695,30 +577,98 @@ a {
   gap: 1rem;
 }
 
-/* ==========================================================================
-   Apps Built Grid (Product Card Inspiration)
-   ========================================================================== */
-.apps-grid {
+/* Apps Grid */
+.apps-showcase-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
 }
 
 .app-card {
-  padding: 2rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.app-title {
-  font-size: 1.4rem;
+/* ==========================================================================
+   Full Embedded Curriculum Vitae Section
+   ========================================================================== */
+.cv-embedded-container {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-card);
+  padding: 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.cv-doc-header {
+  border-bottom: 2px solid var(--glass-border-subtle);
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.cv-person-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.cv-person-sub {
+  font-size: 0.95rem;
+  color: var(--accent-electric);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cv-contact-line {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.cv-segment-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-electric);
+  border-bottom: 1px solid var(--glass-border-subtle);
+  padding-bottom: 0.4rem;
+  margin: 2rem 0 1rem;
+}
+
+.cv-entry-block {
+  margin-bottom: 1.5rem;
+}
+
+.cv-entry-head {
+  display: flex;
+  justify-content: space-between;
   font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.cv-entry-sub {
+  font-size: 0.9rem;
+  color: var(--accent-electric);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
 }
 
 /* ==========================================================================
    Highly Transparent iOS Liquid Glass Floating Dock
-   (NO Customizer / NO Theme Buttons as requested)
    ========================================================================== */
 .ios-liquid-dock {
   position: fixed;
@@ -731,12 +681,16 @@ a {
   gap: 0.45rem;
   padding: 0.5rem 0.85rem;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--glass-border);
   box-shadow: 0 24px 50px -10px rgba(15, 23, 42, 0.22), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] .ios-liquid-dock {
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.2);
 }
 
 .dock-action-btn {
@@ -757,13 +711,18 @@ a {
 .dock-action-btn:hover {
   transform: scale(1.18) translateY(-4px);
   color: var(--accent-electric);
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--glass-bg-hover);
 }
 
 .dock-action-btn.active {
   background: #ffffff;
   color: var(--accent-electric);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+}
+
+[data-theme="dark"] .dock-action-btn.active {
+  background: var(--accent-electric);
+  color: #fff;
 }
 
 .dock-tooltip-bubble {
@@ -771,8 +730,9 @@ a {
   bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: var(--glass-bg-active);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-sub);
   font-size: 0.75rem;
@@ -782,7 +742,7 @@ a {
   pointer-events: none;
   opacity: 0;
   transition: all 0.2s ease;
-  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--glass-shadow);
 }
 
 .dock-action-btn:hover .dock-tooltip-bubble {
@@ -793,7 +753,7 @@ a {
 .dock-separator {
   width: 1px;
   height: 1.5rem;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--glass-border-subtle);
   margin: 0 0.2rem;
 }
 
@@ -811,10 +771,10 @@ a {
   gap: 0.75rem;
   padding: 0.75rem 1.45rem;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--glass-border);
   box-shadow: 0 20px 40px -8px rgba(30, 58, 138, 0.2), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 1);
   font-size: 0.9rem;
   font-weight: 600;
@@ -831,12 +791,12 @@ a {
 }
 
 /* ==========================================================================
-   Modal Dialogs (CV & BibTeX)
+   Modals
    ========================================================================== */
 .glass-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(12, 21, 36, 0.45);
+  background: rgba(12, 21, 36, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 120;
@@ -855,11 +815,11 @@ a {
 }
 
 .glass-modal-window {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--glass-bg-active);
   backdrop-filter: blur(36px) saturate(220%);
   -webkit-backdrop-filter: blur(36px) saturate(220%);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.25);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.35);
   border-radius: var(--radius-card);
   max-width: 760px;
   width: 100%;
@@ -880,7 +840,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 1.35rem 1.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--glass-border-subtle);
 }
 
 .modal-scroll-body {
@@ -900,15 +860,18 @@ a {
 }
 
 /* ==========================================================================
-   Responsive
+   Responsive Adaptations
    ========================================================================== */
 @media (max-width: 860px) {
-  .hero-grid {
+  .hero-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .hero-title {
+  .hero-main-title {
     font-size: 2.6rem;
+  }
+  .cv-embedded-container {
+    padding: 1.75rem;
   }
   .ios-liquid-dock {
     bottom: 1rem;
@@ -921,7 +884,7 @@ a {
 }
 
 @media print {
-  .site-header, .ios-liquid-dock, .liquid-snackbar-toast, .segmented-tabs-wrapper, .search-pill-container, .btn-glass, .marquee-ribbon {
+  .site-header, .ios-liquid-dock, .liquid-snackbar-toast, .btn-glass, .marquee-ribbon {
     display: none !important;
   }
   body {
@@ -946,46 +909,55 @@ a {
         </div>
       </div>
 
-      <div class="header-cta-actions">
-        <button class="btn-glass" onclick="openCvModal()">
+      <div class="header-actions">
+        <a href="#curriculum-vitae" class="btn-glass">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           <span>Curriculum Vitae</span>
+        </a>
+        
+        <!-- Dark / Light Mode Switcher Icon on Top Right -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleThemeMode()" title="Switch Light / Dark Theme" aria-label="Toggle Theme">
+          <svg id="themeIconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
+
         <a href="#contact" class="btn-glass btn-electric">
           <span>Get in Touch</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Canva-Inspired Presentation) -->
   <main>
     <section class="section" id="hero">
-      <div class="container hero-grid">
+      <div class="container hero-layout">
         <div>
-          <div class="hero-status-tag">
-            <span class="pulse-indicator"></span>
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
             <span id="heroStatusText">Final Year Undergraduate Â· Available for Research & Analytics Roles</span>
           </div>
 
-          <h1 class="hero-title">
-            <span id="heroFullName">MD. ASHIKUL ISLAM</span><br>
-            <span class="hero-gradient-text">Economics & Policy Researcher</span>
+          <h1 class="hero-main-title">
+            <span id="heroFullName">Ashikul Islam Khan</span><br>
+            <span class="hero-gradient-text">Economics, Data & Creative Policy</span>
           </h1>
 
-          <p class="hero-subtitle" id="heroTagline">
-            Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist
+          <p class="hero-tagline-text" id="heroTagline">
+            Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist
           </p>
 
-          <p class="hero-description" id="heroBio">
-            Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers.
+          <p class="hero-summary-box" id="heroBio">
+            Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
           </p>
 
-          <div class="hero-cta-bar">
-            <a href="#research" class="btn-glass btn-electric">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              Explore Research Works
+          <div class="hero-actions-bar">
+            <a href="#curriculum-vitae" class="btn-glass btn-electric">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              View Full CV
+            </a>
+            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="btn-glass">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Print / Save PDF (Drive)
             </a>
             <a href="http://cal.com/ashikul-islam-khan" target="_blank" rel="noopener" class="btn-glass">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -1000,19 +972,19 @@ a {
 
         <!-- Right Side Liquid Glass Dossier -->
         <aside class="liquid-glass-card dossier-card">
-          <div class="dossier-top">
+          <div class="dossier-header-row">
             <div>
               <h3 style="font-size: 1.25rem;">Academic Dossier</h3>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Credentials</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Profile</span>
             </div>
             <span class="pill-badge pill-badge-emerald">Active Scholar</span>
           </div>
 
-          <div class="stats-counter-grid" id="dossierStatsGrid">
+          <div class="stats-grid-counter" id="dossierStatsGrid">
             <!-- Populated via app.js -->
           </div>
 
-          <ul class="quick-contact-list" id="dossierContactList">
+          <ul class="quick-contact-stack" id="dossierContactList">
             <!-- Populated via app.js -->
           </ul>
 
@@ -1031,7 +1003,7 @@ a {
       </div>
     </section>
 
-    <!-- Vieve-Style Dynamic Marquee Ribbon -->
+    <!-- Infinite Scrolling Marquee Ribbon -->
     <div class="marquee-ribbon">
       <div class="marquee-track">
         <div class="marquee-item">DEVELOPMENT ECONOMICS <span class="marquee-dot"></span></div>
@@ -1040,27 +1012,27 @@ a {
         <div class="marquee-item">DATA SCIENCE & SQL <span class="marquee-dot"></span></div>
         <div class="marquee-item">UNIVERSITY OF DHAKA <span class="marquee-dot"></span></div>
         <div class="marquee-item">CAB YOUTH PARLIAMENT <span class="marquee-dot"></span></div>
-        <div class="marquee-item">CLIMATE RESILIENCE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CLIMATE ADVOCACY <span class="marquee-dot"></span></div>
         <div class="marquee-item">ECONOMETRIC MODELING <span class="marquee-dot"></span></div>
-        <!-- Duplicated for seamless loop -->
+        <!-- Duplicated for seamless infinite loop -->
         <div class="marquee-item">DEVELOPMENT ECONOMICS <span class="marquee-dot"></span></div>
         <div class="marquee-item">ENERGY JUSTICE <span class="marquee-dot"></span></div>
         <div class="marquee-item">INFLATION TARGETING <span class="marquee-dot"></span></div>
         <div class="marquee-item">DATA SCIENCE & SQL <span class="marquee-dot"></span></div>
         <div class="marquee-item">UNIVERSITY OF DHAKA <span class="marquee-dot"></span></div>
         <div class="marquee-item">CAB YOUTH PARLIAMENT <span class="marquee-dot"></span></div>
-        <div class="marquee-item">CLIMATE RESILIENCE <span class="marquee-dot"></span></div>
+        <div class="marquee-item">CLIMATE ADVOCACY <span class="marquee-dot"></span></div>
         <div class="marquee-item">ECONOMETRIC MODELING <span class="marquee-dot"></span></div>
       </div>
     </div>
 
-    <!-- Core Competencies Section -->
+    <!-- Core Competencies Segment -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Analytical Toolkit</span>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Expertise & Skills</span>
           <h2 class="section-title">Core Competencies</h2>
-          <p class="section-caption">Econometric modeling, quantitative programming, and visual policy communication.</p>
+          <p class="section-subtext">Research, quantitative analytics, creative design, and professional leadership.</p>
         </div>
 
         <div class="competencies-grid" id="competenciesContainer">
@@ -1069,43 +1041,43 @@ a {
       </div>
     </section>
 
-    <!-- Professional & Leadership Experience Section -->
-    <section class="section" id="experience" style="padding-top: 0;">
+    <!-- Workplaces / Professional Experience Segment (Canva-Inspired) -->
+    <section class="section" id="workplaces" style="padding-top: 0;">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Career Milestones</span>
-          <h2 class="section-title">Professional & Leadership Experience</h2>
-          <p class="section-caption">Policy research, parliamentary advocacy, and executive student governance.</p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Professional Roles</span>
+          <h2 class="section-title">Workplaces & Research Experience</h2>
+          <p class="section-subtext">SDG research internships, national parliamentary advocacy, and policy design.</p>
         </div>
 
-        <!-- iOS Segmented Liquid Glass Tabs -->
-        <div class="segmented-tabs-wrapper">
-          <div class="segmented-tabs-bar">
-            <button class="tab-pill-btn active" data-category="all">All Experiences</button>
-            <button class="tab-pill-btn" data-category="work">Research & Policy Roles</button>
-            <button class="tab-pill-btn" data-category="leadership">Executive Leadership</button>
-          </div>
-        </div>
-
-        <!-- Liquid Search Bar -->
-        <div class="search-pill-container">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="globalSearchInput" class="search-pill-input" placeholder="Search experiences, research, or tools...">
-        </div>
-
-        <div class="experience-timeline" id="experienceContainer">
+        <div class="experience-cards-stack" id="workplacesContainer">
           <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Research Works & Publications Section -->
+    <!-- Leadership Experience Segment -->
+    <section class="section" id="leadership">
+      <div class="container">
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Executive Leadership</span>
+          <h2 class="section-title">Leadership & Campus Impact</h2>
+          <p class="section-subtext">Directing club administrations, organizing national economics summits, and climate campaigns.</p>
+        </div>
+
+        <div class="experience-cards-stack" id="leadershipContainer">
+          <!-- Populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Works & Manuscripts Segment -->
     <section class="section" id="research">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Academic Output</span>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Scholarly Manuscripts</span>
           <h2 class="section-title">Research Works & Publications</h2>
-          <p class="section-caption">Empirical macroeconomic evaluations, development models, and energy justice frameworks.</p>
+          <p class="section-subtext">27-year central bank inflation evaluation, Cuban development puzzle, and energy justice governance.</p>
         </div>
 
         <div class="research-cards-grid" id="researchContainer">
@@ -1114,35 +1086,50 @@ a {
       </div>
     </section>
 
-    <!-- Applications & Software Built Section -->
+    <!-- Software & Applications Built Segment -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Software Engineering</span>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Digital Products</span>
           <h2 class="section-title">Applications Built</h2>
-          <p class="section-caption">Privacy-first offline utilities, web tools, and secure communication platforms.</p>
+          <p class="section-subtext">Client-side offline file converters, cloud sharing, and anonymous messaging utilities.</p>
         </div>
 
-        <div class="apps-grid" id="projectsContainer">
+        <div class="apps-showcase-grid" id="projectsContainer">
           <!-- Populated via app.js -->
         </div>
       </div>
     </section>
 
-    <!-- Education, Certifications & Volunteering -->
+    <!-- Creative Direction & Video Campaigns (Canva Style) -->
+    <section class="section" id="creative">
+      <div class="container">
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Creative Production</span>
+          <h2 class="section-title">Video Campaigns & Promotional Direction</h2>
+          <p class="section-subtext">Cinematography, scripting, and full video editing for national economics summits and departmental events.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;" id="creativeWorksContainer">
+          <!-- Populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Education, Certifications & Volunteering Segment -->
     <section class="section" id="education">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Credentials</span>
-          <h2 class="section-title">Education & Academic Foundations</h2>
-          <p class="section-caption">Formal degree training, specialized workshops, and volunteer engagement.</p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Academic Qualifications</span>
+          <h2 class="section-title">Education & Training</h2>
+          <p class="section-subtext">University degree, specialized energy workshops, and volunteering commitments.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;" id="educationContainer">
           <!-- Populated via app.js -->
         </div>
 
-        <!-- Certifications & Volunteering Grid -->
+        <!-- Certifications & Volunteering -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
           <div>
             <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Training & Certifications</h3>
@@ -1157,24 +1144,281 @@ a {
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Creative Works & Campaigns -->
-        <div style="margin-top: 3.5rem;">
-          <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Creative Campaigns & Video Direction (ECC & Summits)</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;" id="creativeWorksContainer">
-            <!-- Populated via app.js -->
+    <!-- ====================================================================
+         COMPLETE EMBEDDED CURRICULUM VITAE SECTION (Prompt Specified)
+         ==================================================================== -->
+    <section class="section" id="curriculum-vitae">
+      <div class="container">
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Official Document</span>
+          <h2 class="section-title">Curriculum Vitae</h2>
+          <p class="section-subtext">Complete academic and professional record.</p>
+        </div>
+
+        <div class="cv-embedded-container">
+          <!-- CV Header -->
+          <div class="cv-doc-header">
+            <div>
+              <h2 class="cv-person-name">Ashikul Islam Khan</h2>
+              <div class="cv-person-sub">
+                Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist
+              </div>
+              <div class="cv-contact-line">
+                ðŸ“ Shahbag, Dhaka, Bangladesh | ðŸ“§ <a href="mailto:inboxashikulislam@gmail.com" style="color: var(--accent-electric); font-weight: 600;">inboxashikulislam@gmail.com</a> | ðŸ“ž +880 1753-932582<br>
+                ðŸŒ Portfolio: <a href="http://ashikulislamkhan.github.io/" style="color: var(--accent-electric);">ashikulislamkhan.github.io</a> | ðŸ”— LinkedIn: <a href="http://linkedin.com/in/ashikul-islam-khan" target="_blank" rel="noopener" style="color: var(--accent-electric);">linkedin.com/in/ashikul-islam-khan</a>
+              </div>
+            </div>
+
+            <!-- Prominent Print / Save PDF Button redirecting to Google Drive -->
+            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="btn-glass btn-electric">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Print / Save PDF (Google Drive)</span>
+            </a>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="cv-segment-title">Professional Summary</div>
+          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-sub); margin-bottom: 1.5rem;">
+            Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.
+          </p>
+
+          <!-- Core Competencies -->
+          <div class="cv-segment-title">Core Competencies</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem;">
+            <div>
+              <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.35rem;">Research & Economics</h4>
+              <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+                <li>Policy Research</li>
+                <li>Development Economics</li>
+                <li>Econometrics</li>
+                <li>Data Analysis</li>
+                <li>Academic Writing</li>
+                <li>Policy Analysis</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.35rem;">Technical Skills</h4>
+              <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Power BI</li>
+                <li>Advanced Excel</li>
+                <li>Microsoft Office Suite</li>
+                <li>Data Visualization</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.35rem;">Creative & Design Skills</h4>
+              <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+                <li>Graphic Design</li>
+                <li>Video Editing</li>
+                <li>Cinematography</li>
+                <li>Visual Storytelling</li>
+                <li>Branding & Social Media Design</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.35rem;">Professional Skills</h4>
+              <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+                <li>Leadership</li>
+                <li>Communication</li>
+                <li>Project Management</li>
+                <li>Public Speaking & Presentation</li>
+                <li>Team Collaboration</li>
+                <li>Climate Advocacy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Professional Experience -->
+          <div class="cv-segment-title">Professional Experience</div>
+          
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Research Intern</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">September 2026 â€“ Present</span>
+            </div>
+            <div class="cv-entry-sub">International Institute of SDGs & Public Policy Research (IISPPR) (Remote)</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Conduct research on Sustainable Development Goals and public policy.</li>
+              <li>Assist in literature reviews, policy analysis, and research documentation.</li>
+              <li>Collaborate with researchers on policy evaluation projects.</li>
+              <li>Strengthen analytical and evidence-based research skills.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Youth Parliamentarian</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">September 2025 â€“ Present</span>
+            </div>
+            <div class="cv-entry-sub">Consumers Association of Bangladesh (CAB)</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Authored and published a policy paper on Energy Justice and Consumer Rights in the CAB Youth Parliament 2025 Handbook.</li>
+              <li>Presented research findings before national leaders, policymakers, and stakeholders.</li>
+              <li>Conduct policy research on consumer rights, energy justice, and sustainable governance.</li>
+              <li>Participate in parliamentary sessions and policy discussions.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Graphic Designer</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">May 2025 â€“ Present</span>
+            </div>
+            <div class="cv-entry-sub">Political and Policy Science Research Foundation (PPSRF)</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Designed official branding and promotional materials for national conferences.</li>
+              <li>Developed visual identity for major policy and democracy events.</li>
+              <li>Collaborated with organizing committees on digital and print communications.</li>
+            </ul>
+          </div>
+
+          <!-- Leadership Experience -->
+          <div class="cv-segment-title">Leadership Experience</div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Vice President (Administration)</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">September 2024 â€“ Present</span>
+            </div>
+            <div class="cv-entry-sub">Economics Cultural Club, University of Dhaka</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Lead club administration and executive operations.</li>
+              <li>Coordinate large-scale university events.</li>
+              <li>Manage organizing committees and volunteers.</li>
+              <li>Previously served as Secretary (Talent Acquisition).</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Associate Member</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">May 2024 â€“ October 2026</span>
+            </div>
+            <div class="cv-entry-sub">Economics Study Center</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Organized Bangladesh Economics Summit.</li>
+              <li>Coordinated seminars, workshops, and academic events.</li>
+              <li>Worked with internal and external stakeholders.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Associate (Organizing)</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">October 2023 â€“ October 2026</span>
+            </div>
+            <div class="cv-entry-sub">Economics Career Alliance</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Assisted in organizing career expos, competitions, and departmental events.</li>
+              <li>Managed logistics and participant coordination.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Joint Coordinator of E3F</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">2021 â€“ 2023</span>
+            </div>
+            <div class="cv-entry-sub">ARANYAK</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.875rem; color: var(--text-sub); line-height: 1.6;">
+              <li>Led environmental awareness initiatives.</li>
+              <li>Organized tree plantation and sustainability campaigns.</li>
+              <li>Coordinated community outreach activities.</li>
+            </ul>
+          </div>
+
+          <!-- Research Works -->
+          <div class="cv-segment-title">Research Works</div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <a href="https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds" target="_blank" rel="noopener" style="color: var(--accent-electric); text-decoration: underline;">Should Bangladesh Bank's Policy Move Towards Inflation Targeting?</a>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">Jan 2026</span>
+            </div>
+            <div class="cv-entry-sub">Monetary Economics Paper (2026)</div>
+            <p style="font-size: 0.875rem; color: var(--text-sub);">Analyzed 27 years of Bangladesh Bank data using exchange rate pass-through analysis. (Unpublished)</p>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <a href="https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle" target="_blank" rel="noopener" style="color: var(--accent-electric); text-decoration: underline;">The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform</a>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">Dec 2025</span>
+            </div>
+            <div class="cv-entry-sub">Development Economics Paper (2025)</div>
+            <p style="font-size: 0.875rem; color: var(--text-sub);">Examined Cuba's development model, institutional reforms, and human development. (Unpublished)</p>
+          </div>
+
+          <div class="cv-entry-block">
+            <div class="cv-entry-head">
+              <span>Energy Justice in Protecting Energy Rights</span>
+              <span class="tabular-nums" style="font-weight: 500; font-size: 0.85rem;">Nov 2025</span>
+            </div>
+            <div class="cv-entry-sub">Conference Paper (Published, CAB Youth Parliament 2025 Handbook)</div>
+            <p style="font-size: 0.875rem; color: var(--text-sub);">Examined energy justice, renewable energy governance, and consumer rights in Bangladesh.</p>
+          </div>
+
+          <!-- Education -->
+          <div class="cv-segment-title">Education</div>
+          <div style="margin-bottom: 0.75rem;">
+            <div style="font-weight: 700; font-size: 0.95rem;">ðŸŽ“ Bachelor of Social Science (BSS) in Economics</div>
+            <div style="color: var(--text-sub); font-size: 0.875rem;">University of Dhaka | <em>(Final Year)</em></div>
+          </div>
+          <div style="margin-bottom: 0.75rem;">
+            <div style="font-weight: 700; font-size: 0.95rem;">ðŸŽ“ Higher Secondary Certificate (HSC)</div>
+            <div style="color: var(--text-sub); font-size: 0.875rem;">Amrita Lal Dey College, Barishal | GPA: 5.00</div>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 0.95rem;">ðŸŽ“ Secondary School Certificate (SSC)</div>
+            <div style="color: var(--text-sub); font-size: 0.875rem;">Kaunia Govt. Secondary School, Barishal | GPA: 5.00</div>
+          </div>
+
+          <!-- Training & Certifications -->
+          <div class="cv-segment-title">Training and Certifications</div>
+          <p style="font-size: 0.875rem; color: var(--text-sub); margin-bottom: 0.5rem;">ðŸ… Students in Energy Security and Just Energy Transition Workshop â€” Consumers Association of Bangladesh (2026)</p>
+          <p style="font-size: 0.875rem; color: var(--text-sub); margin-bottom: 0.5rem;">ðŸ… Climate and Environmental Policy 101 â€” ASEAN Youth Organization (2026)</p>
+          <p style="font-size: 0.875rem; color: var(--text-sub); margin-bottom: 1.5rem;">ðŸ… Air Diary Challenge â€” Youth4Nature Fellowship Program (2026)</p>
+
+          <!-- Volunteering -->
+          <div class="cv-segment-title">Volunteering</div>
+          <div style="margin-bottom: 0.75rem;">
+            <div style="font-weight: 700; font-size: 0.925rem;">Volunteer (Public Relations) â€” South Asian Network on Economic Modelling (SANEM)</div>
+            <p style="font-size: 0.85rem; color: var(--text-sub);">Supported public relations and participant engagement during the 8th SANEM Annual Economists' Conference.</p>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <div style="font-weight: 700; font-size: 0.925rem;">Volunteer (Logistics) â€” Economics Study Center</div>
+            <p style="font-size: 0.85rem; color: var(--text-sub);">Assisted with logistics for the 6th and 7th Bangladesh Economics Summit.</p>
+          </div>
+
+          <!-- Languages -->
+          <div class="cv-segment-title">Languages</div>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">
+            <strong>Bangla:</strong> Native<br>
+            <strong>English:</strong> Fluent (Duolingo English Test Score: 129)
+          </p>
+
+          <!-- Action bar inside CV -->
+          <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border-subtle); display: flex; justify-content: flex-end; gap: 1rem;">
+            <a href="https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link" target="_blank" rel="noopener" class="btn-glass btn-electric">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Official PDF (Google Drive)</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact & Inquiries Section -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-header-center">
-          <span class="section-tag">Inquiries</span>
-          <h2 class="section-title">Connect & Collaborate</h2>
-          <p class="section-caption">Open to research assistantships, policy evaluation initiatives, and data analytics projects.</p>
+        <div class="section-headline-group">
+          <span class="section-eyebrow">Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtext">Open to research assistantships, policy evaluation initiatives, and data analytics projects.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;">
@@ -1231,7 +1475,6 @@ a {
   </main>
 
   <!-- Highly Transparent iOS Liquid Glass Bottom Dock -->
-  <!-- (Clean: Customizer and Theme buttons removed as requested) -->
   <nav class="ios-liquid-dock" aria-label="Floating Navigation Dock">
     <button class="dock-action-btn active" data-target="hero" onclick="scrollToSection('hero')" aria-label="Overview">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -1239,11 +1482,15 @@ a {
     </button>
     <button class="dock-action-btn" data-target="skills" onclick="scrollToSection('skills')" aria-label="Skills">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      <span class="dock-tooltip-bubble">Competencies</span>
+      <span class="dock-tooltip-bubble">Skills</span>
     </button>
-    <button class="dock-action-btn" data-target="experience" onclick="scrollToSection('experience')" aria-label="Experience">
+    <button class="dock-action-btn" data-target="workplaces" onclick="scrollToSection('workplaces')" aria-label="Workplaces">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
       <span class="dock-tooltip-bubble">Experience</span>
+    </button>
+    <button class="dock-action-btn" data-target="leadership" onclick="scrollToSection('leadership')" aria-label="Leadership">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      <span class="dock-tooltip-bubble">Leadership</span>
     </button>
     <button class="dock-action-btn" data-target="research" onclick="scrollToSection('research')" aria-label="Research">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
@@ -1253,16 +1500,16 @@ a {
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
       <span class="dock-tooltip-bubble">Apps</span>
     </button>
-    <button class="dock-action-btn" data-target="education" onclick="scrollToSection('education')" aria-label="Education">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-      <span class="dock-tooltip-bubble">Education</span>
+    <button class="dock-action-btn" data-target="creative" onclick="scrollToSection('creative')" aria-label="Creative">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+      <span class="dock-tooltip-bubble">Creative</span>
     </button>
 
     <div class="dock-separator"></div>
 
-    <button class="dock-action-btn" onclick="openCvModal()" aria-label="Curriculum Vitae">
+    <button class="dock-action-btn" onclick="scrollToSection('curriculum-vitae')" aria-label="Curriculum Vitae">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-      <span class="dock-tooltip-bubble">CV (PDF)</span>
+      <span class="dock-tooltip-bubble">CV Section</span>
     </button>
     <button class="dock-action-btn" onclick="scrollToSection('contact')" aria-label="Contact">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -1298,72 +1545,16 @@ a {
     </div>
   </div>
 
-  <!-- Curriculum Vitae Viewer Modal -->
-  <div class="glass-modal-backdrop" id="cvModalBackdrop">
-    <div class="glass-modal-window">
-      <div class="modal-header-bar">
-        <div>
-          <h3 style="font-size: 1.35rem;">Curriculum Vitae</h3>
-          <span style="font-size: 0.8rem; color: var(--text-muted);">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</span>
-        </div>
-        <div style="display: flex; gap: 0.5rem;">
-          <button class="btn-glass btn-electric" onclick="printCvDocument()">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-            Print / Save PDF
-          </button>
-          <button class="btn-glass" onclick="closeCvModal()" style="padding: 0.35rem 0.65rem;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-      </div>
-      <div class="modal-scroll-body" style="font-size: 0.9rem; line-height: 1.65;">
-        <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.08); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-          <h2 style="font-size: 1.75rem; margin-bottom: 0.25rem;">MD. ASHIKUL ISLAM (Ashikul Islam Khan)</h2>
-          <div style="font-size: 0.875rem; color: var(--text-muted);">
-            Shahbag, Dhaka, Bangladesh Â· +880 1753-932582 Â· inboxashikulislam@gmail.com Â· ashikulislamkhan.github.io
-          </div>
-        </div>
-
-        <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Professional Summary</h4>
-          <p>Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI.</p>
-        </div>
-
-        <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Work & Leadership Experience</h4>
-          <p style="margin-bottom: 0.4rem;"><strong>Research Intern</strong> â€” International Institute of SDGs & Public Policy Research (IISPPR) (Sep 2026 â€“ Present)</p>
-          <p style="margin-bottom: 0.4rem;"><strong>Youth Parliamentarian</strong> â€” Consumers Association of Bangladesh (CAB) (Sep 2025 â€“ Present)</p>
-          <p style="margin-bottom: 0.4rem;"><strong>Graphic Designer</strong> â€” Political and Policy Science Research Foundation (PPSRF) (May 2025 â€“ Present)</p>
-          <p style="margin-bottom: 0.4rem;"><strong>Vice President (Administration)</strong> â€” Economics Cultural Club, University of Dhaka (Sep 2024 â€“ Present)</p>
-          <p style="margin-bottom: 0.4rem;"><strong>Associate Member</strong> â€” Economics Study Center, University of Dhaka (May 2024 â€“ Oct 2026)</p>
-        </div>
-
-        <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1rem; text-transform: uppercase; color: var(--accent-electric); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Research Manuscripts</h4>
-          <p style="margin-bottom: 0.35rem;"><strong>Should Bangladesh Bank's Policy Move Towards Inflation Targeting?</strong> (Jan 2026)</p>
-          <p style="margin-bottom: 0.35rem;"><strong>The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform</strong> (Dec 2025)</p>
-          <p style="margin-bottom: 0.35rem;"><strong>Energy Justice in Protecting Energy Rights</strong> (CAB Youth Parliament 2025 Handbook, Nov 2025)</p>
-        </div>
-      </div>
-      <div style="padding: 1.25rem 1.75rem; display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid rgba(0, 0, 0, 0.08);">
-        <button class="btn-glass" onclick="closeCvModal()">Close</button>
-        <button class="btn-glass btn-electric" onclick="printCvDocument()">Print / Save PDF</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Data Store & Reactive Controller -->
+  <!-- Data Store & Controller -->
   <script>
 /**
  * =========================================================================
  * ASHIKUL ISLAM KHAN - PORTFOLIO CONFIGURATION DATA STORE
  * =========================================================================
  * 
- * ðŸ’¡ EDITING GUIDE:
- * Every segment of this website is dynamically driven by this file.
- * To add, remove, or modify any section:
- * 1. Simply edit the objects or arrays below.
- * 2. Save the file. The website updates automatically!
+ * ðŸ’¡ EDITING GUIDE (GitHub-First):
+ * You can edit this file directly on GitHub by pressing the pencil icon or '.'!
+ * Every segment of the portfolio renders dynamically from this configuration.
  * =========================================================================
  */
 
@@ -1372,84 +1563,78 @@ const PORTFOLIO_DATA = {
   // 1. PRIMARY PERSONAL PROFILE
   // -----------------------------------------------------------------------
   profile: {
-    fullName: "MD. ASHIKUL ISLAM",
-    preferredName: "Ashikul Islam Khan",
-    headline: "Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Climate Activist",
+    fullName: "Ashikul Islam Khan",
+    headline: "Economics Undergraduate | Research Enthusiast | Aspiring Data Analyst | Graphic Designer | Video Editor | Climate Activist",
     location: "Shahbag, Dhaka, Bangladesh",
     email: "inboxashikulislam@gmail.com",
     academicEmail: "s-2022112154@econ.du.ac.bd",
     phone: "+880 1753-932582",
     institution: "Department of Economics, University of Dhaka",
-    statusBadge: "Final Year Undergraduate Â· Available for Research & Analytics Roles",
+    statusBadge: "Final Year Undergraduate Â· Available for Research, Analytics & Creative Roles",
     
-    bio: "Economics undergraduate at the University of Dhaka with interests in development economics, public policy research, climate and environmental sustainability, and data analysis. Researcher with experience in policy analysis and evidence-based research, including authoring and presenting a policy paper on energy justice and equitable governance before national policymakers. Proficient in SQL, Python, and Power BI, supported by strong organizational and leadership skills. Seeking to apply analytical and research expertise to advance evidence-based policymaking, climate resilience, and sustainable socio-economic development in the international development sector.",
+    summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
     socials: {
+      portfolio: "http://ashikulislamkhan.github.io/",
       linkedin: "https://linkedin.com/in/ashikul-islam-khan",
       github: "https://github.com/ashikulislamkhan",
       researchgate: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
       googlescholar: "https://scholar.google.com/citations?hl=en&authuser=3&user=39HR9nwAAAAJ",
       orcid: "https://orcid.org/0009-0001-2470-6484",
       calendly: "http://cal.com/ashikul-islam-khan",
-      resumePdf: "https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=sharing",
-      instagram: "https://instagram.com/ashikplays19",
-      xTwitter: "https://x.com/AshikulIslamK"
+      resumeDrive: "https://drive.google.com/drive/folders/1A0wxWFheME4iqwdDmXPXaLomrhGNUptt?usp=drive_link"
     },
 
     quickStats: [
       { label: "University", val: "Univ of Dhaka" },
-      { label: "Program", val: "BSS Economics" },
-      { label: "Research Papers", val: "3 Manuscripts" },
-      { label: "English Score", val: "Duolingo 129" }
+      { label: "Program", val: "BSS Economics (Final Year)" },
+      { label: "Research Manuscripts", val: "3 Papers" },
+      { label: "English Proficiency", val: "Duolingo 129" }
     ]
   },
 
   // -----------------------------------------------------------------------
-  // 2. CORE COMPETENCIES & TOOLKIT
+  // 2. CORE COMPETENCIES (Categorized)
   // -----------------------------------------------------------------------
   competencies: [
     {
-      category: "Economics & Research",
+      category: "Research & Economics",
       icon: "trending-up",
-      skills: ["Econometrics", "Policy Research", "Data Analysis", "Academic Writing", "Policy Advocacy", "Development Economics", "Environmental Economics", "Exchange Rate Pass-Through"]
+      skills: ["Policy Research", "Development Economics", "Econometrics", "Data Analysis", "Academic Writing", "Policy Analysis"]
     },
     {
-      category: "Technical & Data Science",
+      category: "Technical Skills",
       icon: "cpu",
-      skills: ["Python", "SQL", "Power BI", "Advanced Excel", "Data Visualization", "Microsoft Office Applications", "Stata (Basic)", "QGIS (Spatial Analysis)"]
+      skills: ["SQL", "Python", "Power BI", "Advanced Excel", "Microsoft Office Suite", "Data Visualization"]
     },
     {
-      category: "Creative & Media Production",
+      category: "Creative & Design Skills",
       icon: "film",
-      skills: ["Graphic Designing", "Cinematography", "Video Editing", "Visual Storytelling", "Brand Identity", "Social Media Design", "Promotional Campaigns"]
+      skills: ["Graphic Design", "Video Editing", "Cinematography", "Visual Storytelling", "Branding & Social Media Design"]
     },
     {
-      category: "Leadership & Civic Action",
+      category: "Professional Skills",
       icon: "award",
-      skills: ["Leadership", "Communication", "Project Management", "Public Speaking & Presentation", "Climate Activism", "Cross-team Collaboration", "Event Logistics"]
+      skills: ["Leadership", "Communication", "Project Management", "Public Speaking & Presentation", "Team Collaboration", "Climate Advocacy"]
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 3. WORK & PROFESSIONAL EXPERIENCE
+  // 3. PROFESSIONAL EXPERIENCE (Workplaces)
   // -----------------------------------------------------------------------
   workExperience: [
     {
       id: "iisppr-intern",
       role: "Research Intern",
       organization: "International Institute of SDGs & Public Policy Research (IISPPR)",
-      location: "Aligarh, India (Remote)",
-      period: "Joined Sep 2026",
-      type: "Research & Policy",
-      achievements: [
-        "Selected as a Research Intern at the International Institute of SDGs & Public Policy Research.",
-        "Engaged in research on sustainable development and public policy.",
-        "Committed to strengthening research, analytical, and policy evaluation skills through practical experience."
-      ],
+      location: "Remote",
+      period: "September 2026 â€“ Present",
+      type: "Research & Public Policy",
       responsibilities: [
-        "Support research activities related to the Sustainable Development Goals and public policy.",
-        "Assist with literature reviews, data analysis, and research documentation.",
-        "Collaborate with the research team on ongoing projects and policy initiatives."
+        "Conduct research on Sustainable Development Goals and public policy.",
+        "Assist in literature reviews, policy analysis, and research documentation.",
+        "Collaborate with researchers on policy evaluation projects.",
+        "Strengthen analytical and evidence-based research skills."
       ]
     },
     {
@@ -1457,17 +1642,16 @@ const PORTFOLIO_DATA = {
       role: "Youth Parliamentarian",
       organization: "Consumers Association of Bangladesh (CAB)",
       location: "Dhaka, Bangladesh",
-      period: "Sep 2025 â€“ Present",
-      type: "Policy & Governance",
+      period: "September 2025 â€“ Present",
+      type: "Policy & Energy Governance",
       achievements: [
         "Authored and published a policy paper on Energy Justice and Consumer Rights in the CAB Youth Parliament 2025 Handbook.",
-        "Presented research findings before national leaders, policymakers, and stakeholders.",
-        "Contributed to evidence-based policy discussions on CAB's 13-point Energy Justice agenda."
+        "Presented research findings before national leaders, policymakers, and stakeholders."
       ],
       responsibilities: [
-        "Conducted policy research on energy justice, consumer rights, and sustainable energy governance.",
-        "Participated in parliamentary sessions, seminars, press briefings, and stakeholder engagements.",
-        "Collaborated with Youth Parliament members to develop and communicate policy recommendations."
+        "Conduct policy research on consumer rights, energy justice, and sustainable governance.",
+        "Participate in parliamentary sessions, seminars, press briefings, and policy discussions.",
+        "Collaborate with Youth Parliament members on CAB's 13-point Energy Justice agenda."
       ]
     },
     {
@@ -1479,12 +1663,11 @@ const PORTFOLIO_DATA = {
       type: "Design & Communications",
       achievements: [
         "Designed official visual materials for the 1st Political Science Conference.",
-        "Selected as Graphic Designer for the World Democracy Congress.",
-        "Contributed to the visual identity of PPSRF's flagship academic and policy events."
+        "Selected as Graphic Designer for the World Democracy Congress."
       ],
       responsibilities: [
         "Designed branding, promotional, and event materials for conferences and institutional activities.",
-        "Collaborated with organizing committees to produce high-quality visual communications.",
+        "Collaborated with organizing committees on digital and print communications.",
         "Maintained design consistency across digital and print media."
       ]
     }
@@ -1499,50 +1682,35 @@ const PORTFOLIO_DATA = {
       role: "Vice President (Administration)",
       organization: "Economics Cultural Club, University of Dhaka",
       location: "Dhaka, Bangladesh",
-      period: "Sep 2024 â€“ Present",
-      achievements: [
-        "Promoted from Secretary (Talent Acquisition) to Vice President (Administration).",
-        "Led talent selection for ECC Talent Hunt 2025 and 2026.",
-        "Organized flagship events including ECC Freshers' Breeze and ECC Nobohorshe Noboborshe."
-      ],
+      period: "September 2024 â€“ Present",
+      tagline: "Previously served as Secretary (Talent Acquisition)",
       responsibilities: [
-        "Co-direct club administration, executive strategy, and daily operations with the President.",
-        "Resolve internal administrative bottlenecks to maintain smooth organizational workflow.",
-        "Direct organizing committees, volunteers, and stakeholders for seamless event execution."
+        "Lead club administration and executive operations.",
+        "Coordinate large-scale university events.",
+        "Manage organizing committees and volunteers."
       ]
     },
     {
       id: "esc-member",
       role: "Associate Member",
-      organization: "Economics Study Center, University of Dhaka",
+      organization: "Economics Study Center",
       location: "Dhaka, Bangladesh",
-      period: "May 2024 â€“ Oct 2026",
-      achievements: [
-        "Contributed to the successful organization of the 6th Bangladesh Economics Summit (2025) and 7th Bangladesh Economics Summit (2026).",
-        "Supported the planning and execution of major academic programs and events at the Economics Study Center.",
-        "Strengthened organizational effectiveness through logistics coordination and cross-team collaboration."
-      ],
+      period: "May 2024 â€“ October 2026",
       responsibilities: [
-        "Coordinated logistics and event operations for seminars, study circles, workshops, and flagship programs.",
-        "Collaborated with internal teams and external stakeholders using leadership, communication, coordination, and public relations skills.",
-        "Assisted in planning, organizing, and managing academic and policy-related events."
+        "Organized Bangladesh Economics Summit.",
+        "Coordinated seminars, workshops, and academic events.",
+        "Worked with internal and external stakeholders."
       ]
     },
     {
       id: "eca-associate",
       role: "Associate (Organizing)",
-      organization: "Economics Career Alliance, University of Dhaka",
+      organization: "Economics Career Alliance",
       location: "Dhaka, Bangladesh",
-      period: "Oct 2023 â€“ Oct 2026",
-      achievements: [
-        "Contributed to organizing ECA Quizverse, ECA Career Expo, and The Colosseum II.",
-        "Supported the successful execution of career development and student engagement initiatives.",
-        "Strengthened event operations through effective logistics and team coordination."
-      ],
+      period: "October 2023 â€“ October 2026",
       responsibilities: [
-        "Coordinated logistics and event management for career-focused programs.",
-        "Collaborated with organizing teams to plan and execute departmental events.",
-        "Communicated with participants, volunteers, and stakeholders to ensure smooth event operations."
+        "Assisted in organizing career expos, competitions, and departmental events.",
+        "Managed logistics and participant coordination."
       ]
     },
     {
@@ -1551,33 +1719,26 @@ const PORTFOLIO_DATA = {
       organization: "ARANYAK",
       location: "Barishal, Bangladesh",
       period: "2021 â€“ 2023",
-      achievements: [
-        "Led environmental awareness and conservation initiatives promoting climate action and sustainability.",
-        "Organized tree plantation campaigns and environmental education programs for students and local communities.",
-        "Designed and implemented conservation activities that strengthened youth engagement in environmental stewardship."
-      ],
       responsibilities: [
-        "Planned and coordinated environmental campaigns, seminars, and community outreach programs.",
-        "Led tree plantation initiatives and promoted climate and environmental awareness among students and the public.",
-        "Collaborated with volunteers and local stakeholders to implement conservation and sustainability initiatives."
+        "Led environmental awareness initiatives.",
+        "Organized tree plantation and sustainability campaigns.",
+        "Coordinated community outreach activities."
       ]
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 5. RESEARCH PAPERS & PUBLICATIONS
+  // 5. RESEARCH WORKS & MANUSCRIPTS
   // -----------------------------------------------------------------------
   researchWorks: [
     {
       id: "inflation-targeting-2026",
       title: "Should Bangladesh Bank's Policy Move Towards Inflation Targeting?",
-      genre: "Monetary Economics Paper",
+      genre: "Monetary Economics Paper (2026)",
       institution: "Department of Economics, University of Dhaka",
-      date: "Jan 2026",
       location: "Dhaka, Bangladesh",
-      status: "Unpublished Research Manuscript",
-      description: "Analyzed 27 years of Bangladesh Bank data to evaluate the feasibility of inflation targeting using exchange rate pass-through (ERPT) econometric analysis.",
-      methodology: ["Exchange Rate Pass-Through", "Time Series Econometrics", "27-Year Macro Dataset"],
+      status: "Unpublished",
+      description: "Analyzed 27 years of Bangladesh Bank data using exchange rate pass-through analysis to evaluate the feasibility of inflation targeting.",
       link: "https://www.researchgate.net/publication/414671158_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Should_Bangladesh_Bank's_policy_move_towards_inflation_targeting_Prepared_by_-_The_Rational_Minds",
       bibtex: `@article{khan2026inflation,
   title={Should Bangladesh Bank's Policy Move Towards Inflation Targeting?},
@@ -1591,13 +1752,11 @@ const PORTFOLIO_DATA = {
     {
       id: "cuban-development-puzzle-2025",
       title: "The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform",
-      genre: "Development Economics Paper",
+      genre: "Development Economics Paper (2025)",
       institution: "Department of Economics, University of Dhaka",
-      date: "Dec 2025",
       location: "Dhaka, Bangladesh",
-      status: "Unpublished Research Manuscript",
-      description: "Examined Cuba's development model by analyzing the relationship between human development, economic performance, institutional reforms, and sustainable development, with a focus on resilience, human capital, and policy challenges.",
-      methodology: ["Comparative Development", "Human Capital Index", "Institutional Policy Analysis"],
+      status: "Unpublished",
+      description: "Examined Cuba's development model, institutional reforms, human development, resilience, and policy challenges.",
       link: "https://www.researchgate.net/publication/414824231_The_Cuban_Development_Puzzle",
       bibtex: `@article{khan2025cuba,
   title={The Cuban Development Puzzle: Resilience, Human Capital, and the Dilemma of Reform},
@@ -1611,13 +1770,11 @@ const PORTFOLIO_DATA = {
     {
       id: "energy-justice-2025",
       title: "Energy Justice in Protecting Energy Rights",
-      genre: "Conference Paper",
+      genre: "Conference Paper (Nov 2025)",
       institution: "CAB Youth Parliament 2025",
-      date: "Nov 2025",
       location: "Dhaka, Bangladesh",
-      status: "Published in Handbook",
-      description: "Published in the CAB Youth Parliament 2025 Handbook. Examined energy justice, consumer rights, renewable energy governance, and climate justice in Bangladesh.",
-      methodology: ["Policy Evaluation", "Consumer Equity Framework", "Renewable Energy Transition"],
+      status: "Published, CAB Youth Parliament 2025 Handbook",
+      description: "Examined energy justice, renewable energy governance, and consumer rights in Bangladesh.",
       link: "https://www.researchgate.net/profile/Ashikul-Islam-Khan",
       bibtex: `@inproceedings{khan2025energyjustice,
   title={Energy Justice in Protecting Energy Rights},
@@ -1631,43 +1788,35 @@ const PORTFOLIO_DATA = {
   ],
 
   // -----------------------------------------------------------------------
-  // 6. APPS & SOFTWARE PROJECTS
+  // 6. APPLICATIONS BUILT
   // -----------------------------------------------------------------------
   projects: [
     {
-      id: "airshare",
       name: "AirShare",
       tagline: "Free Cloud File Sharing Platform",
-      description: "A lightweight, secure, and completely free web-based file-sharing cloud platform engineered for frictionless peer-to-peer file exchanges with automatic link expiration.",
-      stack: ["Web Technologies", "Cloud Storage API", "JavaScript", "Responsive UI"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A fast, fully free web-based file-sharing cloud utility designed for effortless peer-to-peer file transfer.",
+      stack: ["JavaScript", "Cloud API", "Web Application"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "konvert",
       name: "KonVert",
       tagline: "100% Client-Side Offline File Converter",
-      description: "A privacy-centric file conversion web application that processes files fully offline within the user's browser, eliminating data upload overhead and bandwidth usage.",
-      stack: ["WebAssembly", "JavaScript (ES6)", "HTML5 File API", "Tailwind CSS"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A secure, privacy-first file converting website that processes documents and media fully offline within your browser.",
+      stack: ["WebAssembly", "JavaScript", "HTML5 API"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "framefuse",
       name: "FrameFuse",
       tagline: "Offline Social Media Frame Applicator",
-      description: "A fast, offline-first canvas manipulation tool allowing organizations and conference attendees to seamlessly overlay campaign badges and event frames onto profile photos.",
-      stack: ["HTML5 Canvas", "JavaScript", "Image Processing", "Offline-first"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      description: "A fully offline canvas tool for overlaying campaign badges, graduation borders, and event frames onto profile pictures.",
+      stack: ["HTML5 Canvas", "JavaScript", "Image Processing"],
       githubUrl: "https://github.com/ashikulislamkhan"
     },
     {
-      id: "a2y",
       name: "A2Y",
-      tagline: "Anonymous Web-Based Texting Utility",
-      description: "A minimalist anonymous communication web application prioritizing zero-log confidentiality and instantaneous ephemeral text transmissions.",
-      stack: ["WebSockets / Serverless", "JavaScript", "Security Architecture"],
-      demoUrl: "https://ashikulislamkhan.github.io/portfolio",
+      tagline: "Anonymous Web-Based Texting App",
+      description: "A minimalist anonymous communication web application focused on instant, privacy-conscious ephemeral text messages.",
+      stack: ["WebSockets", "JavaScript", "Responsive UI"],
       githubUrl: "https://github.com/ashikulislamkhan"
     }
   ],
@@ -1680,22 +1829,19 @@ const PORTFOLIO_DATA = {
       degree: "Bachelor of Social Science (BSS) in Economics",
       institution: "University of Dhaka",
       timeline: "Final Year Undergraduate",
-      location: "Dhaka, Bangladesh",
-      detail: "Specializing in Development Economics, Econometrics, and Public Policy Analysis."
+      location: "Dhaka, Bangladesh"
     },
     {
       degree: "Higher Secondary Certificate (HSC) in Humanities",
       institution: "Amrita Lal Dey College, Barishal",
-      timeline: "Graduated",
-      location: "Barishal, Bangladesh",
-      detail: "Result: GPA 5.00 / 5.00"
+      timeline: "GPA: 5.00 / 5.00",
+      location: "Barishal, Bangladesh"
     },
     {
       degree: "Secondary School Certificate (SSC) in Humanities",
       institution: "Kaunia Govt. Secondary School, Barishal",
-      timeline: "Graduated",
-      location: "Barishal, Bangladesh",
-      detail: "Result: GPA 5.00 / 5.00"
+      timeline: "GPA: 5.00 / 5.00",
+      location: "Barishal, Bangladesh"
     }
   ],
 
@@ -1706,20 +1852,17 @@ const PORTFOLIO_DATA = {
     {
       title: "Students in Energy Security and Just Energy Transition Workshop",
       issuer: "Consumers Association of Bangladesh (CAB)",
-      year: "2026",
-      location: "Dhaka, Bangladesh"
+      year: "2026"
     },
     {
       title: "Climate and Environmental Policy 101",
-      issuer: "AYO Academy | ASEAN Youth Organization",
-      year: "2026",
-      location: "International"
+      issuer: "ASEAN Youth Organization",
+      year: "2026"
     },
     {
       title: "Air Diary Challenge",
       issuer: "Youth4Nature Fellowship Program",
-      year: "2026",
-      location: "Global"
+      year: "2026"
     }
   ],
 
@@ -1729,49 +1872,36 @@ const PORTFOLIO_DATA = {
   volunteering: [
     {
       role: "Volunteer (Public Relations)",
-      organization: "South Asian Network on Economic Modeling (SANEM)",
-      date: "Feb 2025",
-      location: "Dhaka, Bangladesh",
-      achievements: [
-        "Supported public relations and participant engagement for the 8th SANEM Annual Economists' Conference (SAEC) 2025.",
-        "Assisted in communication and coordination to ensure smooth event operations."
-      ]
+      organization: "South Asian Network on Economic Modelling (SANEM)",
+      description: "Supported public relations and participant engagement during the 8th SANEM Annual Economists' Conference."
     },
     {
       role: "Volunteer (Logistics)",
-      organization: "Economics Study Center, University of Dhaka",
-      date: "Feb 2025, Apr 2026",
-      location: "Dhaka, Bangladesh",
-      achievements: [
-        "Provided logistics support for the 6th and 7th Bangladesh Economics Summit (BES) 2025 & 2026.",
-        "Assisted in coordinating event operations and participant management."
-      ]
+      organization: "Economics Study Center",
+      description: "Assisted with logistics for the 6th and 7th Bangladesh Economics Summit."
     }
   ],
 
   // -----------------------------------------------------------------------
-  // 10. CREATIVE & MEDIA WORKS (SUMMITS & ECC)
+  // 10. CREATIVE & MEDIA WORKS (Canva/Video Inspirations)
   // -----------------------------------------------------------------------
   creativeWorks: [
-    { title: "6th Bangladesh Economics Summit (BES 2025) Promo Campaign", role: "Cinematography & Editing" },
-    { title: "BES 2025 EconQuest Economics Olympiad Promo Video", role: "Visual Direction & Editing" },
-    { title: "ECC Freshers' Breeze 2025 Official Promo", role: "Direction & Video Production" },
-    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing" },
-    { title: "ECC Nobohorshe Noboborshe 1432 Cultural Promo", role: "Motion Design & Video Editing" }
+    { title: "ECC Freshersâ€™ Breeze 2025 Promo", role: "Direction, Script & Video Production", year: "2025" },
+    { title: "6th Bangladesh Economics Summit (BES 2025) EconQuest Economics Olympiad Promo", role: "Scripting, Acting & Full Edit", year: "2025" },
+    { title: "6th Bangladesh Economics Summit (BES 2025) Official Promo", role: "Cinematography & Editing", year: "2025" },
+    { title: "ECC Satyajit Ray Birthday Tribute Reel 2026", role: "Visual Storytelling & Editing", year: "2026" },
+    { title: "ECC Nobohorshe Noboborshe 1432 Promo", role: "Motion Design & Video Production", year: "2025" }
   ],
 
   // -----------------------------------------------------------------------
-  // 11. LANGUAGES & PERSONAL
+  // 11. LANGUAGES
   // -----------------------------------------------------------------------
   languages: [
     { name: "Bangla", proficiency: "Native" },
     { name: "English", proficiency: "Fluent (Duolingo English Test Score: 129)" }
-  ],
-
-  personalInterests: ["Football", "Astrophotography", "Tree Plantation & Conservation", "Distance Running", "Music"]
+  ]
 };
 
-// Export for browser global context
 if (typeof window !== "undefined") {
   window.PORTFOLIO_DATA = PORTFOLIO_DATA;
 }
@@ -1784,31 +1914,57 @@ if (typeof window !== "undefined") {
  * =========================================================================
  */
 
-let activeCategory = "all";
-let activeSearchQuery = "";
 let snackbarTimer = null;
 
 // Initialize on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeIcon(savedTheme);
+
   // Render components dynamically from PORTFOLIO_DATA
   renderHeroAndProfile();
   renderCompetencies();
-  renderExperience(activeCategory, activeSearchQuery);
-  renderResearch(activeSearchQuery);
-  renderProjects(activeSearchQuery);
+  renderWorkplaces();
+  renderLeadership();
+  renderResearch();
+  renderProjects();
+  renderCreativeWorks();
   renderEducation();
   renderCertificationsAndVolunteering();
-  renderCreativeWorks();
 
-  // Setup reactive events
-  setupSegmentedTabs();
-  setupSearchInput();
+  // Setup Dock and Form Observers
   setupDockObserver();
   setupInquiryForm();
 });
 
 // -------------------------------------------------------------------------
-// 1. Render Hero & Profile Summary
+// 1. Theme Toggle (Top Right Switcher Icon)
+// -------------------------------------------------------------------------
+function toggleThemeMode() {
+  const current = document.documentElement.getAttribute("data-theme") || "light";
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("portfolio-theme", next);
+  updateThemeIcon(next);
+  showLiquidSnackbar(`Switched to ${next === "dark" ? "Dusk (Dark)" : "Daylight (Light)"} mode`);
+}
+
+function updateThemeIcon(theme) {
+  const btn = document.getElementById("themeToggleBtn");
+  if (!btn) return;
+  if (theme === "dark") {
+    // Show Moon / Dusk icon
+    btn.innerHTML = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+  } else {
+    // Show Sun / Daylight icon
+    btn.innerHTML = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+  }
+}
+
+// -------------------------------------------------------------------------
+// 2. Render Hero & Profile Summary
 // -------------------------------------------------------------------------
 function renderHeroAndProfile() {
   const data = window.PORTFOLIO_DATA.profile;
@@ -1822,17 +1978,17 @@ function renderHeroAndProfile() {
 
   if (heroName) heroName.textContent = data.fullName;
   if (heroTagline) heroTagline.textContent = data.headline;
-  if (heroBio) heroBio.textContent = data.bio;
+  if (heroBio) heroBio.textContent = data.summary;
   if (heroStatus) heroStatus.textContent = data.statusBadge;
-  if (brandName) brandName.textContent = data.preferredName;
+  if (brandName) brandName.textContent = data.fullName;
 
-  // Render Stats with Vieve-inspired confidence
+  // Stats Grid
   const statsContainer = document.getElementById("dossierStatsGrid");
   if (statsContainer && data.quickStats) {
     statsContainer.innerHTML = data.quickStats.map(stat => `
-      <div class="stat-box">
-        <span class="stat-val">${stat.val}</span>
-        <span class="stat-lbl">${stat.label}</span>
+      <div class="stat-counter-box">
+        <span class="stat-val-text">${stat.val}</span>
+        <span class="stat-lbl-text">${stat.label}</span>
       </div>
     `).join("");
   }
@@ -1842,27 +1998,27 @@ function renderHeroAndProfile() {
   if (contactContainer) {
     contactContainer.innerHTML = `
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Location</span>
-        <span class="tabular-nums" style="font-weight: 600;">${data.location}</span>
+        <span style="color: var(--text-muted); font-weight: 600;">Location</span>
+        <span class="tabular-nums" style="font-weight: 700;">${data.location}</span>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Direct Email</span>
-        <a href="mailto:${data.email}" style="color: var(--accent-electric); font-weight: 600;">${data.email}</a>
+        <span style="color: var(--text-muted); font-weight: 600;">Direct Email</span>
+        <a href="mailto:${data.email}" style="color: var(--accent-electric); font-weight: 700;">${data.email}</a>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Phone</span>
-        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="font-weight: 600;">${data.phone}</a>
+        <span style="color: var(--text-muted); font-weight: 600;">Phone</span>
+        <a href="tel:${data.phone.replace(/[\s-]/g, '')}" class="tabular-nums" style="font-weight: 700;">${data.phone}</a>
       </li>
       <li class="quick-contact-row">
-        <span style="color: var(--text-muted); font-weight: 500;">Department</span>
-        <span style="font-weight: 600;">Dept. of Economics</span>
+        <span style="color: var(--text-muted); font-weight: 600;">Department</span>
+        <span style="font-weight: 700;">Univ of Dhaka</span>
       </li>
     `;
   }
 }
 
 // -------------------------------------------------------------------------
-// 2. Render Core Competencies
+// 3. Render Core Competencies
 // -------------------------------------------------------------------------
 function renderCompetencies() {
   const container = document.getElementById("competenciesContainer");
@@ -1870,63 +2026,32 @@ function renderCompetencies() {
   if (!container || !list) return;
 
   container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card competency-card">
-      <div>
-        <h3>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--accent-electric);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          ${item.category}
-        </h3>
-        <div class="skill-chips-cloud">
-          ${item.skills.map(s => `<span class="pill-badge">${s}</span>`).join("")}
-        </div>
+    <div class="liquid-glass-card" style="padding: 2rem;">
+      <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.65rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--accent-electric);"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        ${item.category}
+      </h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        ${item.skills.map(s => `<span class="pill-badge">${s}</span>`).join("")}
       </div>
     </div>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 3. Render Work & Leadership Experience
+// 4. Render Workplaces (Professional Experience)
 // -------------------------------------------------------------------------
-function renderExperience(category = "all", query = "") {
-  const container = document.getElementById("experienceContainer");
-  if (!container) return;
+function renderWorkplaces() {
+  const container = document.getElementById("workplacesContainer");
+  const list = window.PORTFOLIO_DATA.workExperience;
+  if (!container || !list) return;
 
-  const work = window.PORTFOLIO_DATA.workExperience || [];
-  const leadership = window.PORTFOLIO_DATA.leadershipExperience || [];
-  const combined = [...work, ...leadership];
-
-  const q = query.toLowerCase().trim();
-  const filtered = combined.filter(item => {
-    const isLeadership = leadership.some(l => l.id === item.id);
-    const matchesCategory = 
-      category === "all" ||
-      (category === "work" && !isLeadership) ||
-      (category === "leadership" && isLeadership);
-
-    const matchesSearch = !q || 
-      item.role.toLowerCase().includes(q) ||
-      item.organization.toLowerCase().includes(q) ||
-      (item.achievements && item.achievements.some(a => a.toLowerCase().includes(q))) ||
-      (item.responsibilities && item.responsibilities.some(r => r.toLowerCase().includes(q)));
-
-    return matchesCategory && matchesSearch;
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="liquid-glass-card" style="text-align: center; padding: 3rem;">
-        <p style="color: var(--text-muted); font-size: 1.05rem;">No experience entries found matching "${query}".</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => `
-    <article class="liquid-glass-card experience-card">
-      <div class="exp-header-row">
+  container.innerHTML = list.map(item => `
+    <article class="liquid-glass-card workplace-card">
+      <div class="workplace-top-row">
         <div>
-          <h3 class="exp-role-title">${item.role}</h3>
-          <span class="exp-org-badge">${item.organization}</span>
+          <h3 class="workplace-role-title">${item.role}</h3>
+          <span class="workplace-org-badge">${item.organization}</span>
         </div>
         <div style="text-align: right;">
           <span class="pill-badge pill-badge-emerald tabular-nums">${item.period}</span>
@@ -1936,18 +2061,18 @@ function renderExperience(category = "all", query = "") {
 
       ${item.achievements && item.achievements.length > 0 ? `
         <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 1rem;">
-          Key Achievements
+          Achievements
         </div>
-        <ul class="exp-bullet-list">
+        <ul class="workplace-bullet-list">
           ${item.achievements.map(ach => `<li>${ach}</li>`).join("")}
         </ul>
       ` : ""}
 
       ${item.responsibilities && item.responsibilities.length > 0 ? `
         <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-top: 1rem;">
-          Core Responsibilities
+          Responsibilities
         </div>
-        <ul class="exp-bullet-list">
+        <ul class="workplace-bullet-list">
           ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
         </ul>
       ` : ""}
@@ -1956,100 +2081,98 @@ function renderExperience(category = "all", query = "") {
 }
 
 // -------------------------------------------------------------------------
-// 4. Render Research Works & Publications
+// 5. Render Leadership Experience
 // -------------------------------------------------------------------------
-function renderResearch(query = "") {
+function renderLeadership() {
+  const container = document.getElementById("leadershipContainer");
+  const list = window.PORTFOLIO_DATA.leadershipExperience;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <article class="liquid-glass-card workplace-card">
+      <div class="workplace-top-row">
+        <div>
+          <h3 class="workplace-role-title">${item.role}</h3>
+          <span class="workplace-org-badge">${item.organization}</span>
+          ${item.tagline ? `<div style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.15rem;">${item.tagline}</div>` : ""}
+        </div>
+        <div style="text-align: right;">
+          <span class="pill-badge tabular-nums">${item.period}</span>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">${item.location}</div>
+        </div>
+      </div>
+
+      <ul class="workplace-bullet-list">
+        ${item.responsibilities.map(resp => `<li>${resp}</li>`).join("")}
+      </ul>
+    </article>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 6. Render Research Works & Publications
+// -------------------------------------------------------------------------
+function renderResearch() {
   const container = document.getElementById("researchContainer");
   const list = window.PORTFOLIO_DATA.researchWorks;
   if (!container || !list) return;
 
-  const q = query.toLowerCase().trim();
-  const filtered = list.filter(item => {
-    return !q ||
-      item.title.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q) ||
-      item.genre.toLowerCase().includes(q) ||
-      (item.methodology && item.methodology.some(m => m.toLowerCase().includes(q)));
-  });
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div class="liquid-glass-card" style="text-align: center; padding: 3rem;">
-        <p style="color: var(--text-muted); font-size: 1.05rem;">No research manuscripts matching "${query}".</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(item => `
+  container.innerHTML = list.map(item => `
     <article class="liquid-glass-card research-card">
-      <div class="research-top-bar">
-        <span class="pill-badge pill-badge-amber">${item.genre} Â· ${item.date}</span>
+      <div class="research-meta-bar">
+        <span class="pill-badge pill-badge-amber">${item.genre}</span>
         <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">${item.status}</span>
       </div>
 
-      <h3 class="research-title">${item.title}</h3>
-      <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.85rem;">
+      <h3 class="research-title-text">${item.title}</h3>
+      <div style="font-size: 0.95rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.85rem;">
         ${item.institution} Â· ${item.location}
       </div>
 
-      <p style="font-size: 1rem; color: var(--text-sub); line-height: 1.65; margin-bottom: 1.25rem;">
+      <p style="font-size: 1.025rem; color: var(--text-sub); line-height: 1.65; margin-bottom: 1.25rem;">
         ${item.description}
       </p>
 
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        ${item.methodology.map(m => `<span class="pill-badge">${m}</span>`).join("")}
-      </div>
-
-      <div class="research-footer-actions">
+      <div class="research-action-footer">
         <div style="display: flex; gap: 0.75rem;">
-          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+          <a href="${item.link}" target="_blank" rel="noopener" class="btn-glass" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            ResearchGate Manuscript
+            ResearchGate
           </a>
-          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+          <button class="btn-glass" onclick="openBibtexModal('${item.id}')" style="padding: 0.5rem 1.15rem; font-size: 0.85rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
             BibTeX Citation
           </button>
         </div>
-        <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted);">Empirical Econometric Analysis</span>
+        <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">Empirical Econometric Analysis</span>
       </div>
     </article>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 5. Render Software & Apps Built
+// 7. Render Applications Built
 // -------------------------------------------------------------------------
-function renderProjects(query = "") {
+function renderProjects() {
   const container = document.getElementById("projectsContainer");
   const list = window.PORTFOLIO_DATA.projects;
   if (!container || !list) return;
 
-  const q = query.toLowerCase().trim();
-  const filtered = list.filter(item => {
-    return !q ||
-      item.name.toLowerCase().includes(q) ||
-      item.tagline.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q) ||
-      (item.stack && item.stack.some(s => s.toLowerCase().includes(q)));
-  });
-
-  container.innerHTML = filtered.map(item => `
+  container.innerHTML = list.map(item => `
     <div class="liquid-glass-card app-card">
       <div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-          <h3 class="app-title">${item.name}</h3>
+          <h3 class="workplace-role-title">${item.name}</h3>
           <span class="pill-badge pill-badge-emerald">Live Platform</span>
         </div>
-        <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.85rem;">
+        <div style="font-size: 0.9rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.85rem;">
           ${item.tagline}
         </div>
-        <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1.25rem;">
+        <p style="font-size: 0.925rem; color: var(--text-sub); margin-bottom: 1.25rem;">
           ${item.description}
         </p>
         <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.5rem;">
-          ${item.stack.map(st => `<span class="pill-badge" style="font-size: 0.72rem;">${st}</span>`).join("")}
+          ${item.stack.map(st => `<span class="pill-badge" style="font-size: 0.75rem;">${st}</span>`).join("")}
         </div>
       </div>
       <div style="border-top: 1px solid var(--glass-border-subtle); padding-top: 1.25rem;">
@@ -2063,7 +2186,29 @@ function renderProjects(query = "") {
 }
 
 // -------------------------------------------------------------------------
-// 6. Render Education
+// 8. Render Creative Direction & Video Campaigns (Canva Style)
+// -------------------------------------------------------------------------
+function renderCreativeWorks() {
+  const container = document.getElementById("creativeWorksContainer");
+  const list = window.PORTFOLIO_DATA.creativeWorks;
+  if (!container || !list) return;
+
+  container.innerHTML = list.map(item => `
+    <div class="liquid-glass-card" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+          <span class="pill-badge pill-badge-amber">Summit Video</span>
+          <span class="tabular-nums" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">${item.year}</span>
+        </div>
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">${item.title}</h4>
+        <div style="font-size: 0.85rem; color: var(--accent-electric); font-weight: 600;">${item.role}</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// -------------------------------------------------------------------------
+// 9. Render Education
 // -------------------------------------------------------------------------
 function renderEducation() {
   const container = document.getElementById("educationContainer");
@@ -2071,21 +2216,21 @@ function renderEducation() {
   if (!container || !list) return;
 
   container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card" style="padding: 1.75rem;">
+    <div class="liquid-glass-card" style="padding: 1.85rem;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
         <h3 style="font-size: 1.25rem;">${item.degree}</h3>
         <span class="pill-badge pill-badge-emerald">${item.timeline}</span>
       </div>
-      <div style="font-size: 0.95rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.4rem;">
-        ${item.institution} Â· ${item.location}
+      <div style="font-size: 1rem; color: var(--accent-electric); font-weight: 700; margin-bottom: 0.35rem;">
+        ${item.institution}
       </div>
-      <p style="font-size: 0.875rem; color: var(--text-muted);">${item.detail}</p>
+      <div style="font-size: 0.85rem; color: var(--text-muted);">${item.location}</div>
     </div>
   `).join("");
 }
 
 // -------------------------------------------------------------------------
-// 7. Render Certifications & Volunteering
+// 10. Render Certifications & Volunteering
 // -------------------------------------------------------------------------
 function renderCertificationsAndVolunteering() {
   const certContainer = document.getElementById("certificationsContainer");
@@ -2097,7 +2242,7 @@ function renderCertificationsAndVolunteering() {
           <h4 style="font-size: 1.05rem; font-weight: 700;">${c.title}</h4>
           <span class="pill-badge tabular-nums">${c.year}</span>
         </div>
-        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 500;">${c.issuer}</div>
+        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 600;">${c.issuer}</div>
       </div>
     `).join("");
   }
@@ -2107,68 +2252,16 @@ function renderCertificationsAndVolunteering() {
   if (volContainer && vols) {
     volContainer.innerHTML = vols.map(v => `
       <div class="liquid-glass-card" style="padding: 1.35rem;">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
-          <h4 style="font-size: 1.05rem; font-weight: 700;">${v.role}</h4>
-          <span class="pill-badge tabular-nums">${v.date}</span>
-        </div>
-        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 500; margin-bottom: 0.5rem;">${v.organization}</div>
-        <ul class="exp-bullet-list" style="font-size: 0.875rem;">
-          ${v.achievements.map(a => `<li>${a}</li>`).join("")}
-        </ul>
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">${v.role}</h4>
+        <div style="font-size: 0.875rem; color: var(--accent-electric); font-weight: 600; margin-bottom: 0.35rem;">${v.organization}</div>
+        <p style="font-size: 0.875rem; color: var(--text-sub);">${v.description}</p>
       </div>
     `).join("");
   }
 }
 
 // -------------------------------------------------------------------------
-// 8. Render Creative & Media Works
-// -------------------------------------------------------------------------
-function renderCreativeWorks() {
-  const container = document.getElementById("creativeWorksContainer");
-  const list = window.PORTFOLIO_DATA.creativeWorks;
-  if (!container || !list) return;
-
-  container.innerHTML = list.map(item => `
-    <div class="liquid-glass-card" style="padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
-      <div>
-        <h4 style="font-size: 0.95rem; font-weight: 600;">${item.title}</h4>
-        <span style="font-size: 0.8rem; color: var(--accent-electric); font-weight: 500;">${item.role}</span>
-      </div>
-      <span class="pill-badge pill-badge-amber">Summit Video</span>
-    </div>
-  `).join("");
-}
-
-// -------------------------------------------------------------------------
-// 9. Interactive Segmented Tabs & Search Controls
-// -------------------------------------------------------------------------
-function setupSegmentedTabs() {
-  const tabs = document.querySelectorAll(".tab-pill-btn");
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      activeCategory = tab.getAttribute("data-category");
-      renderExperience(activeCategory, activeSearchQuery);
-      showLiquidSnackbar(`Viewing: ${tab.textContent.trim()}`);
-    });
-  });
-}
-
-function setupSearchInput() {
-  const input = document.getElementById("globalSearchInput");
-  if (!input) return;
-
-  input.addEventListener("input", (e) => {
-    activeSearchQuery = e.target.value;
-    renderExperience(activeCategory, activeSearchQuery);
-    renderResearch(activeSearchQuery);
-    renderProjects(activeSearchQuery);
-  });
-}
-
-// -------------------------------------------------------------------------
-// 10. iOS Liquid Glass Dock & Scroll Tracking
+// 11. Dock Observer (Active Section Highlighting)
 // -------------------------------------------------------------------------
 function setupDockObserver() {
   const sections = document.querySelectorAll("section[id]");
@@ -2177,7 +2270,7 @@ function setupDockObserver() {
   window.addEventListener("scroll", () => {
     let currentId = "";
     sections.forEach(sec => {
-      const top = sec.offsetTop - 200;
+      const top = sec.offsetTop - 220;
       if (window.scrollY >= top) {
         currentId = sec.getAttribute("id");
       }
@@ -2200,7 +2293,7 @@ function scrollToSection(sectionId) {
 }
 
 // -------------------------------------------------------------------------
-// 11. Highly Transparent iOS Liquid Glass Snackbar (Toast)
+// 12. Highly Transparent iOS Liquid Glass Snackbar
 // -------------------------------------------------------------------------
 function showLiquidSnackbar(message) {
   const bar = document.getElementById("liquidSnackbar");
@@ -2217,7 +2310,7 @@ function showLiquidSnackbar(message) {
 }
 
 // -------------------------------------------------------------------------
-// 12. Modals (BibTeX & CV Viewer)
+// 13. BibTeX Modal
 // -------------------------------------------------------------------------
 function openBibtexModal(paperId) {
   const papers = window.PORTFOLIO_DATA.researchWorks || [];
@@ -2249,20 +2342,9 @@ function copyBibtexSnippet() {
   });
 }
 
-function openCvModal() {
-  const modal = document.getElementById("cvModalBackdrop");
-  if (modal) modal.classList.add("active");
-}
-
-function closeCvModal() {
-  const modal = document.getElementById("cvModalBackdrop");
-  if (modal) modal.classList.remove("active");
-}
-
-function printCvDocument() {
-  window.print();
-}
-
+// -------------------------------------------------------------------------
+// 14. Email & Inquiry Form
+// -------------------------------------------------------------------------
 function copyDirectEmail() {
   const email = window.PORTFOLIO_DATA.profile.email;
   navigator.clipboard.writeText(email).then(() => {
