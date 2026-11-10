@@ -111,6 +111,26 @@ function renderHeroProfile() {
   if (heroBio) heroBio.textContent = data.summary;
   if (navBrand) navBrand.textContent = data.fullName;
 
+  // Dynamically set Google Drive DP & Cover with instant cache validation & local fallback
+  const avatarImg = document.querySelector(".hero-avatar-img");
+  const coverImg = document.querySelector(".hero-cover-img");
+
+  if (avatarImg && data.avatarImage) {
+    avatarImg.src = data.avatarImage;
+    avatarImg.onerror = () => {
+      avatarImg.onerror = null;
+      avatarImg.src = data.localAvatarFallback || "images/profile.jpg";
+    };
+  }
+
+  if (coverImg && data.coverImage) {
+    coverImg.src = data.coverImage;
+    coverImg.onerror = () => {
+      coverImg.onerror = null;
+      coverImg.src = data.localCoverFallback || "images/cover.jpg";
+    };
+  }
+
   // Render Stats Grid
   const statsContainer = document.getElementById("heroStatsGrid");
   if (statsContainer && data.quickStats) {

@@ -2096,13 +2096,13 @@ ul, ol {
         <!-- Depth Effect Header: Wide Cover Banner with Overlapping Profile Avatar -->
         <div class="hero-depth-container">
           <div class="hero-cover-wrap">
-            <img src="images/cover.jpg" alt="Ashikul Islam Khan Cover Banner" class="hero-cover-img" />
+            <img src="https://lh3.googleusercontent.com/d/1Dk0RN3GHEtjhmo3mSIWDaxehFmhE5TpN" alt="Ashikul Islam Khan Cover Banner" class="hero-cover-img" onerror="this.onerror=null; this.src='images/cover.jpg';" />
             <div class="hero-cover-overlay"></div>
           </div>
           
           <div class="hero-avatar-depth-wrap">
             <div class="hero-avatar-frame">
-              <img src="images/profile.jpg" alt="Ashikul Islam Khan" class="hero-avatar-img" />
+              <img src="https://lh3.googleusercontent.com/d/1Z7pPWIxV9gye9s76BSakGmEKOqz_btL1" alt="Ashikul Islam Khan" class="hero-avatar-img" onerror="this.onerror=null; this.src='images/profile.jpg';" />
               <span class="avatar-status-dot" title="Available for Roles"></span>
             </div>
             <div class="hero-avatar-meta">
@@ -2603,8 +2603,17 @@ const PORTFOLIO_DATA = {
     institution: "Department of Economics, University of Dhaka",
     statusBadge: "Final Year Undergraduate · Available for Research, Analytics & Creative Roles",
     
-    avatarImage: "images/profile.jpg",
-    coverImage: "images/cover.jpg",
+    avatarImage: "https://lh3.googleusercontent.com/d/1Z7pPWIxV9gye9s76BSakGmEKOqz_btL1",
+    coverImage: "https://lh3.googleusercontent.com/d/1Dk0RN3GHEtjhmo3mSIWDaxehFmhE5TpN",
+    localAvatarFallback: "images/profile.jpg",
+    localCoverFallback: "images/cover.jpg",
+
+    googleDriveSync: {
+      folderId: "1FuAj4eRImQEsglTggJXU5qlPPM1onbFq",
+      folderUrl: "https://drive.google.com/drive/folders/1FuAj4eRImQEsglTggJXU5qlPPM1onbFq?usp=sharing",
+      dpFileId: "1Z7pPWIxV9gye9s76BSakGmEKOqz_btL1",
+      coverFileId: "1Dk0RN3GHEtjhmo3mSIWDaxehFmhE5TpN"
+    },
     
     summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
@@ -3134,6 +3143,26 @@ function renderHeroProfile() {
   if (heroTagline) heroTagline.textContent = data.headline;
   if (heroBio) heroBio.textContent = data.summary;
   if (navBrand) navBrand.textContent = data.fullName;
+
+  // Dynamically set Google Drive DP & Cover with instant cache validation & local fallback
+  const avatarImg = document.querySelector(".hero-avatar-img");
+  const coverImg = document.querySelector(".hero-cover-img");
+
+  if (avatarImg && data.avatarImage) {
+    avatarImg.src = data.avatarImage;
+    avatarImg.onerror = () => {
+      avatarImg.onerror = null;
+      avatarImg.src = data.localAvatarFallback || "images/profile.jpg";
+    };
+  }
+
+  if (coverImg && data.coverImage) {
+    coverImg.src = data.coverImage;
+    coverImg.onerror = () => {
+      coverImg.onerror = null;
+      coverImg.src = data.localCoverFallback || "images/cover.jpg";
+    };
+  }
 
   // Render Stats Grid
   const statsContainer = document.getElementById("heroStatsGrid");

@@ -23,8 +23,17 @@ const PORTFOLIO_DATA = {
     institution: "Department of Economics, University of Dhaka",
     statusBadge: "Final Year Undergraduate · Available for Research, Analytics & Creative Roles",
     
-    avatarImage: "images/profile.jpg",
-    coverImage: "images/cover.jpg",
+    avatarImage: "https://lh3.googleusercontent.com/d/1Z7pPWIxV9gye9s76BSakGmEKOqz_btL1",
+    coverImage: "https://lh3.googleusercontent.com/d/1Dk0RN3GHEtjhmo3mSIWDaxehFmhE5TpN",
+    localAvatarFallback: "images/profile.jpg",
+    localCoverFallback: "images/cover.jpg",
+
+    googleDriveSync: {
+      folderId: "1FuAj4eRImQEsglTggJXU5qlPPM1onbFq",
+      folderUrl: "https://drive.google.com/drive/folders/1FuAj4eRImQEsglTggJXU5qlPPM1onbFq?usp=sharing",
+      dpFileId: "1Z7pPWIxV9gye9s76BSakGmEKOqz_btL1",
+      coverFileId: "1Dk0RN3GHEtjhmo3mSIWDaxehFmhE5TpN"
+    },
     
     summary: "Analytical and creative Economics undergraduate at the University of Dhaka. Combines a strong foundation in development economics and data analysis (SQL, Python, Power BI) with advanced skills in graphic design, cinematography, and video editing. Recognized for published policy research on energy justice and organizational leadership. Seeking roles that leverage both evidence-based research and impactful visual storytelling.",
     
